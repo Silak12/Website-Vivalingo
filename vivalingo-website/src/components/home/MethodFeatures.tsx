@@ -23,8 +23,8 @@ const MethodFeatures: React.FC = () => {
     },
     {
       id: 2,
-      title: "2. Active Listening",
-      description: "Höre den fremdsprachlichen Text, während du die Übersetzung liest. Bald \"hörst\" du ihn wie deine Muttersprache.",
+      title: "2. Active Listening + Speaking",
+      description: "Höre den fremdsprachlichen Text, während du die Übersetzung liest. Bald \"hörst\" du ihn wie deine Muttersprache. Versuch laut mitzulesen.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 011.414 1.414" />
@@ -36,7 +36,7 @@ const MethodFeatures: React.FC = () => {
     {
       id: 3,
       title: "3. Passive Listening",
-      description: "Lass die Sprache im Hintergrund laufen. Dein Gehirn passt sich an und baut mühelos Sprachkenntnisse auf.",
+      description: "Sobald du einige Lektionen gelernt hast kannst du anfangen die Audios abszuspielen während du etwas anderes machst.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />

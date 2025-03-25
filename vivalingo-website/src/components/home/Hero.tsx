@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import Button from '../shared/Button';
 import AnimatedText from '../shared/AnimatedText';
 
+
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
@@ -70,7 +71,6 @@ const Hero: React.FC = () => {
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-primary-200/30 to-secondary-200/30 blur-3xl"
         />
       </div>
-
       <div className="container-custom relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
               />
               
               <AnimatedText
-                text="Experience the power of the Birkenbihl method with Vivalingo. Learn without grammar rules, intuitively. Just like you learned your first language."
+                text="Experience the power of the Birkenbihl method with Vivalingo. Learn without grammar rules, intuitively. Just like you learned your mother tongue."
                 className="text-lg text-white/80 mb-8 max-w-xl mx-auto md:mx-0"
                 as="p"
                 delay={0.3}
@@ -117,21 +117,21 @@ const Hero: React.FC = () => {
                   <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>One-time purchase</span>
+                  <span>No grammar rules</span>
                 </div>
                 
                 <div className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>No subscription</span>
+                  <span>From listener to speaker</span>
                 </div>
                 
                 <div className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Just 4,99€</span>
+                  <span>Natural language feel</span>
                 </div>
               </div>
             </motion.div>
