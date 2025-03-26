@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from '../shared/Button';
-import WaveDivider from '../shared/WaveDivider';
+import DiscountSection from './DiscountSection';
 
 const PricingSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'monthly' | 'yearly' | 'lifetime'>('monthly');
@@ -82,15 +82,7 @@ const PricingSection: React.FC = () => {
 
   return (
     <section id="pricing" className="py-20 bg-white relative">
-      {/* Top wave animation */}
-      <WaveDivider 
-        position="top" 
-        color="#ffffff" 
-        height={80}
-        style="gentle-wave" // Or any other style you prefer
-        opacity={0.2} // Optional: control transparency
-      />
-      
+      {/* Top wave animation */}     
       <div className="container-custom relative z-10">
         <div className="text-center mb-12">
           <motion.h2
@@ -304,27 +296,11 @@ const PricingSection: React.FC = () => {
           </motion.div>
         </div>
         
-        {/* FAQ Teaser */}
-        <div className="text-center mt-16">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-gray-600"
-          >
-            Have questions about our pricing? Check our <span className="text-primary-500 font-medium">FAQ section</span> or contact our support team.
-          </motion.p>
-        </div>
+        {/* Re-added Discount Section */}
+        <DiscountSection />
       </div>
       
       {/* Bottom wave animation */}
-      <WaveDivider 
-        position="bottom" 
-        color="#1f2937" 
-        height={80} 
-        className="mt-12" 
-      />
     </section>
   );
 };

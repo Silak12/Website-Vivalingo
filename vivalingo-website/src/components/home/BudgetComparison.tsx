@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
-import WaveDivider from '../shared/WaveDivider';
 import Button from '../shared/Button';
 
 interface BudgetItem {
@@ -146,14 +145,7 @@ const BudgetComparison: React.FC = () => {
   
   return (
     <section id="budget-comparison" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white relative">
-      <WaveDivider 
-        position="top" 
-        color="#ffffff" 
-        height={80}
-        style="gentle-wave" // Or any other style you prefer
-        opacity={0.2} // Optional: control transparency
-      />
-      
+     
       <div className="container-custom relative z-10">
         <div className="text-center mb-12">
           <motion.h2
@@ -391,8 +383,7 @@ const BudgetComparison: React.FC = () => {
           </div>
         </motion.div>
       </div>
-      
-      <WaveDivider position="bottom" color="#111827" height={80} className="mt-12" />
+    
     </section>
   );
 };
