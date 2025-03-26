@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
               className="flex items-center"
             >
               <img 
-                src="/images/logo.svg" 
+                src="/images/logo2.png" 
                 alt="Vivalingo Logo"
                 className="h-10 w-10 mr-2"
               />
