@@ -6,6 +6,7 @@ import MethodDemo from '../components/home/MethodDemo';
 import PricingSection from '../components/home/PricingSection';
 import BudgetComparison from '../components/home/BudgetComparison';
 import DownloadCTA from '../components/home/DownloadCTA';
+import DiscountSection from '../components/home/DiscountSection';
 
 const Home: React.FC = () => {
   return (
@@ -13,9 +14,8 @@ const Home: React.FC = () => {
       <Hero />
       <WordFlowAnimation />
       <MethodFeatures />
-      <MethodDemo />
+      <DiscountSection />
       <PricingSection />
-      <BudgetComparison />
       <DownloadCTA />
     </>
   );

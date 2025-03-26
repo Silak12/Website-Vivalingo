@@ -29,11 +29,11 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(false);
   }, [location]);
 
+  // Updated navigation items - removed "How It Works"
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Features', path: '/#features' },
     { name: 'Method', path: '/method' },
-    { name: 'How It Works', path: '/how-it-works' },
     { name: 'Pricing', path: '/#pricing' },
   ];
 
@@ -87,12 +87,15 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
             >
-              <Button 
-                variant="primary" 
-                size="sm"
-              >
-                Download App
-              </Button>
+              {/* Updated to link to download section */}
+              <Link to="/#download">
+                <Button 
+                  variant="primary" 
+                  size="sm"
+                >
+                  Download App
+                </Button>
+              </Link>
             </motion.div>
           </div>
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
-import Button from '../shared/Button';
 import DiscountCode from '../shared/DiscountCode';
 import { 
   generateDiscountCodes, 
@@ -21,7 +20,6 @@ const DiscountSection: React.FC = () => {
   const [activeCode, setActiveCode] = useState<string>('');
   const [isCodeUsed, setIsCodeUsed] = useState(false);
   const [countdown, setCountdown] = useState(COUNTDOWN_TIME);
-  const [email, setEmail] = useState('');
   
   // Verweise für Animationen
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -131,15 +129,6 @@ const DiscountSection: React.FC = () => {
     }
   };
 
-  // Behandle Abonnieren-Formular
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Hier würde normalerweise die Logik für das Abonnement stehen
-    alert(`Danke für deine Anmeldung mit ${email}! Du wirst benachrichtigt, wenn ein neuer Rabattcode verfügbar ist.`);
-    setEmail('');
-  };
-
   // Animationsvarianten für Container
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -170,7 +159,7 @@ const DiscountSection: React.FC = () => {
         viewport={{ once: true }}
         className="text-center mb-6"
       >
-        <h3 className="text-2xl font-bold mb-3">Finde den 100% Rabattcode!</h3>
+        <h3 className="text-2xl font-bold mb-3">Finde den 100% Rabattcode! Teste ihn in der App!</h3>
         <div className="mb-2 flex items-center justify-center">
           <span className={`font-medium px-3 py-1 rounded-full inline-flex items-center ${
             isCodeUsed ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'
@@ -187,7 +176,7 @@ const DiscountSection: React.FC = () => {
                 <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
-                Code nicht verwendet
+                Code wurde noch nicht verwendet
               </>
             )}
           </span>
@@ -214,7 +203,7 @@ const DiscountSection: React.FC = () => {
         
         <p className="text-gray-600 max-w-2xl mx-auto mt-3">
           Wir haben 150 Codes versteckt, aber nur EINER ist derzeit aktiv für 100% Rabatt. 
-          Wenn er benutzt wird, siehst du einen 24-Stunden-Countdown.
+          Wenn er bereits benutzt wurde, siehst du einen 24-Stunden-Countdown.
         </p>
       </motion.div>
       
@@ -240,29 +229,6 @@ const DiscountSection: React.FC = () => {
             />
           </motion.div>
         ))}
-      </motion.div>
-      
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        viewport={{ once: true }}
-        className="mt-8 text-center"
-      >
-        <p className="text-gray-600 mb-3">Willst du benachrichtigt werden, wenn ein neuer Code online ist?</p>
-        <form onSubmit={handleSubscribe} className="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Deine E-Mail-Adresse"
-            className="px-4 py-2 border border-gray-300 rounded-md flex-grow focus:outline-none focus:ring-2 focus:ring-primary-400"
-            required
-          />
-          <Button type="submit" variant="primary">
-            Abonnieren
-          </Button>
-        </form>
       </motion.div>
     </div>
   );

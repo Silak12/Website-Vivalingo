@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import Button from '../shared/Button';
 import AnimatedText from '../shared/AnimatedText';
+import { Link } from 'react-router-dom';
 
 interface Word {
   original: string;
@@ -95,7 +96,7 @@ const Hero: React.FC = () => {
   // Current phrase
   const currentPhrase = phrases[currentPhraseIndex];
 
-  // Start the animation
+  // Start the animation - fixed to properly track state
   const startAnimation = () => {
     setIsPlaying(true);
     setAnimationCompleted(false);
@@ -104,6 +105,7 @@ const Hero: React.FC = () => {
     // Clear any existing animation
     if (animationTimer) {
       clearInterval(animationTimer);
+      setAnimationTimer(null);
     }
     
     // Set first word
@@ -119,13 +121,19 @@ const Hero: React.FC = () => {
         setAnimationTimer(null);
         setAnimationCompleted(true);
         
-        // Move to next phrase after a delay
-        setTimeout(() => {
-          setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-          setHighlightedWordIndex(0);
-          setAnimationCompleted(false);
-          startAnimation();
+        // Move to next phrase after a delay only if still playing
+        const nextPhraseTimer = setTimeout(() => {
+          // Only proceed if we're still in playing state
+          if (isPlaying) {
+            setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+            setHighlightedWordIndex(0);
+            setAnimationCompleted(false);
+            startAnimation();
+          }
         }, 3000); // Longer delay before switching phrases
+        
+        // Store the timeout in a ref or state if needed to clear it
+        return () => clearTimeout(nextPhraseTimer);
       } else {
         // Move to next word
         setHighlightedWordIndex(wordIndex);
@@ -135,20 +143,30 @@ const Hero: React.FC = () => {
     setAnimationTimer(timer);
   };
 
-  // Pause the animation
+  // Pause the animation - completely stops all animations
   const pauseAnimation = () => {
     setIsPlaying(false);
+    
+    // Clear the word highlighting interval
     if (animationTimer) {
       clearInterval(animationTimer);
       setAnimationTimer(null);
     }
+    
+    // Also clear any GSAP animations related to the phone content
+    if (phoneContentRef.current) {
+      // Kill all animations on the phone content and its children
+      gsap.killTweensOf(phoneContentRef.current.children);
+    }
   };
   
-  // Toggle play/pause
+  // Toggle play/pause - improved with better state management
   const togglePlayPause = () => {
     if (isPlaying) {
+      // If currently playing, pause everything
       pauseAnimation();
     } else {
+      // If currently paused, resume or restart
       if (animationCompleted) {
         // If animation was completed, start a new phrase
         setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
@@ -160,6 +178,9 @@ const Hero: React.FC = () => {
         startAnimation();
       }
     }
+    
+    // Force update of isPlaying state to ensure UI consistency
+    setIsPlaying(!isPlaying);
   };
   
   // Enhanced background effects and parallax
@@ -213,33 +234,15 @@ const Hero: React.FC = () => {
     }
   }, []);
   
-  // Smartphone animation effects - greatly reduced to fix interaction issues
+  // Smartphone shadow effect only - complete removal of movement animation
   useEffect(() => {
     if (phoneRef.current) {
-      // Float animation with very gentle bobbing (reduced movement)
-      gsap.to(phoneRef.current, {
-        y: -5, // Reduced movement
-        duration: 4, // Slower animation
-        ease: "sine.inOut",
-        repeat: -1,
-        yoyo: true
-      });
-      
-      // Subtle shadow animation
-      gsap.to(phoneRef.current, {
-        boxShadow: '0 20px 40px rgba(0, 0, 0, 0.25)',
-        duration: 4,
-        ease: "sine.inOut",
-        repeat: -1,
-        yoyo: true,
-        yoyoEase: "sine.inOut"
-      });
-      
-      // Removing the mousemove tilt effect as it interferes with interaction
-      // This was likely causing the main interaction issues
+      // Removed all movement animation to prevent any wackling
+      // Only keeping a subtle static shadow
+      phoneRef.current.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.25)';
       
       return () => {
-        gsap.killTweensOf(phoneRef.current);
+        // Nothing to clean up since we're not using animations anymore
       };
     }
   }, []);
@@ -293,13 +296,18 @@ const Hero: React.FC = () => {
     }
   }, []);
   
-  // Brain wave animation effects (keeping as is since user likes the phone content)
+  // Brain wave animation effects - fixed to respect play/pause state
   useEffect(() => {
+    let waveInterval: NodeJS.Timeout | null = null;
+    
     if (phoneContentRef.current && isPlaying) {
       // Create brain wave effect
       const createBrainWave = () => {
+        // Only proceed if still playing
+        if (!isPlaying) return;
+        
         const wave = document.createElement('div');
-        wave.className = 'absolute w-6 h-6 rounded-full bg-primary-400/20 backdrop-blur-sm';
+        wave.className = 'absolute w-6 h-6 rounded-full bg-primary-400/20 backdrop-blur-sm pointer-events-none';
         
         // Position near the bottom of the phone screen
         const startX = 40 + Math.random() * 20;
@@ -308,34 +316,40 @@ const Hero: React.FC = () => {
         wave.style.left = `${startX}%`;
         wave.style.top = `${startY}%`;
         
-        phoneContentRef.current!.appendChild(wave);
-        
-        // Animation
-        gsap.fromTo(
-          wave,
-          { 
-            scale: 0, 
-            opacity: 0.7 
-          },
-          {
-            scale: 3,
-            opacity: 0,
-            duration: 3 + Math.random() * 2,
-            ease: 'power1.out',
-            onComplete: () => {
-              phoneContentRef.current?.removeChild(wave);
+        if (phoneContentRef.current) {
+          phoneContentRef.current.appendChild(wave);
+          
+          // Animation
+          gsap.fromTo(
+            wave,
+            { 
+              scale: 0, 
+              opacity: 0.7 
+            },
+            {
+              scale: 3,
+              opacity: 0,
+              duration: 3 + Math.random() * 2,
+              ease: 'power1.out',
+              onComplete: () => {
+                if (phoneContentRef.current && phoneContentRef.current.contains(wave)) {
+                  phoneContentRef.current.removeChild(wave);
+                }
+              }
             }
-          }
-        );
+          );
+        }
       };
       
       // Create brain waves at intervals
-      const waveInterval = setInterval(createBrainWave, 2000);
-      
-      return () => {
-        clearInterval(waveInterval);
-      };
+      waveInterval = setInterval(createBrainWave, 2000);
     }
+    
+    return () => {
+      if (waveInterval) {
+        clearInterval(waveInterval);
+      }
+    };
   }, [isPlaying]);
   
   // Start the animation when component mounts
@@ -400,29 +414,35 @@ const Hero: React.FC = () => {
               />
               
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
-                <Button 
-                  variant="primary" 
-                  size="lg"
-                  className="shadow-lg shadow-primary-500/30 flex items-center gap-2"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22v-9.5m0 0l4 3-4-3-4 3m4-3V7.5" />
-                    <path d="M20 14v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3" />
-                  </svg>
-                  Start Learning Now
-                </Button>
+                {/* Updated Link to scroll to download section */}
+                <Link to="/#download">
+                  <Button 
+                    variant="primary" 
+                    size="lg"
+                    className="shadow-lg shadow-primary-500/30 flex items-center gap-2"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22v-9.5m0 0l4 3-4-3-4 3m4-3V7.5" />
+                      <path d="M20 14v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3" />
+                    </svg>
+                    Start Learning Now
+                  </Button>
+                </Link>
                 
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-white text-white hover:bg-white/10 flex items-center gap-2"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <polygon points="10 8 16 12 10 16 10 8" />
-                  </svg>
-                  See How It Works
-                </Button>
+                {/* Updated Link to go to Method page */}
+                <Link to="/method">
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="border-white text-white hover:bg-white/10 flex items-center gap-2"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <polygon points="10 8 16 12 10 16 10 8" />
+                    </svg>
+                    See How It Works
+                  </Button>
+                </Link>
               </div>
               
               {/* Added ratings and stats like in DownloadCTA section */}

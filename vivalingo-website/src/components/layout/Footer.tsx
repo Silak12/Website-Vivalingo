@@ -11,25 +11,18 @@ const Footer: React.FC = () => {
         { name: 'Features', path: '/#features' },
         { name: 'Pricing', path: '/#pricing' },
         { name: 'Download', path: '/#download' },
-        { name: 'Updates', path: '/updates' },
       ],
     },
     {
       title: 'Learn',
       links: [
         { name: 'Birkenbihl Method', path: '/method' },
-        { name: 'How It Works', path: '/how-it-works' },
-        { name: 'Success Stories', path: '/success-stories' },
-        { name: 'FAQ', path: '/faq' },
       ],
     },
     {
       title: 'Company',
       links: [
         { name: 'About', path: '/about' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Contact', path: '/contact' },
-        { name: 'Careers', path: '/careers' },
       ],
     },
     {
@@ -42,7 +35,7 @@ const Footer: React.FC = () => {
     },
   ];
 
-  // Social media links
+  // Social media links - added TikTok
   const socialLinks = [
     { 
       name: 'Twitter', 
@@ -61,6 +54,15 @@ const Footer: React.FC = () => {
         </svg>
       ),
       url: 'https://instagram.com/vivalingo',
+    },
+    { 
+      name: 'TikTok', 
+      icon: (
+        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 015.34-1.5V11.5a9.82 9.82 0 005.25 1.66 5.25 5.25 0 001.83-.33V9.4a4.85 4.85 0 01-1.83.33 4.86 4.86 0 01-2.34-.61 4.85 4.85 0 014.17-2.43z" />
+        </svg>
+      ),
+      url: 'https://tiktok.com/@vivalingo',
     },
     { 
       name: 'Facebook', 
@@ -106,7 +108,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
         
-        {/* Newsletter and Social */}
+        {/* Logo, Tagline and Social - Updated without email subscribe */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <motion.div 
@@ -126,31 +128,21 @@ const Footer: React.FC = () => {
             </motion.div>
             
             <motion.div
-              className="flex flex-col items-start"
+              className="flex flex-col items-center md:items-end"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your email" 
-                  className="px-4 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                />
-                <button className="bg-primary-500 hover:bg-primary-600 px-4 py-2 rounded-r-md transition-colors duration-300">
-                  Subscribe
-                </button>
-              </div>
-              <div className="flex mt-4 space-x-4">
+              <h3 className="text-lg font-semibold mb-3">Connect With Us</h3>
+              <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a 
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    className="text-gray-400 hover:text-white transition-colors duration-300 bg-gray-800 hover:bg-gray-700 p-2 rounded-full"
                     aria-label={social.name}
                   >
                     {social.icon}
