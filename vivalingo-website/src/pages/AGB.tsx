@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import AnimatedText from '../components/shared/AnimatedText';
 import Layout from '../components/layout/Layout';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const AGB: React.FC = () => {
+  const { t } = useLanguage();
   const pageRef = useRef<HTMLDivElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
@@ -80,6 +82,32 @@ const AGB: React.FC = () => {
     });
   };
   
+  // Define features array for section 2
+  const featuresSection2 = [
+    t('agb.sections.2.features.0'),
+    t('agb.sections.2.features.1'),
+    t('agb.sections.2.features.2'),
+    t('agb.sections.2.features.3'),
+    t('agb.sections.2.features.4')
+  ];
+  
+  // Define plans array for section 5
+  const plansSection5 = [
+    t('agb.sections.5.plans.0'),
+    t('agb.sections.5.plans.1'),
+    t('agb.sections.5.plans.2')
+  ];
+  
+  // Define obligations array for section 8
+  const obligationsSection8 = [
+    t('agb.sections.8.obligations.0'),
+    t('agb.sections.8.obligations.1'),
+    t('agb.sections.8.obligations.2'),
+    t('agb.sections.8.obligations.3'),
+    t('agb.sections.8.obligations.4'),
+    t('agb.sections.8.obligations.5')
+  ];
+  
   return (
     <Layout>
       <div ref={pageRef} className="relative min-h-screen py-20">
@@ -108,7 +136,7 @@ const AGB: React.FC = () => {
         <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-3xl">
           <div className="text-center mb-12">
             <AnimatedText
-              text="Allgemeine Geschäftsbedingungen"
+              text={t('agb.title')}
               className="text-4xl md:text-5xl font-bold mb-6 text-white"
               as="h1"
             />
@@ -123,126 +151,121 @@ const AGB: React.FC = () => {
           >
             <div className="prose prose-lg prose-invert max-w-none">
               <p className="text-sm text-gray-400 mb-6">
-                Stand: {formatDate()}
+                {t('agb.lastUpdated')}: {formatDate()}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">1. Anwendungsbereich</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.1.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der Viva La Lingo Sprachlern-App und der Website www.Viva La Lingo.app ("Dienste") durch Sie als Nutzer. Viva La Lingo wird betrieben von Leonard Marx, Musterstraße 14, 14527 Deutschland ("wir", "uns"). Mit dem Zugriff auf oder der Nutzung unserer Dienste erklären Sie sich mit diesen AGB einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie unsere Dienste bitte nicht.
+                {t('agb.sections.1.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">2. Leistungsbeschreibung</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.2.title')}</h2>
               <p className="text-gray-300 mb-4">
-                Viva La Lingo ist eine Sprachlern-App, die die Birkenbihl-Methode nutzt, um Nutzern das Erlernen von Fremdsprachen zu erleichtern. Die App bietet:
+                {t('agb.sections.2.content')}
               </p>
               <ul className="list-disc pl-6 text-gray-300 mb-6">
-                <li className="mb-2">Sprachlektionen in verschiedenen Sprachen</li>
-                <li className="mb-2">KI-generierte Audiodialoge zum Sprachenlernen</li>
-                <li className="mb-2">Spracherkennungsfunktionen zur Ausspracheverbesserung</li>
-                <li className="mb-2">Fortschrittsverfolgung</li>
-                <li>Verschiedene Abo-Modelle und In-App-Käufe</li>
+                {featuresSection2.map((feature, index) => (
+                  <li key={index} className="mb-2">{feature}</li>
+                ))}
               </ul>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">3. Registrierung und Nutzerkonto</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.3.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Für die volle Nutzung unserer Dienste ist die Erstellung eines Benutzerkontos erforderlich. Sie sind verpflichtet, genaue und vollständige Informationen bei der Registrierung anzugeben und diese Informationen aktuell zu halten. Sie sind für die Sicherheit Ihres Passworts verantwortlich und dürfen Ihr Konto nicht an Dritte weitergeben. Sie sind für alle Aktivitäten verantwortlich, die über Ihr Konto stattfinden.
+                {t('agb.sections.3.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">4. Altersbeschränkung</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.4.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Unsere Dienste richten sich an Nutzer ab 16 Jahren. Wenn du jünger als 16 Jahre bist, darfst du unsere Dienste nur mit Zustimmung deiner Eltern oder Erziehungsberechtigten nutzen. Wir behalten uns das Recht vor, zusätzliche Maßnahmen zu ergreifen, um das Alter der Nutzer zu überprüfen und den Zugang zu unseren Diensten einzuschränken.
+                {t('agb.sections.4.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">5. Preise und Zahlungsbedingungen</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.5.title')}</h2>
               <p className="text-gray-300 mb-4">
-                Wir bieten verschiedene Abonnement-Optionen und In-App-Käufe an:
+                {t('agb.sections.5.content')}
               </p>
               <ul className="list-disc pl-6 text-gray-300 mb-4">
-                <li className="mb-2">Monatliches Abonnement: 2,99 € pro Monat</li>
-                <li className="mb-2">Jährliches Abonnement: 12,99 € pro Jahr (entspricht einer Ersparnis von 64% gegenüber dem monatlichen Abonnement)</li>
-                <li className="mb-2">Lifetime-Zugang: Einmalzahlung von 49,99 €</li>
+                {plansSection5.map((plan, index) => (
+                  <li key={index} className="mb-2">{plan}</li>
+                ))}
               </ul>
               <p className="text-gray-300 mb-6">
-                Alle Zahlungen werden über den App Store (iOS) oder Google Play Store (Android) abgewickelt. Die Abrechnung erfolgt entsprechend der Bestimmungen dieser Plattformen. Abonnements verlängern sich automatisch zum jeweils gültigen Preis, sofern sie nicht mindestens 24 Stunden vor Ende der aktuellen Laufzeit gekündigt werden. Die Kündigung erfolgt über Ihren App Store oder Google Play Account.
+                {t('agb.sections.5.payment')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">6. Testphasen und Rückerstattungen</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.6.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Neue Nutzer erhalten beim Abschluss eines monatlichen oder jährlichen Abonnements eine 7-tägige kostenlose Testphase. Bei Lifetime-Käufen ist keine Testphase vorgesehen. Rückerstattungsanfragen müssen an den jeweiligen App Store (iOS) oder Google Play Store (Android) gerichtet werden und unterliegen deren Richtlinien. Für iOS-Nutzer können Rückerstattungen über die Apple-Website oder direkt im App Store unter "Kaufverlauf" beantragt werden. Android-Nutzer können Rückerstattungen über den Google Play Store im Bereich "Bestellverlauf" innerhalb von 48 Stunden nach dem Kauf beantragen. Bei späteren Anfragen muss der Google Play Support kontaktiert werden. Wir selbst bieten keine direkten Rückerstattungen an, unterstützen Sie aber gerne bei Fragen zum Rückerstattungsprozess.
+                {t('agb.sections.6.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">7. Widerrufsrecht</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.7.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Bei digitalen Inhalten erlischt das Widerrufsrecht mit Beginn der Ausführung des Vertrags, wenn der Nutzer ausdrücklich zugestimmt hat, dass mit der Ausführung vor Ablauf der Widerrufsfrist begonnen wird, und seine Kenntnis davon bestätigt hat, dass durch seine Zustimmung das Widerrufsrecht erlischt. Bei Abonnements können Sie Ihr Widerrufsrecht innerhalb von 14 Tagen nach Vertragsschluss ausüben, sofern Sie die Dienste noch nicht in Anspruch genommen haben.
+                {t('agb.sections.7.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">8. Nutzungsbedingungen</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.8.title')}</h2>
               <p className="text-gray-300 mb-4">
-                Bei der Nutzung unserer Dienste verpflichten Sie sich:
+                {t('agb.sections.8.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-300 mb-6">
-                <li className="mb-2">Unsere Dienste nicht für illegale oder unerlaubte Zwecke zu nutzen</li>
-                <li className="mb-2">Keine Viren oder schädlichen Code zu verbreiten</li>
-                <li className="mb-2">Die App nicht zu reverse-engineeren, zu dekompilieren oder zu disassemblieren</li>
-                <li className="mb-2">Die Inhalte der App nicht zu extrahieren, zu kopieren oder zu verbreiten</li>
-                <li className="mb-2">Keine Maßnahmen zu ergreifen, die die Infrastruktur unserer Dienste übermäßig belasten könnten</li>
-                <li>Die KI-generierten Audiodialoge ausschließlich für Ihr persönliches Sprachenlernen zu verwenden</li>
+                {obligationsSection8.map((obligation, index) => (
+                  <li key={index} className="mb-2">{obligation}</li>
+                ))}
               </ul>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">9. KI-generierte Inhalte</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.9.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Die in unserer App enthaltenen Audiodialoge und Sprachbeispiele werden mit Hilfe von KI-Technologie erstellt. Wir möchten ausdrücklich darauf hinweisen, dass diese Audioinhalte künstlich erzeugt sind und nicht von realen Muttersprachlern stammen, auch wenn sie natürlich klingen. Diese Inhalte sind ausschließlich für deine persönliche Nutzung zum Sprachenlernen bestimmt und dürfen nicht reproduziert, verbreitet oder für andere Zwecke verwendet werden. Wir halten die Rechte an allen KI-generierten Inhalten in unserer App.
+                {t('agb.sections.9.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">10. Geistiges Eigentum</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.10.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Alle Rechte an der App und ihren Inhalten, einschließlich aber nicht beschränkt auf Software, Texte, Grafiken, Audiomaterialien und KI-generierte Inhalte, sind unser Eigentum oder das Eigentum unserer Lizenzgeber und durch Urheberrechts- und andere Gesetze zum Schutz geistigen Eigentums geschützt. Die Nutzung unserer Dienste gewährt Ihnen keine Eigentumsrechte an den Inhalten oder der Software.
+                {t('agb.sections.10.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">11. Datenschutz</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.11.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Der Schutz Ihrer Daten ist uns wichtig. Informationen darüber, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und nutzen, finden Sie in unserer Datenschutzerklärung, die einen integralen Bestandteil dieser AGB darstellt.
+                {t('agb.sections.11.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">12. Verfügbarkeit und Änderungen der Dienste</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.12.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Wir bemühen uns, unsere Dienste rund um die Uhr verfügbar zu halten, können jedoch keine ununterbrochene Verfügbarkeit garantieren. Wir behalten uns das Recht vor, jederzeit und ohne vorherige Ankündigung Funktionen der App zu ändern, zu aktualisieren oder einzustellen. Wir können auch den Zugang zu unseren Diensten aus technischen, rechtlichen oder geschäftlichen Gründen vorübergehend oder dauerhaft einschränken.
+                {t('agb.sections.12.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">13. Haftungsbeschränkung</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.13.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Wir haften nicht für indirekte Schäden, Folgeschäden oder besondere Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung unserer Dienste entstehen. Unsere Haftung ist auf den Betrag beschränkt, den Sie für die Nutzung unserer Dienste gezahlt haben. Diese Haftungsbeschränkung gilt nicht für Schäden, die durch Vorsatz oder grobe Fahrlässigkeit unsererseits verursacht wurden, oder für Verletzungen des Lebens, des Körpers oder der Gesundheit.
+                {t('agb.sections.13.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">14. Kündigung</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.14.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Sie können Ihr Abonnement jederzeit über die Einstellungen Ihres App Store oder Google Play Kontos kündigen. Die Kündigung wird zum Ende der aktuellen Abrechnungsperiode wirksam. Wir können Ihr Konto oder Ihren Zugang zu unseren Diensten jederzeit aus wichtigem Grund kündigen oder aussetzen, insbesondere bei Verstößen gegen diese AGB.
+                {t('agb.sections.14.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">15. Änderungen der AGB</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.15.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Wir behalten uns das Recht vor, diese AGB jederzeit zu ändern. Die geänderten Bedingungen werden auf unserer Website veröffentlicht und treten mit ihrer Veröffentlichung in Kraft. Ihre fortgesetzte Nutzung unserer Dienste nach der Veröffentlichung der geänderten AGB stellt Ihre Zustimmung zu diesen Änderungen dar.
+                {t('agb.sections.15.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">16. Anwendbares Recht und Gerichtsstand</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.16.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Diese AGB unterliegen dem Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Ist der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen, ist Gerichtsstand für alle Streitigkeiten aus dem Vertragsverhältnis unser Geschäftssitz.
+                {t('agb.sections.16.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">17. Schlussbestimmungen</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.17.title')}</h2>
               <p className="text-gray-300 mb-6">
-                Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, so berührt dies die Wirksamkeit der übrigen Bestimmungen nicht. An die Stelle der unwirksamen Bestimmung tritt die gesetzlich zulässige Regelung, die dem Zweck der unwirksamen Bestimmung am nächsten kommt.
+                {t('agb.sections.17.content')}
               </p>
               
-              <h2 className="text-2xl font-semibold text-white mb-4">18. Kontakt</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">{t('agb.sections.18.title')}</h2>
               <p className="text-gray-300">
-                Bei Fragen zu diesen AGB kontaktieren Sie uns bitte unter:
+                {t('agb.sections.18.content')}
                 <br /><br />
-                Leonard Marx<br />
-                Musterstraße 14<br />
-                14527 Deutschland<br />
-                <a href="mailto:kontakt@Viva La Lingo.app" className="text-primary-300 hover:text-primary-200">
-                  kontakt@Viva La Lingo.app
+                {t('agb.sections.18.contactInfo.name')}<br />
+                {t('agb.sections.18.contactInfo.street')}<br />
+                {t('agb.sections.18.contactInfo.location')}<br />
+                <a href={`mailto:${t('agb.sections.18.contactInfo.email')}`} className="text-primary-300 hover:text-primary-200">
+                  {t('agb.sections.18.contactInfo.email')}
                 </a>
               </p>
             </div>

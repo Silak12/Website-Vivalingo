@@ -8,24 +8,27 @@ import {
   shuffleCodes,
   formatCountdown
 } from '../../utils/discountCodeGenerator';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const DiscountSection: React.FC = () => {
-  // Anzahl der anzuzeigenden Codes
+  const { t } = useLanguage();
+  
+  // Number of codes to display
   const CODES_COUNT = 150;
-  // Countdown-Zeit in Sekunden (24 Stunden)
+  // Countdown time in seconds (24 hours)
   const COUNTDOWN_TIME = 24 * 60 * 60;
   
-  // State für Rabattcodes und aktiven Code
+  // States for discount codes and active code
   const [discountCodes, setDiscountCodes] = useState<string[]>([]);
   const [activeCode, setActiveCode] = useState<string>('');
   const [isCodeUsed, setIsCodeUsed] = useState(false);
   const [countdown, setCountdown] = useState(COUNTDOWN_TIME);
   
-  // Verweise für Animationen
+  // Refs for animations
   const sectionRef = useRef<HTMLDivElement>(null);
   const codesGridRef = useRef<HTMLDivElement>(null);
 
-  // Generiere Codes beim ersten Rendern
+  // Generate codes on first render
   useEffect(() => {
     const codes = generateDiscountCodes(CODES_COUNT, 6, 'VIVA');
     const shuffledCodes = shuffleCodes(codes);
@@ -35,7 +38,7 @@ const DiscountSection: React.FC = () => {
     setActiveCode(selectedActiveCode);
   }, []);
 
-  // Countdown-Timer, wenn Code verwendet wurde
+  // Countdown timer when code is used
   useEffect(() => {
     let timer: NodeJS.Timeout;
     
@@ -45,12 +48,12 @@ const DiscountSection: React.FC = () => {
       }, 1000);
     }
     
-    // Wenn Countdown abgelaufen ist, setze zurück
+    // When countdown expires, reset
     if (countdown === 0) {
       setIsCodeUsed(false);
       setCountdown(COUNTDOWN_TIME);
       
-      // Wähle einen neuen aktiven Code
+      // Choose a new active code
       const newActiveCode = selectRandomCode(
         discountCodes.filter(code => code !== activeCode)
       );
@@ -62,10 +65,10 @@ const DiscountSection: React.FC = () => {
     };
   }, [isCodeUsed, countdown, activeCode, discountCodes]);
 
-  // Konfetti-Animation für den aktiven Code
+  // Confetti animation for the active code
   useEffect(() => {
-    if (sectionRef.current && codesGridRef.current) {
-      // Confetti-ähnliche Animation, wenn ein Code aktiviert wird
+    if (sectionRef.current && codesGridRef.current && isCodeUsed) {
+      // Confetti-like animation when a code is activated
       const createConfetti = () => {
         const confettiCount = 100;
         const colors = ['#0e98f0', '#f03a6a', '#bcbc23', '#8B5CF6'];
@@ -76,24 +79,24 @@ const DiscountSection: React.FC = () => {
           confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
           confetti.style.position = 'absolute';
           
-          // Startposition
+          // Start position
           const startX = window.innerWidth / 2;
           const startY = sectionRef.current!.offsetTop + 200;
           
-          // Setze Startposition
+          // Set start position
           confetti.style.left = `${startX}px`;
           confetti.style.top = `${startY}px`;
           
-          // Füge zum DOM hinzu
+          // Add to DOM
           document.body.appendChild(confetti);
           
-          // Zufällige Richtung, Größe und Rotation
+          // Random direction, size and rotation
           const angle = Math.random() * Math.PI * 2;
           const distance = 100 + Math.random() * 300;
           const destX = startX + Math.cos(angle) * distance;
           const destY = startY + Math.sin(angle) * distance;
           
-          // Animiere mit GSAP
+          // Animate with GSAP
           gsap.to(confetti, {
             x: destX - startX,
             y: destY - startY,
@@ -102,26 +105,23 @@ const DiscountSection: React.FC = () => {
             duration: 1 + Math.random() * 2,
             ease: 'power1.out',
             onComplete: () => {
-              // Entferne nach Animation
+              // Remove after animation
               document.body.removeChild(confetti);
             }
           });
         }
       };
       
-      // Effekt beim Verwenden des Codes
-      if (isCodeUsed) {
-        createConfetti();
-      }
+      createConfetti();
     }
   }, [isCodeUsed]);
 
-  // Behandle Klick auf einen Code
+  // Handle click on a code
   const handleCodeClick = (code: string) => {
     if (code === activeCode && !isCodeUsed) {
       setIsCodeUsed(true);
       
-      // Scrolle zum aktiven Code
+      // Scroll to the active code
       const activeCodeElement = document.getElementById(`code-${code}`);
       if (activeCodeElement) {
         activeCodeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -129,7 +129,7 @@ const DiscountSection: React.FC = () => {
     }
   };
 
-  // Animationsvarianten für Container
+  // Animation variants for container
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -140,7 +140,7 @@ const DiscountSection: React.FC = () => {
     }
   };
   
-  // Animationsvarianten für einzelne Codes
+  // Animation variants for individual codes
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -159,7 +159,7 @@ const DiscountSection: React.FC = () => {
         viewport={{ once: true }}
         className="text-center mb-6"
       >
-        <h3 className="text-2xl font-bold mb-3">Finde den 100% Rabattcode! Teste ihn in der App!</h3>
+        <h3 className="text-2xl font-bold mb-3">{t('discountSection.title')}</h3>
         <div className="mb-2 flex items-center justify-center">
           <span className={`font-medium px-3 py-1 rounded-full inline-flex items-center ${
             isCodeUsed ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'
@@ -169,14 +169,14 @@ const DiscountSection: React.FC = () => {
                 <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
-                Code wurde verwendet!
+                {t('discountSection.codeUsed.label')}
               </>
             ) : (
               <>
                 <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
-                Code wurde noch nicht verwendet
+                {t('discountSection.codeAvailable.label')}
               </>
             )}
           </span>
@@ -192,9 +192,9 @@ const DiscountSection: React.FC = () => {
               className="text-center mt-4 mb-2 bg-red-50 p-3 rounded-lg inline-block"
             >
               <p className="font-bold">
-                Der Code wurde verwendet!
+                {t('discountSection.codeUsed.title')}
                 <br />
-                Nächster Code wird aktiv in:
+                {t('discountSection.codeUsed.nextCode')}
                 <span className="text-red-600 ml-2">{formatCountdown(countdown)}</span>
               </p>
             </motion.div>
@@ -202,8 +202,7 @@ const DiscountSection: React.FC = () => {
         )}
         
         <p className="text-gray-600 max-w-2xl mx-auto mt-3">
-          Wir haben 150 Codes versteckt, aber nur EINER ist derzeit aktiv für 100% Rabatt. 
-          Wenn er bereits benutzt wurde, siehst du einen 24-Stunden-Countdown.
+          {t('discountSection.description')}
         </p>
       </motion.div>
       

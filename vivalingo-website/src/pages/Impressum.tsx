@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import AnimatedText from '../components/shared/AnimatedText';
 import Layout from '../components/layout/Layout';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Impressum: React.FC = () => {
+  const { t } = useLanguage();
   const pageRef = useRef<HTMLDivElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
@@ -98,7 +100,7 @@ const Impressum: React.FC = () => {
         <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-3xl">
           <div className="text-center mb-12">
             <AnimatedText
-              text="Impressum"
+              text={t('impressum.title')}
               className="text-4xl md:text-5xl font-bold mb-6 text-white"
               as="h1"
             />
@@ -112,49 +114,49 @@ const Impressum: React.FC = () => {
             className="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-lg border border-white/10 mb-12"
           >
             <div className="prose prose-lg prose-invert max-w-none">
-              <h2 className="text-2xl font-semibold text-white mb-6">Angaben gemäß § 5 TMG</h2>
+              <h2 className="text-2xl font-semibold text-white mb-6">{t('impressum.companyInfo.title')}</h2>
               
               <p className="text-gray-300 mb-4">
-                Leonard Marx<br />
-                Musterstraße 14<br />
-                14527 Deutschland
+                {t('impressum.companyInfo.name')}<br />
+                {t('impressum.companyInfo.street')}<br />
+                {t('impressum.companyInfo.location')}
               </p>
               
-              <h3 className="text-xl font-semibold text-white mb-4 mt-8">Kontakt</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 mt-8">{t('impressum.contact.title')}</h3>
               <p className="text-gray-300 mb-4">
-                E-Mail: <a href="mailto:kontakt@Viva La Lingo.app" className="text-primary-300 hover:text-primary-200">
-                  kontakt@Viva La Lingo.app
+                {t('impressum.contact.email')}: <a href={`mailto:${t('impressum.contact.emailAddress')}`} className="text-primary-300 hover:text-primary-200">
+                  {t('impressum.contact.emailAddress')}
                 </a><br />
-                Website: <a href="https://www.Viva La Lingo.app" target="_blank" rel="noopener noreferrer" className="text-primary-300 hover:text-primary-200">
-                  www.Viva La Lingo.app
+                {t('impressum.contact.website')}: <a href={t('impressum.contact.websiteUrl')} target="_blank" rel="noopener noreferrer" className="text-primary-300 hover:text-primary-200">
+                  {t('impressum.contact.websiteUrl')}
                 </a>
               </p>
               
-              <h3 className="text-xl font-semibold text-white mb-4 mt-8">Umsatzsteuer-ID</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 mt-8">{t('impressum.vatId.title')}</h3>
               <p className="text-gray-300 mb-4">
-                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                DE123456789
+                {t('impressum.vatId.description')}<br />
+                {t('impressum.vatId.number')}
               </p>
               
-              <h3 className="text-xl font-semibold text-white mb-4 mt-8">Verantwortlich für den Inhalt</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 mt-8">{t('impressum.responsible.title')}</h3>
               <p className="text-gray-300 mb-4">
-                Leonard Marx<br />
-                Musterstraße 14<br />
-                14527 Deutschland
+                {t('impressum.responsible.name')}<br />
+                {t('impressum.responsible.street')}<br />
+                {t('impressum.responsible.location')}
               </p>
               
-              <h3 className="text-xl font-semibold text-white mb-4 mt-8">EU-Streitschlichtung</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 mt-8">{t('impressum.disputeResolution.euTitle')}</h3>
               <p className="text-gray-300 mb-4">
-                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-primary-300 hover:text-primary-200">
-                  https://ec.europa.eu/consumers/odr/
+                {t('impressum.disputeResolution.euDescription')} 
+                <a href={t('impressum.disputeResolution.euLink')} target="_blank" rel="noopener noreferrer" className="text-primary-300 hover:text-primary-200">
+                  {t('impressum.disputeResolution.euLink')}
                 </a>.
-                Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                {t('impressum.disputeResolution.emailNote')}
               </p>
               
-              <h3 className="text-xl font-semibold text-white mb-4 mt-8">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 mt-8">{t('impressum.disputeResolution.generalTitle')}</h3>
               <p className="text-gray-300">
-                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                {t('impressum.disputeResolution.generalDescription')}
               </p>
             </div>
           </motion.div>

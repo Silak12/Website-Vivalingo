@@ -4,8 +4,10 @@ import gsap from 'gsap';
 import AnimatedText from '../components/shared/AnimatedText';
 import Button from '../components/shared/Button';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
   const pageRef = useRef<HTMLDivElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
@@ -148,7 +150,7 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-3xl">
         <div className="text-center mb-12">
           <AnimatedText
-            text="About Viva La Lingo"
+            text={t('about.title')}
             className="text-4xl md:text-5xl font-bold mb-6 text-white"
             as="h1"
           />
@@ -163,23 +165,23 @@ const About: React.FC = () => {
         >
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-gray-300 mb-6">
-              Hey there! I'm the creator of Viva La Lingo. This app started as a personal project — I simply wanted a better way to learn languages for myself using the Birkenbihl method.
+              {t('about.story.0')}
             </p>
             
             <p className="text-gray-300 mb-6">
-              What happened next was unexpected. When friends and family saw me using the app, they wanted it too. Before I knew it, I had accidentally poured 5 months into development, refining and expanding the app far beyond my initial plans.
+              {t('about.story.1')}
             </p>
             
             <p className="text-gray-300 mb-6">
-              I figured, if my close circle found it useful, maybe others would too. So here we are! I've released Viva La Lingo to the world in hopes that others can benefit from this powerful language learning method just like I have.
+              {t('about.story.2')}
             </p>
             
             <p className="text-gray-300 mb-6">
-              Full disclosure: this is a one-person operation. That means if I'm a little slow to implement new features, it's because it's just me behind the scenes! But I'm always working on improvements and eager to make this app the best it can be.
+              {t('about.story.3')}
             </p>
             
             <p className="text-gray-300">
-              I'm completely open to feedback and suggestions. So if you have ideas about how to make Viva La Lingo better, I'm all ears!
+              {t('about.story.4')}
             </p>
           </div>
         </motion.div>
@@ -191,7 +193,7 @@ const About: React.FC = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl font-semibold text-white mb-6">Get In Touch</h2>
+          <h2 className="text-2xl font-semibold text-white mb-6">{t('about.contact.title')}</h2>
           
           {/* Email address */}
           <a 
@@ -202,7 +204,7 @@ const About: React.FC = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span>Viva La Lingoapp@gmail.com</span>
+              <span>{t('about.contact.email')}</span>
             </div>
           </a>
           
@@ -230,7 +232,7 @@ const About: React.FC = () => {
                 size="lg"
                 className="shadow-lg shadow-primary-500/30"
               >
-                Download Viva La Lingo
+                {t('about.downloadButton')}
               </Button>
             </Link>
           </div>
