@@ -4,8 +4,10 @@ import gsap from 'gsap';
 import Button from '../shared/Button';
 import AnimatedText from '../shared/AnimatedText';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const PricingSection: React.FC = () => {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<'monthly' | 'yearly' | 'lifetime'>('yearly');
   
   // Refs for animation elements
@@ -13,53 +15,44 @@ const PricingSection: React.FC = () => {
   const circleRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
 
+  // Helper function to safely get translated arrays
+  const getTranslatedArray = (key: string): string[] => {
+    const translation = t(key, { returnObjects: true });
+    return Array.isArray(translation) ? translation : [];
+  };
+
   // Dynamic pricing content based on active tab
   const getPricingDetails = () => {
     switch(activeTab) {
       case 'monthly':
         return {
-          price: '2.99',
-          period: 'month',
-          savings: '',
-          features: [
-            'Full access to all languages',
-            'Ad-free experience',
-            'Unlimited audio control',
-            'Multiple language switching'
-          ],
+          price: t('pricingSection.cards.monthly.price'),
+          period: t('pricingSection.cards.monthly.period'),
+          savings: t('pricingSection.cards.monthly.savings'),
+          features: getTranslatedArray('pricingSection.features.monthly'),
           freeTrialAvailable: true
         };
       case 'yearly':
         return {
-          price: '12.99',
-          period: 'year',
-          savings: 'Save 64% compared to monthly',
-          features: [
-            'Full access to all languages',
-            'Ad-free experience',
-            'Priority customer support',
-            'Downloadable content for offline use'
-          ],
+          price: t('pricingSection.cards.yearly.price'),
+          period: t('pricingSection.cards.yearly.period'),
+          savings: t('pricingSection.cards.yearly.savings'),
+          features: getTranslatedArray('pricingSection.features.yearly'),
           freeTrialAvailable: true
         };
       case 'lifetime':
         return {
-          price: '49.99',
-          period: 'one-time payment',
-          savings: 'Best value - No recurring payments',
-          features: [
-            'One time payment',
-            'Access to all future updates',
-            'Full access to all languages',
-            'Ad-free experience'
-          ],
+          price: t('pricingSection.cards.lifetime.price'),
+          period: t('pricingSection.cards.lifetime.period'),
+          savings: t('pricingSection.cards.lifetime.savings'),
+          features: getTranslatedArray('pricingSection.features.lifetime'),
           freeTrialAvailable: false
         };
       default:
         return {
-          price: '2.99',
-          period: 'month',
-          savings: '',
+          price: t('pricingSection.cards.monthly.price'),
+          period: t('pricingSection.cards.monthly.period'),
+          savings: t('pricingSection.cards.monthly.savings'),
           features: [],
           freeTrialAvailable: true
         };
@@ -186,12 +179,12 @@ const PricingSection: React.FC = () => {
       <div className="container-custom relative z-10">
         <div className="text-center mb-12">
           <AnimatedText
-            text="Choose Your Plan"
+            text={t('pricingSection.title')}
             className="text-4xl md:text-5xl font-bold mb-4 text-white"
             as="h2"
           />
           <AnimatedText
-            text="Simple pricing, powerful features, and no hidden fees"
+            text={t('pricingSection.subtitle')}
             className="text-lg text-gray-300 max-w-2xl mx-auto"
             as="p"
             delay={0.2}
@@ -207,7 +200,7 @@ const PricingSection: React.FC = () => {
                 activeTab === 'monthly' ? 'bg-primary-500 text-white shadow-md' : 'text-white hover:bg-white/10'
               }`}
             >
-              Monthly
+              {t('pricingSection.tabs.monthly')}
             </button>
             <button
               onClick={() => setActiveTab('yearly')}
@@ -216,8 +209,10 @@ const PricingSection: React.FC = () => {
               }`}
             >
               <span className="flex flex-col items-center justify-center">
-                <span>Yearly</span>
-                <span className={`text-xs font-medium ${activeTab === 'yearly' ? 'text-white/80' : 'text-green-300'}`}>Save 64%</span>
+                <span>{t('pricingSection.tabs.yearly')}</span>
+                <span className={`text-xs font-medium ${activeTab === 'yearly' ? 'text-white/80' : 'text-green-300'}`}>
+                  {t('pricingSection.tabs.yearlySavings')}
+                </span>
               </span>
             </button>
             <button
@@ -227,8 +222,10 @@ const PricingSection: React.FC = () => {
               }`}
             >
               <span className="flex flex-col items-center justify-center">
-                <span>Lifetime</span>
-                <span className={`text-xs font-medium ${activeTab === 'lifetime' ? 'text-white/80' : 'text-yellow-300'}`}>Best value</span>
+                <span>{t('pricingSection.tabs.lifetime')}</span>
+                <span className={`text-xs font-medium ${activeTab === 'lifetime' ? 'text-white/80' : 'text-yellow-300'}`}>
+                  {t('pricingSection.tabs.lifetimeBestValue')}
+                </span>
               </span>
             </button>
           </div>
@@ -246,19 +243,19 @@ const PricingSection: React.FC = () => {
           <div className="relative bg-gradient-to-r from-primary-600 to-primary-500 px-8 py-8 text-white">
             {activeTab === 'lifetime' && (
               <div className="absolute top-0 right-0 bg-yellow-400 text-primary-900 font-bold px-4 py-2 rounded-bl-lg flex items-center">
-                <span className="mr-1">👑</span> BEST VALUE
+                <span className="mr-1">👑</span> {t('pricingSection.cards.lifetime.tag')}
               </div>
             )}
             {activeTab === 'yearly' && (
               <div className="absolute top-0 right-0 bg-green-400 text-green-900 font-bold px-4 py-2 rounded-bl-lg flex items-center">
-                <span className="mr-1">⭐</span> POPULAR
+                <span className="mr-1">⭐</span> {t('pricingSection.cards.yearly.tag')}
               </div>
             )}
             
             <h3 className="text-xl font-bold mb-2 flex items-center">
-              {activeTab === 'monthly' && 'Monthly Access'}
-              {activeTab === 'yearly' && 'Yearly Access'}
-              {activeTab === 'lifetime' && 'Lifetime Access'}
+              {activeTab === 'monthly' && t('pricingSection.cards.monthly.title')}
+              {activeTab === 'yearly' && t('pricingSection.cards.yearly.title')}
+              {activeTab === 'lifetime' && t('pricingSection.cards.lifetime.title')}
             </h3>
             
             <div className="flex items-baseline">
@@ -276,7 +273,7 @@ const PricingSection: React.FC = () => {
           {/* Card Body */}
           <div className="p-8">
             <div className="mb-6">
-              <div className="text-lg font-semibold mb-4 text-white">Includes:</div>
+              <div className="text-lg font-semibold mb-4 text-white">{t('pricingSection.features.title')}</div>
               <motion.ul 
                 variants={containerVariants}
                 initial="hidden"
@@ -304,10 +301,10 @@ const PricingSection: React.FC = () => {
             {details.freeTrialAvailable && (
               <div className="bg-black/20 backdrop-blur-sm p-4 rounded-lg mb-8 border border-white/5">
                 <div className="font-medium text-white mb-2 flex items-center">
-                  <span className="mr-2">🎁</span> 7-day free trial
+                  <span className="mr-2">🎁</span> {t('pricingSection.freeTrial.title')}
                 </div>
                 <p className="text-sm text-gray-300">
-                  Try all features with no commitment. Cancel anytime before the trial ends.
+                  {t('pricingSection.freeTrial.description')}
                 </p>
               </div>
             )}
@@ -320,7 +317,7 @@ const PricingSection: React.FC = () => {
                   className="flex-1 flex items-center justify-center bg-white/5 border-white/20 text-white hover:bg-white/10"
                   icon={<span className="mr-2">🍎</span>}
                 >
-                  App Store
+                  {t('pricingSection.buttons.appStore')}
                 </Button>
                 <Button
                   variant="outline"
@@ -328,7 +325,7 @@ const PricingSection: React.FC = () => {
                   className="flex-1 flex items-center justify-center bg-white/5 border-white/20 text-white hover:bg-white/10"
                   icon={<span className="mr-2">🤖</span>}
                 >
-                  Play Store
+                  {t('pricingSection.buttons.playStore')}
                 </Button>
               </div>
             </div>

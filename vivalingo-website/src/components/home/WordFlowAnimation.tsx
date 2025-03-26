@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 interface WordPair {
   original: string;
@@ -8,20 +9,21 @@ interface WordPair {
 }
 
 const WordFlowAnimation: React.FC = () => {
+  const { t } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
   const wordListRef = useRef<HTMLDivElement>(null);
   const staticTextRef = useRef<HTMLDivElement>(null);
   const [activeWordIndex, setActiveWordIndex] = useState(0);
   
-  // Word pairs highlighting intuitive learning methods
+  // Word pairs highlighting intuitive learning methods - using translations
   const wordPairs: WordPair[] = [
-    { original: 'No grammar rules', translation: '文法ルールなし' },             // Japanese
-    { original: 'No vocabulary drills', translation: 'без заучування слів' },    // Ukrainian
-    { original: 'Learn intuitively', translation: 'intuitiv lernen' },           // German
-    { original: 'Real-life dialogues', translation: '실제 생활 대화' },            // Korean
-    { original: 'Speak confidently', translation: 'habla con confianza' },       // Spanish
-    { original: 'Natural understanding', translation: 'luonnollinen ymmärrys' }, // Finnish
-    { original: 'Immediate results', translation: '即効性のある成果' },             // Japanese
+    { original: t('wordFlow.words.0.original'), translation: t('wordFlow.words.0.translation') },
+    { original: t('wordFlow.words.1.original'), translation: t('wordFlow.words.1.translation') },
+    { original: t('wordFlow.words.2.original'), translation: t('wordFlow.words.2.translation') },
+    { original: t('wordFlow.words.3.original'), translation: t('wordFlow.words.3.translation') },
+    { original: t('wordFlow.words.4.original'), translation: t('wordFlow.words.4.translation') },
+    { original: t('wordFlow.words.5.original'), translation: t('wordFlow.words.5.translation') },
+    { original: t('wordFlow.words.6.original'), translation: t('wordFlow.words.6.translation') },
   ];
   
   // IMPROVED SCROLL DETECTION with smoother progression and better end visibility
@@ -85,7 +87,7 @@ const WordFlowAnimation: React.FC = () => {
     >
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center">
-          {/* Static Vivalingo Text */}
+          {/* Static Viva La Lingo Text */}
           <div 
             ref={staticTextRef}
             className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0"
@@ -97,7 +99,7 @@ const WordFlowAnimation: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Vivalingo<span className="text-primary-400">.</span>
+              {t('wordFlow.title')}
             </motion.h2>
             <motion.p
               className="text-gray-600 mt-4 max-w-md"
@@ -106,7 +108,7 @@ const WordFlowAnimation: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              From listener to speaker: Gain confidence and speak up immediately.
+              {t('wordFlow.subtitle')}
             </motion.p>
           </div>
           
@@ -172,7 +174,7 @@ const WordFlowAnimation: React.FC = () => {
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                   </svg>
-                  <span>Scroll to see more</span>
+                  <span>{t('wordFlow.scrollToSee')}</span>
                 </div>
               </div>
             )}

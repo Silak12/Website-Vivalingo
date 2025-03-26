@@ -11,8 +11,8 @@ interface BudgetItem {
 }
 
 const BudgetComparison: React.FC = () => {
-  // Vivalingo budget is fixed at 200€
-  const vivalingoBudget = 200;
+  // Viva La Lingo budget is fixed at 200€
+  const Viva La LingoBudget = 200;
   // Duolingo budget in millions
   const duolingoBudget = 70;
   
@@ -20,10 +20,10 @@ const BudgetComparison: React.FC = () => {
   const circleRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
   const duolingoContainerRef = useRef<HTMLDivElement>(null);
-  const vivalingoContainerRef = useRef<HTMLDivElement>(null);
+  const Viva La LingoContainerRef = useRef<HTMLDivElement>(null);
   
   // Toggle for "what I can buy" section
-  const [showVivalingoItems, setShowVivalingoItems] = useState(false);
+  const [showViva La LingoItems, setShowViva La LingoItems] = useState(false);
   
   // Animation variants
   const containerVariants = {
@@ -35,8 +35,8 @@ const BudgetComparison: React.FC = () => {
     }
   };
 
-  // Fun things Vivalingo can buy with their budget
-  const vivalingoItems: BudgetItem[] = [
+  // Fun things Viva La Lingo can buy with their budget
+  const Viva La LingoItems: BudgetItem[] = [
     { cost: 5, description: "A cup of coffee to fuel late-night coding", icon: "☕" },
     { cost: 15, description: "Premium domain for a month", icon: "🌐" },
     { cost: 25, description: "Stock photos that aren't obviously stock photos", icon: "📸" },
@@ -172,9 +172,9 @@ const BudgetComparison: React.FC = () => {
     }
   }, []);
   
-  // Coffee cup effect for Vivalingo - simplified version
+  // Coffee cup effect for Viva La Lingo - simplified version
   useEffect(() => {
-    if (vivalingoContainerRef.current && showVivalingoItems) {
+    if (Viva La LingoContainerRef.current && showViva La LingoItems) {
       const coffeeAnimation = () => {
         const steam = document.createElement('div');
         steam.className = 'absolute text-sm opacity-80 pointer-events-none';
@@ -184,7 +184,7 @@ const BudgetComparison: React.FC = () => {
         steam.style.left = '10%';
         steam.style.top = '40%';
         
-        vivalingoContainerRef.current?.appendChild(steam);
+        Viva La LingoContainerRef.current?.appendChild(steam);
         
         // Steam rising animation
         gsap.to(steam, {
@@ -193,7 +193,7 @@ const BudgetComparison: React.FC = () => {
           duration: 2,
           ease: "power1.out",
           onComplete: () => {
-            if (vivalingoContainerRef.current?.contains(steam)) {
+            if (Viva La LingoContainerRef.current?.contains(steam)) {
               steam.remove();
             }
           }
@@ -204,16 +204,16 @@ const BudgetComparison: React.FC = () => {
       
       return () => clearInterval(interval);
     }
-  }, [showVivalingoItems]);
+  }, [showViva La LingoItems]);
   
-  // Calculate what percentage of Duolingo's budget is Vivalingo's
-  const percentageOfDuolingo = (vivalingoBudget / (duolingoBudget * 1000000)) * 100;
+  // Calculate what percentage of Duolingo's budget is Viva La Lingo's
+  const percentageOfDuolingo = (Viva La LingoBudget / (duolingoBudget * 1000000)) * 100;
   
   // This creates a human-understandable comparison
   const calculateComparison = (): string => {
     // Formats to a readable ridiculous comparison
     if (percentageOfDuolingo < 0.0001) {
-      return `Duolingo spends your entire budget every ${Math.round(86400 * 365 / (duolingoBudget * 1000000 / vivalingoBudget))} seconds`;
+      return `Duolingo spends your entire budget every ${Math.round(86400 * 365 / (duolingoBudget * 1000000 / Viva La LingoBudget))} seconds`;
     } else if (percentageOfDuolingo < 0.001) {
       return `Duolingo spends your entire yearly budget before their morning coffee`;
     } else {
@@ -271,19 +271,19 @@ const BudgetComparison: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-lg border border-white/10">
             <div className="flex items-center mb-10">
               <div className="w-32 text-right pr-4 font-semibold">
-                <span className="text-primary-400">Vivalingo</span>
+                <span className="text-primary-400">Viva La Lingo</span>
               </div>
               
-              {/* Vivalingo budget bar */}
+              {/* Viva La Lingo budget bar */}
               <div className="relative flex-grow h-10 bg-gray-700/50 rounded-full overflow-hidden flex items-center">
                 <div 
                   className="h-full bg-primary-500 flex items-center justify-start pl-2 rounded-full"
                   style={{ width: `${Math.max(2, percentageOfDuolingo)}%` }}
                 >
-                  {percentageOfDuolingo > 5 ? `€${formatNumber(vivalingoBudget)}` : ''}
+                  {percentageOfDuolingo > 5 ? `€${formatNumber(Viva La LingoBudget)}` : ''}
                 </div>
                 {percentageOfDuolingo <= 5 && (
-                  <span className="ml-3 text-sm text-white">{`€${formatNumber(vivalingoBudget)}`}</span>
+                  <span className="ml-3 text-sm text-white">{`€${formatNumber(Viva La LingoBudget)}`}</span>
                 )}
                 
                 {/* Microscope icon for tiny budget */}
@@ -334,18 +334,18 @@ const BudgetComparison: React.FC = () => {
         
         {/* What can you buy with these budgets - Simplified layout for both */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Vivalingo Budget */}
+          {/* Viva La Lingo Budget */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg border border-white/10"
-            ref={vivalingoContainerRef}
+            ref={Viva La LingoContainerRef}
           >
             <h3 className="text-xl font-semibold mb-4 text-white flex items-center">
-              <span className="text-primary-400 mr-2">Vivalingo</span>
-              <span className="text-lg">({formatNumber(vivalingoBudget)}€)</span>
+              <span className="text-primary-400 mr-2">Viva La Lingo</span>
+              <span className="text-lg">({formatNumber(Viva La LingoBudget)}€)</span>
             </h3>
             
             <p className="text-gray-300 mb-6">
@@ -355,15 +355,15 @@ const BudgetComparison: React.FC = () => {
             <Button 
               variant="primary" 
               size="md" 
-              onClick={() => setShowVivalingoItems(!showVivalingoItems)}
+              onClick={() => setShowViva La LingoItems(!showViva La LingoItems)}
               className="w-full mb-4 shadow-lg shadow-primary-500/30"
             >
-              {showVivalingoItems ? "Hide Items" : "Show What We Can Buy"}
+              {showViva La LingoItems ? "Hide Items" : "Show What We Can Buy"}
             </Button>
             
-            {showVivalingoItems && (
+            {showViva La LingoItems && (
               <div className="space-y-3 mt-6 bg-black/20 backdrop-blur-sm p-4 rounded-lg">
-                {vivalingoItems.map((item, index) => (
+                {Viva La LingoItems.map((item, index) => (
                   <motion.div 
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
@@ -382,12 +382,12 @@ const BudgetComparison: React.FC = () => {
                   </motion.div>
                 ))}
                 <div className="text-center text-sm text-gray-300 mt-2">
-                  Budget spent: {vivalingoItems.reduce((sum, item) => sum + item.cost, 0)}€ of {vivalingoBudget}€
+                  Budget spent: {Viva La LingoItems.reduce((sum, item) => sum + item.cost, 0)}€ of {Viva La LingoBudget}€
                 </div>
               </div>
             )}
             
-            {!showVivalingoItems && (
+            {!showViva La LingoItems && (
               <div className="opacity-60 text-center py-8">
                 <div className="text-4xl mb-2">☕</div>
                 <div className="text-sm text-gray-300">Click above to see what we can afford</div>
@@ -458,14 +458,14 @@ const BudgetComparison: React.FC = () => {
               <div className="bg-black/20 backdrop-blur-sm p-4 rounded-lg flex-1">
                 <div className="text-4xl mb-2">🦉</div>
                 <h4 className="font-semibold text-green-400">Duolingo</h4>
-                <p className="text-sm mt-2 text-gray-300">Spends {formatNumber(Math.round(duolingoBudget * 1000000 / vivalingoBudget))} times more than us</p>
+                <p className="text-sm mt-2 text-gray-300">Spends {formatNumber(Math.round(duolingoBudget * 1000000 / Viva La LingoBudget))} times more than us</p>
               </div>
               
               <div className="text-4xl font-bold text-gray-500">VS</div>
               
               <div className="bg-black/20 backdrop-blur-sm p-4 rounded-lg flex-1">
                 <div className="text-4xl mb-2">🚀</div>
-                <h4 className="font-semibold text-primary-400">Vivalingo</h4>
+                <h4 className="font-semibold text-primary-400">Viva La Lingo</h4>
                 <p className="text-sm mt-2 text-gray-300">We put our budget where it matters - in the product</p>
               </div>
             </div>

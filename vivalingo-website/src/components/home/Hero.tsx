@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import Button from '../shared/Button';
 import AnimatedText from '../shared/AnimatedText';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 interface Word {
   original: string;
@@ -24,6 +25,8 @@ interface Phrase {
 }
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+  
   const heroRef = useRef<HTMLDivElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
   const phoneRef = useRef<HTMLDivElement>(null);
@@ -40,26 +43,28 @@ const Hero: React.FC = () => {
   // Demo phrases for the phone app animation with Birkenbihl's decoding approach
   const phrases: Phrase[] = [
     {
-      sourceLanguage: "Japanisch",
+      sourceLanguage: t('hero.languagePhrases.japanese.lang'),
       sourceLanguageCode: "JA",
       sourceColor: "bg-red-500",
-      targetLanguage: "Deutsch",
-      targetLanguageCode: "DE",
+      targetLanguage: t('hero.languagePhrases.spanish.lang') === "Spanisch" ? "Deutsch" : "English",
+      targetLanguageCode: t('hero.languagePhrases.spanish.lang') === "Spanisch" ? "DE" : "EN",
       targetColor: "bg-yellow-600",
       originalSentence: "私は毎日日本語を勉強します",
       decodedWords: [
-        { original: "私は", decoded: ["Ich"], highlightIndices: [0] },
-        { original: "毎日", decoded: ["jeden", "Tag"], highlightIndices: [1, 2] },
-        { original: "日本語を", decoded: ["Japanisch"], highlightIndices: [3] },
-        { original: "勉強します", decoded: ["studiere"], highlightIndices: [4] }
+        { original: "私は", decoded: [t('hero.languagePhrases.spanish.lang') === "Spanisch" ? "Ich" : "I"], highlightIndices: [0] },
+        { original: "毎日", decoded: t('hero.languagePhrases.spanish.lang') === "Spanisch" ? ["jeden", "Tag"] : ["every", "day"], highlightIndices: [1, 2] },
+        { original: "日本語を", decoded: [t('hero.languagePhrases.japanese.lang')], highlightIndices: [3] },
+        { original: "勉強します", decoded: [t('hero.languagePhrases.spanish.lang') === "Spanisch" ? "studiere" : "study"], highlightIndices: [4] }
       ],
-      targetSentence: "Ich jeden Tag Japanisch studiere"
+      targetSentence: t('hero.languagePhrases.spanish.lang') === "Spanisch" 
+        ? "Ich jeden Tag Japanisch studiere" 
+        : "I every day Japanese study"
     },
     {
-      sourceLanguage: "Spanisch",
+      sourceLanguage: t('hero.languagePhrases.spanish.lang'),
       sourceLanguageCode: "ES",
       sourceColor: "bg-yellow-600",
-      targetLanguage: "Englisch",
+      targetLanguage: t('hero.languagePhrases.spanish.lang') === "Spanisch" ? "Englisch" : "English",
       targetLanguageCode: "EN",
       targetColor: "bg-blue-500",
       originalSentence: "Me gusta aprender sin reglas gramaticales",
@@ -74,10 +79,10 @@ const Hero: React.FC = () => {
       targetSentence: "I like to learn without rules grammatical"
     },
     {
-      sourceLanguage: "Französisch",
+      sourceLanguage: t('hero.languagePhrases.french.lang'),
       sourceLanguageCode: "FR",
       sourceColor: "bg-blue-600",
-      targetLanguage: "Spanisch",
+      targetLanguage: t('hero.languagePhrases.spanish.lang'),
       targetLanguageCode: "ES",
       targetColor: "bg-red-600",
       originalSentence: "J'apprends naturellement avec cette méthode",
@@ -399,14 +404,14 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.7 }}
             >
               <AnimatedText
-                text="Learn Languages Naturally"
+                text={t('hero.title')}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
                 as="h1"
                 once={true}
               />
               
               <AnimatedText
-                text="Experience the power of the Birkenbihl method with Vivalingo. Learn without grammar rules, intuitively. Just like you learned your mother tongue."
+                text={t('hero.subtitle')}
                 className="text-lg text-white/80 mb-8 max-w-xl mx-auto md:mx-0"
                 as="p"
                 delay={0.3}
@@ -425,7 +430,7 @@ const Hero: React.FC = () => {
                       <path d="M12 22v-9.5m0 0l4 3-4-3-4 3m4-3V7.5" />
                       <path d="M20 14v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3" />
                     </svg>
-                    Start Learning Now
+                    {t('hero.startLearning')}
                   </Button>
                 </Link>
                 
@@ -440,7 +445,7 @@ const Hero: React.FC = () => {
                       <circle cx="12" cy="12" r="10" />
                       <polygon points="10 8 16 12 10 16 10 8" />
                     </svg>
-                    See How It Works
+                    {t('hero.seeHowItWorks')}
                   </Button>
                 </Link>
               </div>
@@ -454,12 +459,12 @@ const Hero: React.FC = () => {
                 <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
                   <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
                     <div className="text-yellow-400 text-lg">★★★★★</div>
-                    <span className="text-white">4.8/5 im App Store</span>
+                    <span className="text-white">{t('hero.appStoreRating')}</span>
                   </div>
                   
                   <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
                     <span className="text-white font-semibold">100k+</span>
-                    <span className="text-gray-300">zufriedene Nutzer</span>
+                    <span className="text-gray-300">{t('hero.satisfiedUsers')}</span>
                   </div>
                 </div>
               </motion.div>
@@ -469,21 +474,21 @@ const Hero: React.FC = () => {
                   <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>No grammar rules</span>
+                  <span>{t('hero.benefits.noGrammarRules')}</span>
                 </div>
                 
                 <div className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>From listener to speaker</span>
+                  <span>{t('hero.benefits.fromListenerToSpeaker')}</span>
                 </div>
                 
                 <div className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Natural language feel</span>
+                  <span>{t('hero.benefits.naturalLanguageFeel')}</span>
                 </div>
               </div>
             </motion.div>
@@ -511,7 +516,7 @@ const Hero: React.FC = () => {
                   >
                     {/* App Header */}
                     <div className="h-14 bg-primary-600 flex items-center justify-center">
-                      <div className="text-white font-bold text-lg">Vivalingo</div>
+                      <div className="text-white font-bold text-lg">Viva La Lingo</div>
                     </div>
                     
                     {/* Language UI */}
@@ -591,19 +596,19 @@ const Hero: React.FC = () => {
                       
                       {/* Birkenbihl Method Explanation */}
                       <div className="bg-gray-100 rounded-xl p-4 text-xs text-gray-800">
-                        <div className="mb-2 font-semibold">Birkenbihl-Methode:</div>
+                        <div className="mb-2 font-semibold">{t('hero.birkenbihlMethod.title')}</div>
                         <ol className="space-y-2 list-decimal pl-4">
                           <li className="text-xs">
-                            <span className="font-medium">Dekodierung:</span> Wort-für-Wort Übersetzung ohne Grammatikregeln
+                            <span className="font-medium">{t('hero.birkenbihlMethod.decoding').split(':')[0]}:</span> {t('hero.birkenbihlMethod.decoding').split(':')[1]}
                           </li>
                           <li className="text-xs">
-                            <span className="font-medium">Aktives Hören:</span> Text und Übersetzung gleichzeitig
+                            <span className="font-medium">{t('hero.birkenbihlMethod.activeListening').split(':')[0]}:</span> {t('hero.birkenbihlMethod.activeListening').split(':')[1]}
                           </li>
                           <li className="text-xs">
-                            <span className="font-medium">Passives Hören:</span> Audio im Hintergrund abspielen
+                            <span className="font-medium">{t('hero.birkenbihlMethod.passiveListening').split(':')[0]}:</span> {t('hero.birkenbihlMethod.passiveListening').split(':')[1]}
                           </li>
                           <li className="text-xs">
-                            <span className="font-medium">Aktivieren:</span> Sprache natürlich anwenden
+                            <span className="font-medium">{t('hero.birkenbihlMethod.activation').split(':')[0]}:</span> {t('hero.birkenbihlMethod.activation').split(':')[1]}
                           </li>
                         </ol>
                       </div>

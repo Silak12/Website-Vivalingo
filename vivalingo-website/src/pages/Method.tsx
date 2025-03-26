@@ -3,8 +3,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import gsap from 'gsap';
 import Button from '../components/shared/Button';
 import AnimatedText from '../components/shared/AnimatedText';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Method: React.FC = () => {
+  const { t } = useLanguage();
   const headerRef = useRef<HTMLDivElement>(null);
   const methodContainerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -141,47 +143,99 @@ const Method: React.FC = () => {
     }
   }, []);
   
-  // Phases content - expanded with more details
+  // Phases content - expanded with more details and using translations
   const phases = [
     {
       number: 1,
-      title: "Dekodieren",
-      description: "Der Text wird wortwörtlich übersetzt, sodass du den Inhalt direkt erfassen kannst. Diese Wort-für-Wort-Übersetzung hilft deinem Gehirn, Muster zu erkennen, statt Regeln zu lernen.",
+      title: t('method.phases.items.0.title'),
+      description: t('method.phases.items.0.description'),
       color: "bg-primary-500",
       textColor: "text-primary-500",
       shadowColor: "shadow-primary-500/20",
       icon: "🧠",
-      appFeature: "In der App sind alle Texte bereits wortgetreu übersetzt und farbkodiert, damit du direkt mit dem Lernen beginnen kannst, ohne Zeit mit Wörterbüchern zu verschwenden."
+      appFeature: t('method.phases.items.0.appFeature')
     },
     {
       number: 2,
-      title: "Aktives Hören & Sprechen",
-      description: "Höre den fremdsprachlichen Text während du die Übersetzung liest. Sprich die Wörter nach, sobald du dich sicher fühlst. Durch das Mitsprechen trainierst du aktiv deine Aussprache und verankerst die Sprache tiefer.",
+      title: t('method.phases.items.1.title'),
+      description: t('method.phases.items.1.description'),
       color: "bg-secondary-500",
       textColor: "text-secondary-500",
       shadowColor: "shadow-secondary-500/20",
       icon: "🔊",
-      appFeature: "Mit der Schildkröte (langsame Audio) und dem Hasen (schnelle Audio) kannst du dein Tempo anpassen. Fange mit der Schildkröte an und steigere dich. Durch Wiederholung und aktives Mitsprechen wirst du schnell Fortschritte merken."
+      appFeature: t('method.phases.items.1.appFeature')
     },
     {
       number: 3,
-      title: "Passives Hören",
-      description: "Lass die Sprache im Hintergrund laufen, während du anderen Tätigkeiten nachgehst. Dieses passive Hören hilft deinem Gehirn, sich an die Klänge der Sprache zu gewöhnen und vertieft das Gelernte unbewusst.",
+      title: t('method.phases.items.2.title'),
+      description: t('method.phases.items.2.description'),
       color: "bg-accent-500",
       textColor: "text-accent-500",
       shadowColor: "shadow-accent-500/20",
       icon: "👂",
-      appFeature: "Die App ermöglicht das Abspielen im Hintergrund, selbst wenn dein Bildschirm gesperrt ist. So kannst du beim Joggen, Kochen oder anderen Aktivitäten passiv weiterhören."
+      appFeature: t('method.phases.items.2.appFeature')
     },
     {
       number: 4,
-      title: "Anwenden & Prüfen",
-      description: "Probiere die Sprache aktiv aus, sei es im Gespräch oder beim Medienkonsum. Experimentiere mit dem Gelernten und lerne aus deinen Fehlern ohne Druck.",
+      title: t('method.phases.items.3.title'),
+      description: t('method.phases.items.3.description'),
       color: "bg-purple-500",
       textColor: "text-purple-500",
       shadowColor: "shadow-purple-500/20",
       icon: "🎯",
-      appFeature: "Nutze die Prüfungen in der App – sie können beliebig oft wiederholt werden, ohne Druck! So kannst du deine Aussprache testen und erkennst schnell, wo du noch Übung brauchst. Die Prüfungen sind deine Freunde, keine Hindernisse."
+      appFeature: t('method.phases.items.3.appFeature')
+    }
+  ];
+  
+  // Benefits data using translations
+  const benefits = [
+    {
+      title: t('method.benefits.items.0.title'),
+      description: t('method.benefits.items.0.description'),
+      icon: "🧠",
+      color: "bg-primary-400/20",
+      borderColor: "border-primary-400/30",
+      delay: 0.1
+    },
+    {
+      title: t('method.benefits.items.1.title'),
+      description: t('method.benefits.items.1.description'),
+      icon: "💡",
+      color: "bg-secondary-400/20",
+      borderColor: "border-secondary-400/30",
+      delay: 0.2
+    },
+    {
+      title: t('method.benefits.items.2.title'),
+      description: t('method.benefits.items.2.description'),
+      icon: "😌",
+      color: "bg-accent-400/20",
+      borderColor: "border-accent-400/30",
+      delay: 0.3
+    },
+    {
+      title: t('method.benefits.items.3.title'),
+      description: t('method.benefits.items.3.description'),
+      icon: "🔄",
+      color: "bg-primary-400/20",
+      borderColor: "border-primary-400/30",
+      delay: 0.4
+    },
+    {
+      title: t('method.benefits.items.4.title'),
+      description: t('method.benefits.items.4.description'),
+      icon: "📚",
+      color: "bg-secondary-400/20",
+      borderColor: "border-secondary-400/30",
+      delay: 0.5
+    },
+    {
+      title: t('method.benefits.items.5.title'),
+      description: t('method.benefits.items.5.description'),
+      icon: "👨‍👩‍👧‍👦",
+      color: "bg-accent-400/20",
+      borderColor: "border-accent-400/30",
+      delay: 0.6
     }
   ];
   
@@ -220,13 +274,13 @@ const Method: React.FC = () => {
         
         <div className="container-custom relative z-10 text-center">
           <AnimatedText
-            text="Die Birkenbihl-Methode"
+            text={t('method.hero.title')}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
             as="h1"
           />
           
           <AnimatedText
-            text="Entdecke die effektivste Art, Sprachen zu lernen, wie dein Gehirn es liebt"
+            text={t('method.hero.subtitle')}
             className="text-xl text-gray-200 max-w-2xl mx-auto mb-8"
             as="p"
             delay={0.2}
@@ -249,12 +303,12 @@ const Method: React.FC = () => {
             <div className="flex flex-wrap gap-4 justify-center">
               <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
                 <div className="text-yellow-400 text-lg">★★★★★</div>
-                <span className="text-white">Tausende begeisterte Lerner</span>
+                <span className="text-white">{t('method.hero.ratings.enthusiasts')}</span>
               </div>
               
               <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
-                <span className="text-white font-semibold">Wissenschaftlich</span>
-                <span className="text-gray-300">fundiert</span>
+                <span className="text-white font-semibold">{t('method.hero.ratings.scientific')}</span>
+                <span className="text-gray-300">{t('method.hero.ratings.foundedOn')}</span>
               </div>
             </div>
           </motion.div>
@@ -262,7 +316,7 @@ const Method: React.FC = () => {
         
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-          <span className="text-white/70 text-sm mb-2">Mehr erfahren</span>
+          <span className="text-white/70 text-sm mb-2">{t('method.hero.scrollDown')}</span>
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <div className="w-1.5 h-1.5 bg-white/70 rounded-full animate-bounce mt-2"></div>
           </div>
@@ -283,30 +337,25 @@ const Method: React.FC = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2 md:pr-10 mb-10 md:mb-0"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Wer war Vera F. Birkenbihl?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                {t('method.intro.title')}
+              </h2>
               <p className="text-gray-700 mb-4">
-                Vera F. Birkenbihl (1946-2011) war eine renommierte deutsche Managementtrainerin, 
-                Sachbuchautorin und Expertin für hirngerechtes Lernen und Lehren. Sie ist vor allem 
-                bekannt für ihre innovative Sprachlernmethode, die völlig anders funktioniert als 
-                herkömmliche Lehrmethoden.
+                {t('method.intro.paragraphs.0')}
               </p>
               <p className="text-gray-700 mb-4">
-                Ihre Methode basiert auf dem Verständnis, wie das menschliche Gehirn Sprachen 
-                natürlich erlernt – nämlich durch Verstehen und Kontext, nicht durch Grammatikregeln 
-                und stures Auswendiglernen.
+                {t('method.intro.paragraphs.1')}
               </p>
               
               {/* Added callout box */}
               <div className="bg-gradient-to-r from-primary-50 to-secondary-50 border-l-4 border-primary-500 p-4 rounded-r-lg shadow-sm my-6">
                 <p className="text-gray-700 italic">
-                  „Man kann eine Sprache nicht unterrichten, man kann nur die Bedingungen schaffen, 
-                  unter denen sie gelernt werden kann." – Vera F. Birkenbihl
+                  {t('method.intro.quote')}
                 </p>
               </div>
               
               <p className="text-gray-700">
-                Vivalingo bringt diese revolutionäre Methode in eine moderne App, die dir hilft, 
-                Sprachen auf die natürlichste und effektivste Weise zu erlernen.
+                {t('method.intro.appDescription')}
               </p>
             </motion.div>
             
@@ -344,7 +393,7 @@ const Method: React.FC = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent"
             >
-              Die 4 Phasen der Birkenbihl-Methode
+              {t('method.phases.title')}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -353,7 +402,7 @@ const Method: React.FC = () => {
               viewport={{ once: true }}
               className="text-lg text-gray-600 max-w-2xl mx-auto"
             >
-              Ein strukturierter Ansatz zum natürlichen Sprachenlernen, der mit deinem Gehirn arbeitet, nicht gegen es
+              {t('method.phases.subtitle')}
             </motion.p>
           </div>
           
@@ -405,7 +454,7 @@ const Method: React.FC = () => {
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-primary-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
-                          In der Vivalingo-App:
+                          In der Viva La Lingo-App:
                         </h4>
                         <p className="text-gray-600">
                           {phase.appFeature}
@@ -429,7 +478,7 @@ const Method: React.FC = () => {
                         {phase.number === 4 && (
                           <div className="mt-4 p-3 bg-purple-50 rounded-md border border-purple-100">
                             <p className="text-sm text-gray-600 italic">
-                              Keine Angst vor Prüfungen! In Vivalingo kannst du sie beliebig oft wiederholen, 
+                              Keine Angst vor Prüfungen! In Viva La Lingo kannst du sie beliebig oft wiederholen, 
                               um deine Aussprache und dein Verständnis zu verbessern.
                             </p>
                           </div>
@@ -460,7 +509,7 @@ const Method: React.FC = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold mb-4 text-white"
             >
-              Vorteile der Birkenbihl-Methode
+              {t('method.benefits.title')}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -469,61 +518,12 @@ const Method: React.FC = () => {
               viewport={{ once: true }}
               className="text-lg text-gray-200 max-w-2xl mx-auto"
             >
-              Warum diese Methode effektiver ist als traditionelles Sprachenlernen
+              {t('method.benefits.subtitle')}
             </motion.p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Natürliches Lernen",
-                description: "Lerne wie ein Kind – durch Verstehen und Anwendung, nicht durch Regeln und Auswendiglernen.",
-                icon: "🧠",
-                color: "bg-primary-400/20",
-                borderColor: "border-primary-400/30",
-                delay: 0.1
-              },
-              {
-                title: "Gehirngerecht",
-                description: "Die Methode nutzt die natürliche Funktionsweise deines Gehirns, was zu schnelleren und länger anhaltenden Ergebnissen führt.",
-                icon: "💡",
-                color: "bg-secondary-400/20",
-                borderColor: "border-secondary-400/30",
-                delay: 0.2
-              },
-              {
-                title: "Stressfrei",
-                description: "Lerne ohne Druck und Prüfungsangst – in deinem eigenen Tempo und mit Freude statt Frustration.",
-                icon: "😌",
-                color: "bg-accent-400/20",
-                borderColor: "border-accent-400/30",
-                delay: 0.3
-              },
-              {
-                title: "Nachhaltiges Lernen",
-                description: "Durch multisensorische Stimulation wird das Gelernte tief im Langzeitgedächtnis verankert.",
-                icon: "🔄",
-                color: "bg-primary-400/20",
-                borderColor: "border-primary-400/30",
-                delay: 0.4
-              },
-              {
-                title: "Kein Grammatikbüffeln",
-                description: "Verstehe Grammatik intuitiv durch Kontext statt durch abstrakte Regeln.",
-                icon: "📚",
-                color: "bg-secondary-400/20",
-                borderColor: "border-secondary-400/30",
-                delay: 0.5
-              },
-              {
-                title: "Für jeden geeignet",
-                description: "Ob Kind oder Erwachsener, Sprachtalent oder nicht – die Methode ist für alle zugänglich.",
-                icon: "👨‍👩‍👧‍👦",
-                color: "bg-accent-400/20",
-                borderColor: "border-accent-400/30",
-                delay: 0.6
-              },
-            ].map((benefit, index) => (
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -563,7 +563,7 @@ const Method: React.FC = () => {
                   viewport={{ once: true }}
                   className="text-3xl font-bold text-white mb-4"
                 >
-                  Bereit, Sprachen auf natürliche Weise zu lernen?
+                  {t('method.cta.title')}
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0, x: -30 }}
@@ -572,8 +572,7 @@ const Method: React.FC = () => {
                   viewport={{ once: true }}
                   className="text-white/90 mb-6"
                 >
-                  Mit Vivalingo erlebst du die Birkenbihl-Methode in einer modernen, benutzerfreundlichen App. 
-                  Starte jetzt deine Sprachlernreise und lerne Sprachen so wie deine Muttersprache!
+                  {t('method.cta.description')}
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -590,7 +589,7 @@ const Method: React.FC = () => {
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                     </svg>
-                    iOS App herunterladen
+                    {t('method.cta.iosDownload')}
                   </Button>
                   
                   <Button
@@ -601,7 +600,7 @@ const Method: React.FC = () => {
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3 20.5V3.5c0-.85.44-1.59 1.1-2.02L14.5 12 4.1 22.52c-.66-.43-1.1-1.17-1.1-2.02zM18.77 12L7 3.78l8.49 8.49-8.49 8.49L18.77 12zm-4.31 0l-1.65 9.71L5.21 12l7.6-9.71L14.46 12z" />
                     </svg>
-                    Android App herunterladen
+                    {t('method.cta.androidDownload')}
                   </Button>
                 </motion.div>
               </div>
@@ -619,8 +618,8 @@ const Method: React.FC = () => {
                   {/* Phone mockup */}
                   <div className="relative w-[200px] h-[400px] mx-auto rounded-[30px] border-[10px] border-gray-800 bg-gray-900 shadow-2xl overflow-hidden">
                     <img
-                      src="https://via.placeholder.com/300x600.png/0a0a0a/ffffff?text=Vivalingo+App"
-                      alt="Vivalingo App"
+                      src="https://via.placeholder.com/300x600.png/0a0a0a/ffffff?text=Viva La Lingo+App"
+                      alt="Viva La Lingo App"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     

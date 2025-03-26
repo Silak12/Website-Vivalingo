@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import Button from '../shared/Button';
+import { useLanguage, Language } from '../../contexts/LanguageContext';
 
 interface MobileSidebarProps {
   isOpen: boolean;
@@ -12,36 +13,37 @@ interface MobileSidebarProps {
 const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const bubblesRef = useRef<HTMLDivElement>(null);
+  const { language, setLanguage, t } = useLanguage();
   
-  // Erstellt schwebende Sprachblasen im Hintergrund
+  // Creates floating language bubbles in the background
   useEffect(() => {
     if (isOpen && bubblesRef.current) {
       const container = bubblesRef.current;
       const bubbleCount = 8;
       
-      // Bereinige bestehende Bubbles
+      // Clean up existing bubbles
       container.innerHTML = '';
       
-      // Erstelle neue Bubbles
+      // Create new bubbles
       for (let i = 0; i < bubbleCount; i++) {
         const bubble = document.createElement('div');
         
-        // Zufällige Größe (15-40px)
+        // Random size (15-40px)
         const size = 15 + Math.random() * 25;
         
-        // Zufällige Position
+        // Random position
         const left = Math.random() * 80 + 10; // 10-90%
         const top = Math.random() * 80 + 10; // 10-90%
         
-        // Zufällige Farbe
+        // Random color
         const colors = ['primary', 'secondary', 'accent', 'purple', 'blue', 'green'];
         const colorIndex = Math.floor(Math.random() * colors.length);
         const color = colors[colorIndex];
         
-        // Zufällige Opazität
+        // Random opacity
         const opacity = 0.1 + Math.random() * 0.2;
         
-        // Stile anwenden
+        // Apply styles
         bubble.style.position = 'absolute';
         bubble.style.left = `${left}%`;
         bubble.style.top = `${top}%`;
@@ -50,13 +52,13 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
         bubble.style.borderRadius = '50%';
         bubble.style.opacity = opacity.toString();
         
-        // Füge Klasse basierend auf der Farbe hinzu
+        // Add class based on color
         bubble.className = `bg-${color}-400`;
         
-        // Zum Container hinzufügen
+        // Add to container
         container.appendChild(bubble);
         
-        // Animation mit GSAP
+        // Animation with GSAP
         gsap.to(bubble, {
           y: -30 - Math.random() * 70,
           x: Math.random() * 30 - 15,
@@ -71,13 +73,13 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
       }
       
       return () => {
-        // Bereinige GSAP-Animationen
+        // Clean up GSAP animations
         gsap.killTweensOf(container.children);
       };
     }
   }, [isOpen]);
   
-  // Verhindere Scrolling, wenn das Menü geöffnet ist
+  // Prevent scrolling when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -90,16 +92,26 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen]);
   
-  // Navigationspunkte
+  // Nav items
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Features', path: '/#features' },
-    { name: 'Method', path: '/method' },
-    { name: 'How It Works', path: '/how-it-works' },
-    { name: 'Pricing', path: '/#pricing' },
+    { name: t('navbar.home'), path: '/' },
+    { name: t('navbar.features'), path: '/#features' },
+    { name: t('navbar.method'), path: '/method' },
+    { name: t('navbar.pricing'), path: '/#pricing' },
+  ];
+
+  // Available languages
+  const languages = [
+    { code: 'de', label: 'DE' },
+    { code: 'en', label: 'EN' }
   ];
   
-  // Animationsvarianten
+  // Handle language change
+  const handleLanguageChange = (langCode: Language) => {
+    setLanguage(langCode);
+  };
+  
+  // Animation variants
   const sidebarVariants = {
     hidden: { 
       x: '-100%',
@@ -181,7 +193,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
             animate="visible"
             exit="exit"
           >
-            {/* Hintergrund-Bubbles */}
+            {/* Background bubbles */}
             <div ref={bubblesRef} className="absolute inset-0 overflow-hidden z-0"></div>
             
             {/* Content */}
@@ -191,10 +203,10 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
                 <div className="flex items-center">
                   <img 
                     src="/images/logo.svg" 
-                    alt="Vivalingo Logo"
+                    alt="Viva La Lingo Logo"
                     className="h-10 w-10 mr-2"
                   />
-                  <span className="font-bold text-xl text-primary-600">Vivalingo</span>
+                  <span className="font-bold text-xl text-primary-600">Viva La Lingo</span>
                 </div>
                 <button
                   onClick={onClose}
@@ -227,12 +239,21 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
                   variants={navItemVariants}
                   className="mt-8 p-4 bg-gray-50 rounded-lg"
                 >
-                  <h3 className="font-medium mb-2">Sprache ändern</h3>
+                  <h3 className="font-medium mb-2">{t('mobileSidebar.changeLanguage')}</h3>
                   <div className="flex space-x-2">
-                    <button className="px-3 py-1 rounded bg-primary-100 text-primary-700 font-medium">DE</button>
-                    <button className="px-3 py-1 rounded bg-gray-100 text-gray-700">EN</button>
-                    <button className="px-3 py-1 rounded bg-gray-100 text-gray-700">ES</button>
-                    <button className="px-3 py-1 rounded bg-gray-100 text-gray-700">FR</button>
+                    {languages.map((lang) => (
+                      <button 
+                        key={lang.code}
+                        className={`px-3 py-1 rounded ${
+                          language === lang.code 
+                            ? 'bg-primary-100 text-primary-700 font-medium' 
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        } transition-colors`}
+                        onClick={() => handleLanguageChange(lang.code as Language)}
+                      >
+                        {lang.label}
+                      </button>
+                    ))}
                   </div>
                 </motion.div>
               </nav>
@@ -243,10 +264,10 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
                 className="p-6 border-t border-gray-200"
               >
                 <Button variant="primary" className="w-full">
-                  App herunterladen
+                  {t('mobileSidebar.downloadApp')}
                 </Button>
                 <div className="mt-4 text-center text-sm text-gray-500">
-                  &copy; {new Date().getFullYear()} Vivalingo
+                  &copy; {new Date().getFullYear()} Viva La Lingo
                 </div>
               </motion.div>
             </div>

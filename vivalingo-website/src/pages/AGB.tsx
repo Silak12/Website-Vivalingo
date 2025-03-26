@@ -128,12 +128,12 @@ const AGB: React.FC = () => {
               
               <h2 className="text-2xl font-semibold text-white mb-4">1. Anwendungsbereich</h2>
               <p className="text-gray-300 mb-6">
-                Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der Vivalingo Sprachlern-App und der Website www.vivalingo.app ("Dienste") durch Sie als Nutzer. Vivalingo wird betrieben von Leonard Marx, Musterstraße 14, 14527 Deutschland ("wir", "uns"). Mit dem Zugriff auf oder der Nutzung unserer Dienste erklären Sie sich mit diesen AGB einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie unsere Dienste bitte nicht.
+                Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der Viva La Lingo Sprachlern-App und der Website www.Viva La Lingo.app ("Dienste") durch Sie als Nutzer. Viva La Lingo wird betrieben von Leonard Marx, Musterstraße 14, 14527 Deutschland ("wir", "uns"). Mit dem Zugriff auf oder der Nutzung unserer Dienste erklären Sie sich mit diesen AGB einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie unsere Dienste bitte nicht.
               </p>
               
               <h2 className="text-2xl font-semibold text-white mb-4">2. Leistungsbeschreibung</h2>
               <p className="text-gray-300 mb-4">
-                Vivalingo ist eine Sprachlern-App, die die Birkenbihl-Methode nutzt, um Nutzern das Erlernen von Fremdsprachen zu erleichtern. Die App bietet:
+                Viva La Lingo ist eine Sprachlern-App, die die Birkenbihl-Methode nutzt, um Nutzern das Erlernen von Fremdsprachen zu erleichtern. Die App bietet:
               </p>
               <ul className="list-disc pl-6 text-gray-300 mb-6">
                 <li className="mb-2">Sprachlektionen in verschiedenen Sprachen</li>
@@ -241,8 +241,8 @@ const AGB: React.FC = () => {
                 Leonard Marx<br />
                 Musterstraße 14<br />
                 14527 Deutschland<br />
-                <a href="mailto:kontakt@vivalingo.app" className="text-primary-300 hover:text-primary-200">
-                  kontakt@vivalingo.app
+                <a href="mailto:kontakt@Viva La Lingo.app" className="text-primary-300 hover:text-primary-200">
+                  kontakt@Viva La Lingo.app
                 </a>
               </p>
             </div>

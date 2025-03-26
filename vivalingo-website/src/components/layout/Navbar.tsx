@@ -3,11 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../shared/Button';
 import MobileSidebar from './MobileSidebar';
+import LanguageSelector from '../shared/LanguageSelector';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
   
   // Handle scroll effect
   useEffect(() => {
@@ -31,10 +34,10 @@ const Navbar: React.FC = () => {
 
   // Updated navigation items - removed "How It Works"
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Features', path: '/#features' },
-    { name: 'Method', path: '/method' },
-    { name: 'Pricing', path: '/#pricing' },
+    { name: t('navbar.home'), path: '/' },
+    { name: t('navbar.features'), path: '/#features' },
+    { name: t('navbar.method'), path: '/method' },
+    { name: t('navbar.pricing'), path: '/#pricing' },
   ];
 
   const navbarClasses = `fixed w-full z-50 transition-all duration-300 ${
@@ -58,10 +61,10 @@ const Navbar: React.FC = () => {
             >
               <img 
                 src="/images/logo2.png" 
-                alt="Vivalingo Logo"
+                alt="Viva La Lingo Logo"
                 className="h-10 w-10 mr-2"
               />
-              <span className={`font-bold text-xl ${logoTextColor}`}>Vivalingo</span>
+              <span className={`font-bold text-xl ${logoTextColor}`}>Viva La Lingo</span>
             </motion.div>
           </Link>
 
@@ -82,6 +85,16 @@ const Navbar: React.FC = () => {
                 </Link>
               </motion.div>
             ))}
+            
+            {/* Language Selector */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+            >
+              <LanguageSelector />
+            </motion.div>
+            
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -93,14 +106,17 @@ const Navbar: React.FC = () => {
                   variant="primary" 
                   size="sm"
                 >
-                  Download App
+                  {t('navbar.downloadApp')}
                 </Button>
               </Link>
             </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden touch-target">
+          <div className="md:hidden touch-target flex items-center space-x-2">
+            {/* Mobile Language Selector */}
+            <LanguageSelector />
+            
             <button
               onClick={() => setIsMenuOpen(true)}
               className="touch-target flex items-center justify-center"

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import Button from '../shared/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 // Interface für ein Feature
 interface AppFeature {
@@ -14,6 +15,7 @@ interface AppFeature {
 }
 
 const DownloadCTA: React.FC = () => {
+  const { t } = useLanguage();
   const bgRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
   const phoneRef = useRef<HTMLDivElement>(null);
@@ -23,39 +25,39 @@ const DownloadCTA: React.FC = () => {
   // State für aktuelles Feature
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
   
-  // App Features
+  // App Features - now using translations
   const features: AppFeature[] = [
     {
       id: 1,
       icon: '🧠',
-      title: 'Sprachen lernen wie die Muttersprache',
-      description: 'Dein Gehirn lernt durch Mustererkennung, nicht durch Regeln. Genau wie Kinder ihre erste Sprache lernen.',
+      title: t('downloadCTA.features.0.title'),
+      description: t('downloadCTA.features.0.description'),
       color: 'bg-purple-500',
-      example: 'Die Birkenbihl-Methode nutzt die natürliche Fähigkeit deines Gehirns, Muster zu erkennen'
+      example: t('downloadCTA.features.0.example')
     },
     {
       id: 2,
       icon: '🎯',
-      title: 'Intuitives Sprachgefühl',
-      description: 'Du wirst Sätze bilden, ohne nachzudenken. Die Grammatik kommt automatisch.',
+      title: t('downloadCTA.features.1.title'),
+      description: t('downloadCTA.features.1.description'),
       color: 'bg-blue-500',
-      example: 'Durch 1:1 Dekodierung verstehst du die Struktur der Sprache intuitiv, ohne Regeln auswendig zu lernen'
+      example: t('downloadCTA.features.1.example')
     },
     {
       id: 3,
       icon: '🔊',
-      title: 'Automatisch gute Aussprache',
-      description: 'Durch wiederholtes Hören und Nachsprechen entwickelst du eine natürliche Aussprache.',
+      title: t('downloadCTA.features.2.title'),
+      description: t('downloadCTA.features.2.description'),
       color: 'bg-green-500',
-      example: 'Du trainierst dein Ohr, die Feinheiten der Aussprache zu erfassen und natürlich wiederzugeben'
+      example: t('downloadCTA.features.2.example')
     },
     {
       id: 4,
       icon: '🚀',
-      title: 'Schnelle Erfolge',
-      description: 'Schon nach wenigen Stunden beginnst du, erste Sätze zu verstehen und zu sprechen.',
+      title: t('downloadCTA.features.3.title'),
+      description: t('downloadCTA.features.3.description'),
       color: 'bg-red-500',
-      example: 'Der Fokus liegt auf praktischer Anwendung statt theoretischem Wissen, was zu schnellen Fortschritten führt'
+      example: t('downloadCTA.features.3.example')
     }
   ];
   
@@ -242,10 +244,10 @@ const DownloadCTA: React.FC = () => {
   
   // Beispielsätze für verschiedene Sprachen
   const phrases = [
-    { lang: 'Spanisch', original: 'Me gusta aprender idiomas', translation: 'Mir gefällt Sprachen lernen' },
-    { lang: 'Französisch', original: 'Je parle sans réfléchir', translation: 'Ich spreche ohne nachzudenken' },
-    { lang: 'Italienisch', original: 'Imparo in modo naturale', translation: 'Ich lerne auf natürliche Weise' },
-    { lang: 'Japanisch', original: '私は毎日練習します', translation: 'Ich übe jeden Tag' }
+    { lang: t('hero.languagePhrases.spanish.lang'), original: t('hero.languagePhrases.spanish.original'), translation: t('hero.languagePhrases.spanish.translation') },
+    { lang: t('hero.languagePhrases.french.lang'), original: t('hero.languagePhrases.french.original'), translation: t('hero.languagePhrases.french.translation') },
+    { lang: t('hero.languagePhrases.italian.lang'), original: t('hero.languagePhrases.italian.original'), translation: t('hero.languagePhrases.italian.translation') },
+    { lang: t('hero.languagePhrases.japanese.lang'), original: t('hero.languagePhrases.japanese.original'), translation: t('hero.languagePhrases.japanese.translation') }
   ];
   
   // Aktueller Beispielsatz basierend auf Feature
@@ -279,12 +281,12 @@ const DownloadCTA: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-tight">
-                Revolutioniere <br />
-                <span className="text-primary-400">dein Sprachenlernen</span>
+                {t('downloadCTA.title')} <br />
+                <span className="text-primary-400">{t('downloadCTA.titleHighlight')}</span>
               </h2>
               
               <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-                Mit Vivalingo lernst du Sprachen auf die natürlichste Weise. Genau wie du deine Muttersprache gelernt hast - intuitiv und ohne Regelbüffelei.
+                {t('downloadCTA.description')}
               </p>
             </motion.div>
             
@@ -303,7 +305,7 @@ const DownloadCTA: React.FC = () => {
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                 </svg>
-                iOS App herunterladen
+                {t('downloadCTA.downloadIOS')}
               </Button>
               
               <Button 
@@ -314,7 +316,7 @@ const DownloadCTA: React.FC = () => {
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 20.5V3.5c0-.85.44-1.59 1.1-2.02L14.5 12 4.1 22.52c-.66-.43-1.1-1.17-1.1-2.02zM18.77 12L7 3.78l8.49 8.49-8.49 8.49L18.77 12zm-4.31 0l-1.65 9.71L5.21 12l7.6-9.71L14.46 12z" />
                 </svg>
-                Android App herunterladen
+                {t('downloadCTA.downloadAndroid')}
               </Button>
             </motion.div>
             
@@ -327,12 +329,12 @@ const DownloadCTA: React.FC = () => {
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
                   <div className="text-yellow-400 text-lg">★★★★★</div>
-                  <span className="text-white">4.8/5 im App Store</span>
+                  <span className="text-white">{t('downloadCTA.appStoreRating')}</span>
                 </div>
                 
                 <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
                   <span className="text-white font-semibold">100k+</span>
-                  <span className="text-gray-300">zufriedene Nutzer</span>
+                  <span className="text-gray-300">{t('downloadCTA.satisfiedUsers')}</span>
                 </div>
               </div>
             </motion.div>
@@ -384,7 +386,7 @@ const DownloadCTA: React.FC = () => {
                     {/* App Header */}
                     <div className="h-14 flex items-center justify-center mb-4">
                       <div className="text-white text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
-                        Vivalingo
+                        Viva La Lingo
                       </div>
                     </div>
                     

@@ -2,17 +2,19 @@ import React, { useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import gsap from 'gsap';
 import Button from '../shared/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const MethodFeatures: React.FC = () => {
+  const { t } = useLanguage();
   const featureRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(featureRef, { once: true, amount: 0.3 });
   
-  // Features data
+  // Features data using translations
   const features = [
     {
       id: 1,
-      title: "1. Decode",
-      description: "Text wird wortgetreu übersetzt, sodass du die Bedeutung sofort erfasst – ohne Wörterbuch.",
+      title: t('methodFeatures.phases.0.title'),
+      description: t('methodFeatures.phases.0.description'),
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
@@ -23,8 +25,8 @@ const MethodFeatures: React.FC = () => {
     },
     {
       id: 2,
-      title: "2. Active Listening + Speaking",
-      description: "Höre den fremdsprachlichen Text, während du die Übersetzung liest. Bald \"hörst\" du ihn wie deine Muttersprache. Versuch laut mitzulesen.",
+      title: t('methodFeatures.phases.1.title'),
+      description: t('methodFeatures.phases.1.description'),
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 011.414 1.414" />
@@ -35,8 +37,8 @@ const MethodFeatures: React.FC = () => {
     },
     {
       id: 3,
-      title: "3. Passive Listening",
-      description: "Sobald du einige Lektionen gelernt hast kannst du anfangen die Audios abszuspielen während du etwas anderes machst.",
+      title: t('methodFeatures.phases.2.title'),
+      description: t('methodFeatures.phases.2.description'),
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
@@ -47,8 +49,8 @@ const MethodFeatures: React.FC = () => {
     },
     {
       id: 4,
-      title: "4. Apply",
-      description: "Sprich mit Freunden, schaue fremdsprachige Filme – alles, was dir hilft, deine neue Sprache aktiv auszuprobieren.",
+      title: t('methodFeatures.phases.3.title'),
+      description: t('methodFeatures.phases.3.description'),
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -101,7 +103,7 @@ const MethodFeatures: React.FC = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            Die 4 Phasen der Birkenbihl-Methode
+            {t('methodFeatures.title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +112,7 @@ const MethodFeatures: React.FC = () => {
             viewport={{ once: true }}
             className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
-            Entdecke eine natürliche, intuitive Art des Sprachenlernens, die deinem Gehirn entspricht.
+            {t('methodFeatures.subtitle')}
           </motion.p>
         </div>
         
@@ -146,7 +148,7 @@ const MethodFeatures: React.FC = () => {
               viewport={{ once: true }}
               className="text-2xl font-bold mb-4"
             >
-              Gehirngerecht Lernen
+              {t('methodFeatures.brainLearning.title')}
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, x: -20 }}
@@ -155,7 +157,7 @@ const MethodFeatures: React.FC = () => {
               viewport={{ once: true }}
               className="text-gray-600 mb-4"
             >
-              Mit der Birkenbihl-Methode lernst du auf die gleiche Weise, wie dein Gehirn Informationen am besten verarbeitet. Keine Grammatikregeln auswendig lernen. Stattdessen baust du ein intuitives Sprachgefühl auf – genau wie bei deiner Muttersprache.
+              {t('methodFeatures.brainLearning.description1')}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: -20 }}
@@ -164,7 +166,7 @@ const MethodFeatures: React.FC = () => {
               viewport={{ once: true }}
               className="text-gray-600 mb-6"
             >
-              Durch die multimodale Stimulation deines Gehirns (Hören, Sehen, Verstehen) wird die Sprache tief in deinem Langzeitgedächtnis verankert.
+              {t('methodFeatures.brainLearning.description2')}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -172,7 +174,7 @@ const MethodFeatures: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <Button variant="primary">Mehr zur Methode</Button>
+              <Button variant="primary">{t('methodFeatures.brainLearning.button')}</Button>
             </motion.div>
           </div>
           

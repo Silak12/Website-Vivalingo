@@ -7,6 +7,8 @@ import About from './pages/About';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import AGB from './pages/AGB';
+import { LanguageProvider } from './contexts/LanguageContext';
+
 // Helper component to scroll to top on route change
 const ScrollToTop: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
@@ -20,19 +22,21 @@ const ScrollToTop: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop>
-        <Routes>
-          <Route path="/" element={<Layout><Home /></Layout>} />
-          <Route path="/method" element={<Layout><Method /></Layout>} />
-          <Route path="/about" element={<Layout><About /></Layout>} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
-          <Route path="/agb" element={<AGB />} />
-          {/* Add more routes as needed */}
-        </Routes>
-      </ScrollToTop>
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Layout><Home /></Layout>} />
+            <Route path="/method" element={<Layout><Method /></Layout>} />
+            <Route path="/about" element={<Layout><About /></Layout>} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/agb" element={<AGB />} />
+            {/* Add more routes as needed */}
+          </Routes>
+        </ScrollToTop>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 

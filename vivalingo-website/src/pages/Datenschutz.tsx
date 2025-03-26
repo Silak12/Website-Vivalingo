@@ -128,7 +128,7 @@ const Datenschutz: React.FC = () => {
               
               <h2 className="text-2xl font-semibold text-white mb-4">1. Einleitung</h2>
               <p className="text-gray-300 mb-6">
-                Wir bei Vivalingo ("wir", "uns", "unsere") respektieren deine Privatsphäre und verpflichten uns, deine personenbezogenen Daten zu schützen. Diese Datenschutzerklärung informiert dich darüber, wie wir mit den Daten umgehen, die wir durch deine Nutzung unserer Sprachlern-App Vivalingo (die "App") und unserer Website www.vivalingo.app (die "Website") sammeln, und erklärt deine Datenschutzrechte.
+                Wir bei Viva La Lingo ("wir", "uns", "unsere") respektieren deine Privatsphäre und verpflichten uns, deine personenbezogenen Daten zu schützen. Diese Datenschutzerklärung informiert dich darüber, wie wir mit den Daten umgehen, die wir durch deine Nutzung unserer Sprachlern-App Viva La Lingo (die "App") und unserer Website www.Viva La Lingo.app (die "Website") sammeln, und erklärt deine Datenschutzrechte.
               </p>
               
               <h2 className="text-2xl font-semibold text-white mb-4">2. Verantwortlicher für die Datenverarbeitung</h2>
@@ -139,8 +139,8 @@ const Datenschutz: React.FC = () => {
                 Musterstraße 14<br />
                 14527 Deutschland<br /><br />
                 
-                E-Mail: <a href="mailto:kontakt@vivalingo.app" className="text-primary-300 hover:text-primary-200">
-                  kontakt@vivalingo.app
+                E-Mail: <a href="mailto:kontakt@Viva La Lingo.app" className="text-primary-300 hover:text-primary-200">
+                  kontakt@Viva La Lingo.app
                 </a>
               </p>
               
@@ -249,8 +249,8 @@ const Datenschutz: React.FC = () => {
               </ul>
               <p className="text-gray-300 mb-6">
                 Um eines dieser Rechte auszuüben, kontaktiere uns bitte unter 
-                <a href="mailto:kontakt@vivalingo.app" className="text-primary-300 hover:text-primary-200 mx-1">
-                  kontakt@vivalingo.app
+                <a href="mailto:kontakt@Viva La Lingo.app" className="text-primary-300 hover:text-primary-200 mx-1">
+                  kontakt@Viva La Lingo.app
                 </a>.
                 Du hast außerdem das Recht, eine Beschwerde bei einer Datenschutzaufsichtsbehörde einzureichen.
               </p>
@@ -287,8 +287,8 @@ const Datenschutz: React.FC = () => {
                 Leonard Marx<br />
                 Musterstraße 14<br />
                 14527 Deutschland<br />
-                <a href="mailto:kontakt@vivalingo.app" className="text-primary-300 hover:text-primary-200">
-                  kontakt@vivalingo.app
+                <a href="mailto:kontakt@Viva La Lingo.app" className="text-primary-300 hover:text-primary-200">
+                  kontakt@Viva La Lingo.app
                 </a>
               </p>
             </div>

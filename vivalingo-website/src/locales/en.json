@@ -1,0 +1,331 @@
+{
+    "navbar": {
+      "home": "Home",
+      "features": "Features",
+      "method": "Method",
+      "pricing": "Pricing",
+      "downloadApp": "Download App"
+    },
+    "footer": {
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing", 
+      "download": "Download",
+      "learn": "Learn",
+      "method": "Birkenbihl Method",
+      "company": "Company",
+      "about": "About",
+      "legal": "Legal",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "impressum": "Impressum",
+      "connectWithUs": "Connect With Us",
+      "copyright": "© {year} Viva La Lingo. All rights reserved.",
+      "madeWith": "Made with ❤️ for language learners",
+      "tagline": "Learn languages naturally with the Birkenbihl method. No grammar rules, just intuitive learning."
+    },
+    "mobileSidebar": {
+      "changeLanguage": "Change Language",
+      "downloadApp": "Download App"
+    },
+    "hero": {
+      "title": "Learn Languages Naturally",
+      "subtitle": "Experience the power of the Birkenbihl method with Viva La Lingo. Learn without grammar rules, intuitively. Just like you learned your mother tongue.",
+      "startLearning": "Start Learning Now",
+      "seeHowItWorks": "See How It Works",
+      "appStoreRating": "4.8/5 in App Store",
+      "satisfiedUsers": "100k+ satisfied users",
+      "benefits": {
+        "noGrammarRules": "No grammar rules",
+        "fromListenerToSpeaker": "From listener to speaker",
+        "naturalLanguageFeel": "Natural language feel"
+      },
+      "birkenbihlMethod": {
+        "title": "Birkenbihl Method:",
+        "decoding": "Decoding: Word-for-word translation without grammar rules",
+        "activeListening": "Active Listening: Text and translation simultaneously",
+        "passiveListening": "Passive Listening: Playing audio in the background",
+        "activation": "Activation: Apply language naturally"
+      },
+      "languagePhrases": {
+        "spanish": {
+          "lang": "Spanish",
+          "original": "Me gusta aprender idiomas",
+          "translation": "I like learning languages"
+        },
+        "french": {
+          "lang": "French",
+          "original": "Je parle sans réfléchir",
+          "translation": "I speak without thinking"
+        },
+        "italian": {
+          "lang": "Italian",
+          "original": "Imparo in modo naturale",
+          "translation": "I learn naturally"
+        },
+        "japanese": {
+          "lang": "Japanese",
+          "original": "私は毎日練習します",
+          "translation": "I practice every day"
+        }
+      }
+    },
+    "wordFlow": {
+      "title": "Viva La Lingo.",
+      "subtitle": "From listener to speaker: Gain confidence and speak up immediately.",
+      "scrollToSee": "Scroll to see more",
+      "words": [
+        { "original": "No grammar rules", "translation": "文法ルールなし" },
+        { "original": "No vocabulary drills", "translation": "без заучування слів" },
+        { "original": "Learn intuitively", "translation": "intuitiv lernen" },
+        { "original": "Real-life dialogues", "translation": "실제 생활 대화" },
+        { "original": "Speak confidently", "translation": "habla con confianza" },
+        { "original": "Natural understanding", "translation": "luonnollinen ymmärrys" },
+        { "original": "Immediate results", "translation": "即効性のある成果" }
+      ]
+    },
+    "methodFeatures": {
+      "title": "The 4 Phases of the Birkenbihl Method",
+      "subtitle": "Discover a natural, intuitive way of language learning that aligns with your brain.",
+      "phases": [
+        {
+          "title": "1. Decode",
+          "description": "Text is translated literally, so you grasp the meaning immediately – without a dictionary."
+        },
+        {
+          "title": "2. Active Listening + Speaking",
+          "description": "Listen to the foreign language text while reading the translation. Soon you'll \"hear\" it like your native language. Try to read along aloud."
+        },
+        {
+          "title": "3. Passive Listening",
+          "description": "Once you've learned a few lessons, you can start playing the audios while doing something else."
+        },
+        {
+          "title": "4. Apply",
+          "description": "Talk to friends, watch foreign language films – anything that helps you actively try out your new language."
+        }
+      ],
+      "brainLearning": {
+        "title": "Brain-Friendly Learning",
+        "description1": "With the Birkenbihl method, you learn in the same way your brain processes information best. No memorizing grammar rules. Instead, you build an intuitive language feel – just like with your native language.",
+        "description2": "Through multi-modal stimulation of your brain (hearing, seeing, understanding), the language is deeply anchored in your long-term memory.",
+        "button": "More about the method"
+      }
+    },
+    "downloadCTA": {
+      "title": "Revolutionize",
+      "titleHighlight": "your language learning",
+      "description": "With Viva La Lingo, you learn languages in the most natural way. Just like you learned your mother tongue - intuitively and without cramming rules.",
+      "downloadIOS": "Download iOS App",
+      "downloadAndroid": "Download Android App",
+      "appStoreRating": "4.8/5 in App Store",
+      "satisfiedUsers": "100k+ satisfied users",
+      "features": [
+        {
+          "title": "Learn languages like your mother tongue",
+          "description": "Your brain learns through pattern recognition, not through rules. Just like children learn their first language.",
+          "example": "The Birkenbihl method uses your brain's natural ability to recognize patterns"
+        },
+        {
+          "title": "Intuitive language feel",
+          "description": "You'll form sentences without thinking. Grammar comes automatically.",
+          "example": "Through 1:1 decoding, you understand the structure of the language intuitively, without memorizing rules"
+        },
+        {
+          "title": "Naturally good pronunciation",
+          "description": "Through repeated listening and speaking, you develop a natural pronunciation.",
+          "example": "You train your ear to capture the nuances of pronunciation and reproduce them naturally"
+        },
+        {
+          "title": "Quick results",
+          "description": "After just a few hours, you'll begin to understand and speak first sentences.",
+          "example": "The focus is on practical application rather than theoretical knowledge, which leads to rapid progress"
+        }
+      ]
+    },
+    "pricingSection": {
+      "title": "Choose Your Plan",
+      "subtitle": "Simple pricing, powerful features, and no hidden fees",
+      "tabs": {
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "lifetime": "Lifetime",
+        "yearlySavings": "Save 64%",
+        "lifetimeBestValue": "Best value"
+      },
+      "cards": {
+        "monthly": {
+          "title": "Monthly Access",
+          "price": "2.99",
+          "period": "month",
+          "savings": "",
+          "freeTrialAvailable": true
+        },
+        "yearly": {
+          "title": "Yearly Access",
+          "price": "12.99",
+          "period": "year",
+          "savings": "Save 64% compared to monthly",
+          "tag": "POPULAR",
+          "freeTrialAvailable": true
+        },
+        "lifetime": {
+          "title": "Lifetime Access",
+          "price": "49.99",
+          "period": "one-time payment",
+          "savings": "Best value - No recurring payments",
+          "tag": "BEST VALUE",
+          "freeTrialAvailable": false
+        }
+      },
+      "features": {
+        "title": "Includes:",
+        "monthly": [
+          "Full access to all languages",
+          "Ad-free experience",
+          "Unlimited audio control",
+          "Multiple language switching"
+        ],
+        "yearly": [
+          "Full access to all languages",
+          "Ad-free experience",
+          "Priority customer support",
+          "Downloadable content for offline use"
+        ],
+        "lifetime": [
+          "One time payment",
+          "Access to all future updates",
+          "Full access to all languages",
+          "Ad-free experience"
+        ]
+      },
+      "freeTrial": {
+        "title": "7-day free trial",
+        "description": "Try all features with no commitment. Cancel anytime before the trial ends."
+      },
+      "buttons": {
+        "appStore": "App Store",
+        "playStore": "Play Store"
+      }
+    },
+    "discountSection": {
+      "title": "Find the 100% discount code! Test it in the app!",
+      "codeAvailable": {
+        "label": "Code has not been used yet",
+        "icon": "⏱️"
+      },
+      "codeUsed": {
+        "label": "Code has been used!",
+        "icon": "⏱️",
+        "title": "The code has been used!",
+        "nextCode": "Next code will be active in:"
+      },
+      "description": "We've hidden 150 codes, but only ONE is currently active for a 100% discount. If it's already been used, you'll see a 24-hour countdown."
+    },
+    "about": {
+      "title": "About Viva La Lingo",
+      "story": [
+        "Hey there! I'm the creator of Viva La Lingo. This app started as a personal project — I simply wanted a better way to learn languages for myself using the Birkenbihl method.",
+        "What happened next was unexpected. When friends and family saw me using the app, they wanted it too. Before I knew it, I had accidentally poured 5 months into development, refining and expanding the app far beyond my initial plans.",
+        "I figured, if my close circle found it useful, maybe others would too. So here we are! I've released Viva La Lingo to the world in hopes that others can benefit from this powerful language learning method just like I have.",
+        "Full disclosure: this is a one-person operation. That means if I'm a little slow to implement new features, it's because it's just me behind the scenes! But I'm always working on improvements and eager to make this app the best it can be.",
+        "I'm completely open to feedback and suggestions. So if you have ideas about how to make Viva La Lingo better, I'm all ears!"
+      ],
+      "contact": {
+        "title": "Get In Touch",
+        "email": "Viva La Lingoapp@gmail.com"
+      },
+      "downloadButton": "Download Viva La Lingo"
+    },
+    "method": {
+      "hero": {
+        "title": "The Birkenbihl Method",
+        "subtitle": "Discover the most effective way to learn languages, how your brain loves it",
+        "ratings": {
+          "enthusiasts": "Thousands of enthusiastic learners",
+          "scientific": "Scientifically",
+          "foundedOn": "based"
+        },
+        "scrollDown": "Learn more"
+      },
+      "intro": {
+        "title": "Who was Vera F. Birkenbihl?",
+        "paragraphs": [
+          "Vera F. Birkenbihl (1946-2011) was a renowned German management trainer, non-fiction author, and expert in brain-friendly learning and teaching. She is best known for her innovative language learning method, which works completely differently from conventional teaching methods.",
+          "Her method is based on understanding how the human brain naturally learns languages – through comprehension and context, not through grammar rules and rote memorization."
+        ],
+        "quote": "\"You cannot teach a language, you can only create the conditions under which it can be learned.\" – Vera F. Birkenbihl",
+        "appDescription": "Viva La Lingo brings this revolutionary method to a modern app that helps you learn languages in the most natural and effective way."
+      },
+      "phases": {
+        "title": "The 4 Phases of the Birkenbihl Method",
+        "subtitle": "A structured approach to natural language learning that works with your brain, not against it",
+        "items": [
+          {
+            "title": "Decode",
+            "description": "The text is translated literally, so you can grasp the content directly. This word-for-word translation helps your brain recognize patterns, instead of learning rules.",
+            "appFeature": "In the app, all texts are already literally translated and color-coded, so you can start learning right away, without wasting time with dictionaries."
+          },
+          {
+            "title": "Active Listening & Speaking",
+            "description": "Listen to the foreign language text while reading the translation. Repeat the words once you feel confident. By speaking along, you actively train your pronunciation and anchor the language deeper.",
+            "appFeature": "With the turtle (slow audio) and the rabbit (fast audio), you can adjust your pace. Start with the turtle and gradually increase. Through repetition and active speaking, you'll quickly notice progress."
+          },
+          {
+            "title": "Passive Listening",
+            "description": "Let the language run in the background while you're doing other activities. This passive listening helps your brain get used to the sounds of the language and unconsciously deepens what you've learned.",
+            "appFeature": "The app allows playback in the background, even when your screen is locked. This way, you can continue to listen passively while jogging, cooking, or doing other activities."
+          },
+          {
+            "title": "Apply & Test",
+            "description": "Try the language actively, whether in conversation or when consuming media. Experiment with what you've learned and learn from your mistakes without pressure.",
+            "appFeature": "Use the tests in the app – they can be repeated as often as you like, without pressure! This way, you can test your pronunciation and quickly recognize where you still need practice. The tests are your friends, not obstacles."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits of the Birkenbihl Method",
+        "subtitle": "Why this method is more effective than traditional language learning",
+        "items": [
+          {
+            "title": "Natural Learning",
+            "description": "Learn like a child – through understanding and application, not through rules and memorization."
+          },
+          {
+            "title": "Brain-friendly",
+            "description": "The method uses the natural functioning of your brain, which leads to faster and longer-lasting results."
+          },
+          {
+            "title": "Stress-free",
+            "description": "Learn without pressure and test anxiety – at your own pace and with joy instead of frustration."
+          },
+          {
+            "title": "Sustainable Learning",
+            "description": "Through multi-sensory stimulation, what you learn is deeply anchored in your long-term memory."
+          },
+          {
+            "title": "No Grammar Cramming",
+            "description": "Understand grammar intuitively through context instead of abstract rules."
+          },
+          {
+            "title": "Suitable for Everyone",
+            "description": "Whether child or adult, language talent or not – the method is accessible to everyone."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to learn languages naturally?",
+        "description": "With Viva La Lingo, you experience the Birkenbihl method in a modern, user-friendly app. Start your language learning journey now and learn languages just like your mother tongue!",
+        "iosDownload": "Download iOS App",
+        "androidDownload": "Download Android App"
+      }
+    },
+    "languageSelector": {
+      "languages": {
+        "de": "German",
+        "en": "English",
+        "es": "Spanish",
+        "fr": "French"
+      }
+    }
+  }

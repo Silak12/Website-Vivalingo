@@ -122,11 +122,11 @@ const Impressum: React.FC = () => {
               
               <h3 className="text-xl font-semibold text-white mb-4 mt-8">Kontakt</h3>
               <p className="text-gray-300 mb-4">
-                E-Mail: <a href="mailto:kontakt@vivalingo.app" className="text-primary-300 hover:text-primary-200">
-                  kontakt@vivalingo.app
+                E-Mail: <a href="mailto:kontakt@Viva La Lingo.app" className="text-primary-300 hover:text-primary-200">
+                  kontakt@Viva La Lingo.app
                 </a><br />
-                Website: <a href="https://www.vivalingo.app" target="_blank" rel="noopener noreferrer" className="text-primary-300 hover:text-primary-200">
-                  www.vivalingo.app
+                Website: <a href="https://www.Viva La Lingo.app" target="_blank" rel="noopener noreferrer" className="text-primary-300 hover:text-primary-200">
+                  www.Viva La Lingo.app
                 </a>
               </p>
               
