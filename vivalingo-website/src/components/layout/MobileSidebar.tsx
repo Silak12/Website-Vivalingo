@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import Button from '../shared/Button';
@@ -14,6 +14,24 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const bubblesRef = useRef<HTMLDivElement>(null);
   const { language, setLanguage, t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  // Funktion zum Navigieren zum Download-Bereich
+  const handleNavigateToDownload = () => {
+    onClose(); // Schließe zuerst die Sidebar
+    
+    if (location.pathname === '/') {
+      // Wenn wir bereits auf der Startseite sind, scrolle zum Download-Bereich
+      const downloadSection = document.getElementById('download');
+      if (downloadSection) {
+        downloadSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Wenn wir auf einer anderen Seite sind, navigiere zur Startseite mit dem Download-Anker
+      navigate('/#download');
+    }
+  };
   
   // Creates floating language bubbles in the background
   useEffect(() => {
@@ -263,7 +281,11 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
                 variants={navItemVariants}
                 className="p-6 border-t border-gray-200"
               >
-                <Button variant="primary" className="w-full">
+                <Button 
+                  variant="primary" 
+                  className="w-full cursor-pointer"
+                  onClick={handleNavigateToDownload}
+                >
                   {t('mobileSidebar.downloadApp')}
                 </Button>
                 <div className="mt-4 text-center text-sm text-gray-500">

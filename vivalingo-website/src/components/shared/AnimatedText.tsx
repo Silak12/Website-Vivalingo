@@ -25,8 +25,8 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   const ref = useRef(null);
   const inView = useInView(ref, { once });
   
-  // Split text into words
-  const words = text.split(' ');
+  // Split text into words and ensure no empty strings
+  const words = text.split(' ').filter(word => word.trim() !== '');
   
   const container = {
     hidden: { opacity: 0 },
@@ -35,6 +35,9 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
       transition: { 
         staggerChildren, 
         delayChildren: delay * i,
+        // Ensure all children animate
+        staggerDirection: 1,
+        when: "beforeChildren",
       }
     })
   };
@@ -58,32 +61,42 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   
   useEffect(() => {
     if (inView) {
+      // Force complete animation sequence
       controls.start('visible');
     } else if (!once) {
       controls.start('hidden');
     }
   }, [controls, inView, once]);
   
-  const Component = as;
+  // Use native HTML element
+  const Component = motion[as] || motion.div;
   
   return (
-    <motion.div
+    <Component
       ref={ref}
-      className={className}
+      className={`${className} overflow-visible`}
       variants={container}
       initial="hidden"
       animate={controls}
+      style={{ display: 'block', width: '100%' }}
     >
       {words.map((word, index) => (
-        <motion.span
-          key={index}
-          className="inline-block mr-1"
-          variants={child}
-        >
-          {word}{' '}
-        </motion.span>
+        <span key={index} style={{ position: 'relative', display: 'inline-block' }}>
+          <motion.span
+            variants={child}
+            style={{ 
+              display: 'inline-block',
+              whiteSpace: 'pre'
+            }}
+          >
+            {word}
+          </motion.span>
+          {index < words.length - 1 && (
+            <span style={{ display: 'inline-block', width: '0.35em' }}> </span>
+          )}
+        </span>
       ))}
-    </motion.div>
+    </Component>
   );
 };
 

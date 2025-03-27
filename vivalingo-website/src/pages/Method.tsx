@@ -366,14 +366,6 @@ const Method: React.FC = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2"
             >
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary-200/30 to-secondary-200/30 rounded-2xl blur-xl"></div>
-                <img 
-                  src="https://via.placeholder.com/600x400?text=Vera+F.+Birkenbihl" 
-                  alt="Vera F. Birkenbihl" 
-                  className="relative z-10 rounded-xl shadow-xl w-full"
-                />
-              </div>
             </motion.div>
           </div>
         </div>

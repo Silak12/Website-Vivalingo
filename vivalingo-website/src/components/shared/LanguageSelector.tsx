@@ -23,8 +23,8 @@ const LanguageSelector: React.FC = () => {
 
   // Language options with flags
   const languages: { code: Language; flag: string }[] = [
-    { code: 'en', flag: '🇬🇧' },
-    { code: 'de', flag: '🇩🇪' },
+    { code: 'en', flag: 'EN' },
+    { code: 'de', flag: 'DE' },
     { code: 'es', flag: 'ES' },
     { code: 'id', flag: 'ID' },
     { code: 'fr', flag: 'FR' },

@@ -3,11 +3,19 @@ import { motion, useInView } from 'framer-motion';
 import gsap from 'gsap';
 import Button from '../shared/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 
 const MethodFeatures: React.FC = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate(); // Hook für die Navigation
   const featureRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(featureRef, { once: true, amount: 0.3 });
+  
+  // Navigation-Handler für den Method-Button
+  const handleNavigateToMethod = () => {
+    navigate('/method');
+    window.scrollTo(0, 0); // Scrolle zum Seitenanfang nach der Navigation
+  };
   
   // Features data using translations
   const features = [
@@ -61,34 +69,48 @@ const MethodFeatures: React.FC = () => {
     },
   ];
   
-  // Brain animation
-  const brainRef = useRef<HTMLDivElement>(null);
+  // Logo animation
+  const logoRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
-    if (brainRef.current) {
-      const synapses = brainRef.current.querySelectorAll('.synapse');
+    if (logoRef.current) {
+      const logo = logoRef.current.querySelector('.logo-image');
       
-      synapses.forEach((synapse) => {
-        // Random delay
-        const delay = Math.random() * 4;
-        
-        gsap.fromTo(
-          synapse,
-          { 
-            opacity: 0.3,
-            scale: 0.8,
-          },
-          { 
-            opacity: 1,
-            scale: 1.2,
-            duration: 1.5,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut",
-            delay: delay,
-          }
-        );
-      });
+      // Create subtle animation for the logo
+      gsap.fromTo(
+        logo,
+        { 
+          y: 0,
+          rotation: 0,
+          scale: 1,
+        },
+        { 
+          y: -5,
+          rotation: 2,
+          scale: 1.03,
+          duration: 2.5,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+        }
+      );
+      
+      // Create glow effect
+      gsap.fromTo(
+        logoRef.current.querySelector('.logo-glow'),
+        {
+          opacity: 0.4,
+          scale: 0.9,
+        },
+        {
+          opacity: 0.7,
+          scale: 1.1,
+          duration: 3,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+        }
+      );
     }
   }, []);
   
@@ -138,7 +160,7 @@ const MethodFeatures: React.FC = () => {
           ))}
         </div>
         
-        {/* Brain visualization */}
+        {/* Brain visualization replaced with logo */}
         <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl overflow-hidden shadow-xl p-8 mt-16">
           <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8">
             <motion.h3
@@ -174,45 +196,31 @@ const MethodFeatures: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <Button variant="primary">{t('methodFeatures.brainLearning.button')}</Button>
+              {/* Button mit onClick-Handler für Navigation */}
+              <Button 
+                variant="primary" 
+                onClick={handleNavigateToMethod} 
+                className="cursor-pointer hover:shadow-md transition-shadow"
+              >
+                {t('methodFeatures.brainLearning.button')}
+              </Button>
             </motion.div>
           </div>
           
           <div className="w-full md:w-1/2 relative">
             <div 
-              ref={brainRef}
+              ref={logoRef}
               className="aspect-square max-w-md mx-auto relative"
             >
-              {/* Brain outline SVG */}
-              <svg className="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M100 180C145.228 180 182 143.228 182 98C182 52.7715 145.228 16 100 16C54.7715 16 18 52.7715 18 98C18 143.228 54.7715 180 100 180Z" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M100 16C100 16 120 42 120 98C120 154 100 180 100 180" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M100 16C100 16 80 42 80 98C80 154 100 180 100 180" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M42 48C42 48 70 58 100 58C130 58 158 48 158 48" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M42 148C42 148 70 138 100 138C130 138 158 148 158 148" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M54 30C54 30 64 66 64 98C64 130 54 166 54 166" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M146 30C146 30 136 66 136 98C136 130 146 166 146 166" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              {/* Glow effect behind logo */}
+              <div className="logo-glow absolute inset-0 bg-gradient-to-r from-primary-300/20 to-secondary-300/20 rounded-full blur-xl"></div>
               
-              {/* Brain synapses */}
-              <div className="synapse absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-primary-500 opacity-80"></div>
-              <div className="synapse absolute top-1/3 left-2/3 w-2 h-2 rounded-full bg-secondary-500 opacity-80"></div>
-              <div className="synapse absolute top-2/3 left-1/3 w-4 h-4 rounded-full bg-accent-500 opacity-80"></div>
-              <div className="synapse absolute top-1/2 left-1/2 w-3 h-3 rounded-full bg-purple-500 opacity-80"></div>
-              <div className="synapse absolute top-1/5 left-1/2 w-2 h-2 rounded-full bg-primary-400 opacity-80"></div>
-              <div className="synapse absolute top-3/4 left-3/4 w-3 h-3 rounded-full bg-secondary-400 opacity-80"></div>
-              <div className="synapse absolute top-2/5 left-2/5 w-2 h-2 rounded-full bg-accent-400 opacity-80"></div>
-              <div className="synapse absolute top-3/5 left-4/5 w-4 h-4 rounded-full bg-purple-400 opacity-80"></div>
-              
-              {/* Brain connections */}
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 50L100 100" stroke="rgba(14, 152, 240, 0.4)" strokeWidth="1" strokeDasharray="2 2"/>
-                <path d="M150 50L100 100" stroke="rgba(240, 58, 106, 0.4)" strokeWidth="1" strokeDasharray="2 2"/>
-                <path d="M50 150L100 100" stroke="rgba(188, 188, 35, 0.4)" strokeWidth="1" strokeDasharray="2 2"/>
-                <path d="M150 150L100 100" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="1" strokeDasharray="2 2"/>
-                <path d="M40 100L160 100" stroke="rgba(14, 152, 240, 0.3)" strokeWidth="1" strokeDasharray="3 3"/>
-                <path d="M100 40L100 160" stroke="rgba(240, 58, 106, 0.3)" strokeWidth="1" strokeDasharray="3 3"/>
-              </svg>
+              {/* Logo image */}
+              <img 
+                src="../../../public/images/logo2.png"  
+                alt="Viva La Lingo Logo" 
+                className="logo-image w-full h-full object-contain relative z-10"
+              />
             </div>
           </div>
         </div>
