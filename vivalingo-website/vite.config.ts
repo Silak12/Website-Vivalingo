@@ -5,6 +5,10 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    host: '0.0.0.0', // Auf allen Netzwerkschnittstellen lauschen
+    port: 5173, // Standard-Port, kann bei Bedarf geändert werden
+  },
   css: {
     postcss: './postcss.config.js', // Explizit angeben
   },
