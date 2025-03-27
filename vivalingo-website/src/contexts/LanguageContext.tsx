@@ -3,9 +3,15 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 // Importiere lokale Übersetzungsdateien
 import enTranslations from '../locales/en.json';
 import deTranslations from '../locales/de.json';
+import esTranslations from '../locales/es.json';
+import idTranslations from '../locales/id.json';
+import frTranslations from '../locales/fr.json';
+import itTranslations from '../locales/it.json';
+
+
 
 // Unterstützte Sprachen
-export type Language = 'en' | 'de';
+export type Language = 'en' | 'de' | 'es' | 'id' | 'fr' | 'it' | 'pt' | 'nl' | 'pl' | 'ru' | 'tr' | 'zh';
 
 // Interface für den Kontext
 interface LanguageContextType {
@@ -43,7 +49,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   // Translations Map
   const translations: Record<Language, Translations> = {
     en: enTranslations,
-    de: deTranslations
+    de: deTranslations,
+    es: esTranslations,
+    id: idTranslations,
+    fr: frTranslations,
+    it: itTranslations,
   };
 
   // Update html lang attribute when language changes

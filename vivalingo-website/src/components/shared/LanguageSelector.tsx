@@ -25,6 +25,10 @@ const LanguageSelector: React.FC = () => {
   const languages: { code: Language; flag: string }[] = [
     { code: 'en', flag: '🇬🇧' },
     { code: 'de', flag: '🇩🇪' },
+    { code: 'es', flag: 'ES' },
+    { code: 'id', flag: 'ID' },
+    { code: 'fr', flag: 'FR' },
+    { code: 'it', flag: 'IT' },
   ];
 
   // Get current language option

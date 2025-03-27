@@ -122,7 +122,8 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
             >
               <Link to="/" className="flex items-center">
-                <img src="/images/logo2.png" alt="Viva La Lingo Logo" className="h-8 w-8 mr-2" />
+                {/* Vergrößertes Logo von h-8 w-8 auf h-12 w-12 */}
+                <img src="/images/logo2.png" alt="Viva La Lingo Logo" className="h-12 w-12 mr-2" />
                 <span className="text-xl font-bold">Viva La Lingo</span>
               </Link>
               <p className="text-gray-400 mt-2 max-w-xs">

@@ -115,7 +115,7 @@
   "downloadCTA": {
     "title": "Revolutioniere",
     "titleHighlight": "dein Sprachenlernen",
-    "description": "Mit Viva La Lingo lernst du Sprachen auf die natürlichste Weise. Genau wie du deine Muttersprache gelernt hast – intuitiv und ohne Regelbüffelei.",
+    "description": "Mit Viva La Lingo lernst du Sprachen auf die natürlichste Weise. Genau wie du deine Muttersprache gelernt hast – intuitiv und ohne Regeln.",
     "downloadIOS": "iOS App herunterladen",
     "downloadAndroid": "Android App herunterladen",
     "appStoreRating": "4.8/5 im App Store",
@@ -209,7 +209,7 @@
     }
   },
   "discountSection": {
-    "title": "Finde den 100% Rabattcode! Teste ihn in der App!",
+    "title": "Teste jeden Code in der App - Einer dieser Codes gibt dir 90% Rabatt auf das 1 Jahres Abo!",
     "codeAvailable": {
       "label": "Code wurde noch nicht verwendet",
       "icon": "⏱️"
@@ -220,7 +220,7 @@
       "title": "Der Code wurde verwendet!",
       "nextCode": "Nächster Code wird aktiv in:"
     },
-    "description": "Wir haben 150 Codes versteckt, aber nur EINER ist derzeit aktiv für 100% Rabatt. Wenn er bereits benutzt wurde, siehst du einen 24-Stunden-Countdown."
+    "description": "Wir haben 150 Codes versteckt, aber nur EINER ist derzeit aktiv für 90% Rabatt. Wenn er bereits benutzt wurde, siehst du einen 24-Stunden-Countdown."
   },
   "about": {
     "title": "Über Viva La Lingo",
@@ -260,6 +260,7 @@
     "phases": {
       "title": "Die 4 Phasen der Birkenbihl-Methode",
       "subtitle": "Ein strukturierter Ansatz zum natürlichen Sprachenlernen, der mit deinem Gehirn arbeitet, nicht gegen es",
+      "appFeatureTitle": "In der Viva La Lingo-App:",
       "items": [
         {
           "title": "Dekodieren",
@@ -269,7 +270,9 @@
         {
           "title": "Aktives Hören & Sprechen",
           "description": "Höre den fremdsprachlichen Text, während du die Übersetzung liest. Sprich die Wörter nach, sobald du dich sicher fühlst. Durch das Mitsprechen trainierst du aktiv deine Aussprache und verankerst die Sprache tiefer.",
-          "appFeature": "Mit der Schildkröte (langsame Audio) und dem Hasen (schnelle Audio) kannst du dein Tempo anpassen. Fange mit der Schildkröte an und steigere dich. Durch Wiederholung und aktives Mitsprechen wirst du schnell Fortschritte merken."
+          "appFeature": "Mit der Schildkröte (langsame Audio) und dem Hasen (schnelle Audio) kannst du dein Tempo anpassen. Fange mit der Schildkröte an und steigere dich. Durch Wiederholung und aktives Mitsprechen wirst du schnell Fortschritte merken.",
+          "slow": "Langsam & gründlich",
+          "fast": "Schnell & flüssig"
         },
         {
           "title": "Passives Hören",
@@ -279,7 +282,8 @@
         {
           "title": "Anwenden",
           "description": "Sprich mit Freunden, schaue fremdsprachige Filme – alles, was dir hilft, deine neue Sprache aktiv auszuprobieren.",
-          "appFeature": "Nutze die Prüfungen in der App – sie können beliebig oft wiederholt werden, ohne Druck! So kannst du deine Aussprache testen und erkennst schnell, wo du noch Übung brauchst. Die Prüfungen sind deine Freunde, keine Hindernisse."
+          "appFeature": "Nutze die Prüfungen in der App – sie können beliebig oft wiederholt werden, ohne Druck! So kannst du deine Aussprache testen und erkennst schnell, wo du noch Übung brauchst. Die Prüfungen sind deine Freunde, keine Hindernisse.",
+          "practiceNote": "Keine Angst vor Prüfungen! In Viva La Lingo kannst du sie beliebig oft wiederholen, um deine Aussprache und dein Verständnis zu verbessern."
         }
       ]
     },
@@ -325,7 +329,9 @@
       "de": "Deutsch",
       "en": "Englisch",
       "es": "Spanisch",
-      "fr": "Französisch"
+      "fr": "Französisch",
+      "id": "Indonesisch",
+      "it": "Italienisch"
     }
   },
   "agb": {

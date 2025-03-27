@@ -1,0 +1,613 @@
+{
+    "navbar": {
+      "home": "Beranda",
+      "features": "Fitur",
+      "method": "Metode",
+      "pricing": "Harga",
+      "downloadApp": "Unduh Aplikasi"
+    },
+    "footer": {
+      "product": "Produk",
+      "features": "Fitur",
+      "pricing": "Harga",
+      "download": "Unduh",
+      "learn": "Belajar",
+      "method": "Metode Birkenbihl",
+      "company": "Perusahaan",
+      "about": "Tentang",
+      "legal": "Legal",
+      "privacyPolicy": "Kebijakan Privasi",
+      "termsOfService": "Syarat Layanan",
+      "impressum": "Impresum",
+      "connectWithUs": "Hubungi Kami",
+      "copyright": "© {year} Viva La Lingo. Hak cipta dilindungi undang-undang.",
+      "madeWith": "Dibuat dengan ❤️ untuk para pembelajar bahasa",
+      "tagline": "Belajar bahasa secara alami dengan metode Birkenbihl. Tanpa aturan tata bahasa, hanya pembelajaran intuitif."
+    },
+    "mobileSidebar": {
+      "changeLanguage": "Ganti Bahasa",
+      "downloadApp": "Unduh Aplikasi"
+    },
+    "hero": {
+      "title": "Belajar Bahasa Secara Alami",
+      "subtitle": "Rasakan kekuatan metode Birkenbihl bersama Viva La Lingo. Belajar tanpa aturan tata bahasa, secara intuitif. Seperti cara kamu belajar bahasa ibu.",
+      "startLearning": "Mulai Belajar Sekarang",
+      "seeHowItWorks": "Lihat Cara Kerjanya",
+      "appStoreRating": "4.8/5 di App Store",
+      "satisfiedUsers": "Lebih dari 100k pengguna puas",
+      "benefits": {
+        "noGrammarRules": "Tanpa aturan tata bahasa",
+        "fromListenerToSpeaker": "Dari pendengar ke pembicara",
+        "naturalLanguageFeel": "Nuansa bahasa yang alami"
+      },
+      "birkenbihlMethod": {
+        "title": "Metode Birkenbihl:",
+        "decoding": "Dekoding: Terjemahan kata demi kata tanpa aturan tata bahasa",
+        "activeListening": "Mendengarkan Aktif: Teks dan terjemahan bersamaan",
+        "passiveListening": "Mendengarkan Pasif: Memainkan audio di latar belakang",
+        "activation": "Aktivasi: Terapkan bahasa secara alami"
+      },
+      "languagePhrases": {
+        "spanish": {
+          "lang": "Spanyol",
+          "original": "Me gusta aprender idiomas",
+          "translation": "Saya suka belajar bahasa"
+        },
+        "french": {
+          "lang": "Perancis",
+          "original": "Je parle sans réfléchir",
+          "translation": "Saya berbicara tanpa berpikir"
+        },
+        "italian": {
+          "lang": "Italia",
+          "original": "Imparo in modo naturale",
+          "translation": "Saya belajar secara alami"
+        },
+        "japanese": {
+          "lang": "Jepang",
+          "original": "私は毎日練習します",
+          "translation": "Saya berlatih setiap hari"
+        }
+      }
+    },
+    "wordFlow": {
+      "title": "Viva La Lingo.",
+      "subtitle": "Dari pendengar ke pembicara: Dapatkan kepercayaan diri dan segera berbicara.",
+      "scrollToSee": "Gulir untuk melihat lebih banyak",
+      "words": [
+        { "original": "No grammar rules", "translation": "Tanpa aturan tata bahasa" },
+        { "original": "No vocabulary drills", "translation": "Tanpa latihan kosakata" },
+        { "original": "Learn intuitively", "translation": "Belajar secara intuitif" },
+        { "original": "Real-life dialogues", "translation": "Dialog kehidupan nyata" },
+        { "original": "Speak confidently", "translation": "Berbicara dengan percaya diri" },
+        { "original": "Natural understanding", "translation": "Pemahaman alami" },
+        { "original": "Immediate results", "translation": "Hasil instan" }
+      ]
+    },
+    "methodFeatures": {
+      "title": "4 Fase Metode Birkenbihl",
+      "subtitle": "Temukan cara alami dan intuitif untuk belajar bahasa yang sesuai dengan cara kerja otakmu.",
+      "phases": [
+        {
+          "title": "1. Dekode",
+          "description": "Teks diterjemahkan secara literal sehingga kamu langsung memahami maknanya tanpa perlu kamus."
+        },
+        {
+          "title": "2. Mendengarkan Aktif & Berbicara",
+          "description": "Dengarkan teks dalam bahasa asing sambil membaca terjemahannya. Segera, kamu akan 'mendengarnya' seperti bahasa ibumu. Cobalah membaca dengan suara keras."
+        },
+        {
+          "title": "3. Mendengarkan Pasif",
+          "description": "Setelah beberapa pelajaran, kamu bisa mulai memutar audio sambil melakukan aktivitas lain."
+        },
+        {
+          "title": "4. Terapkan",
+          "description": "Bicaralah dengan teman, tonton film berbahasa asing – apa pun yang membantumu mempraktikkan bahasa baru secara aktif."
+        }
+      ],
+      "brainLearning": {
+        "title": "Pembelajaran yang Ramah Otak",
+        "description1": "Dengan metode Birkenbihl, kamu belajar sesuai cara kerja otakmu. Bukan tentang menghafal aturan tata bahasa, melainkan membangun perasaan bahasa secara intuitif seperti bahasa ibu.",
+        "description2": "Melalui stimulasi multimodal (mendengar, melihat, memahami), bahasa tertanam kuat dalam memori jangka panjangmu.",
+        "button": "Pelajari lebih lanjut tentang metode"
+      }
+    },
+    "downloadCTA": {
+      "title": "Revolusi",
+      "titleHighlight": "pembelajaran bahasamu",
+      "description": "Dengan Viva La Lingo, kamu belajar bahasa dengan cara yang paling alami. Seperti cara kamu belajar bahasa ibu – secara intuitif dan tanpa aturan.",
+      "downloadIOS": "Unduh Aplikasi iOS",
+      "downloadAndroid": "Unduh Aplikasi Android",
+      "appStoreRating": "4.8/5 di App Store",
+      "satisfiedUsers": "Lebih dari 100k pengguna puas",
+      "features": [
+        {
+          "title": "Belajar bahasa seperti bahasa ibumu",
+          "description": "Otakmu belajar melalui pengenalan pola, bukan dengan aturan. Seperti anak-anak belajar bahasa pertama mereka.",
+          "example": "Metode Birkenbihl memanfaatkan kemampuan alami otak untuk mengenali pola"
+        },
+        {
+          "title": "Perasaan bahasa yang intuitif",
+          "description": "Kamu akan membentuk kalimat tanpa berpikir. Tata bahasa datang secara otomatis.",
+          "example": "Melalui dekoding 1:1, kamu memahami struktur bahasa secara intuitif tanpa menghafal aturan"
+        },
+        {
+          "title": "Pengucapan yang alami",
+          "description": "Dengan mendengarkan dan berbicara berulang, kamu mengembangkan pengucapan yang alami.",
+          "example": "Latih telingamu untuk menangkap nuansa pengucapan dan mengulanginya secara alami"
+        },
+        {
+          "title": "Hasil yang cepat",
+          "description": "Setelah beberapa jam, kamu mulai memahami dan mengucapkan kalimat sederhana.",
+          "example": "Fokus pada penerapan praktis, bukan pengetahuan teoretis, menghasilkan kemajuan cepat"
+        }
+      ]
+    },
+    "pricingSection": {
+      "title": "Pilih Paketmu",
+      "subtitle": "Harga sederhana, fitur kuat, dan tanpa biaya tersembunyi",
+      "tabs": {
+        "monthly": "Bulanan",
+        "yearly": "Tahunan",
+        "lifetime": "Seumur Hidup",
+        "yearlySavings": "Hemat 64%",
+        "lifetimeBestValue": "Penawaran Terbaik"
+      },
+      "cards": {
+        "monthly": {
+          "title": "Akses Bulanan",
+          "price": "2.99",
+          "period": "bulan",
+          "savings": "",
+          "freeTrialAvailable": true
+        },
+        "yearly": {
+          "title": "Akses Tahunan",
+          "price": "12.99",
+          "period": "tahun",
+          "savings": "Hemat 64% dibandingkan bulanan",
+          "tag": "POPULER",
+          "freeTrialAvailable": true
+        },
+        "lifetime": {
+          "title": "Akses Seumur Hidup",
+          "price": "49.99",
+          "period": "pembayaran sekali",
+          "savings": "Penawaran terbaik – Tanpa biaya berulang",
+          "tag": "TERBAIK",
+          "freeTrialAvailable": false
+        }
+      },
+      "features": {
+        "title": "Termasuk:",
+        "monthly": [
+          "Akses penuh ke semua bahasa",
+          "Pengalaman tanpa iklan",
+          "Kontrol audio tanpa batas",
+          "Berganti bahasa secara berganda"
+        ],
+        "yearly": [
+          "Akses penuh ke semua bahasa",
+          "Pengalaman tanpa iklan",
+          "Dukungan pelanggan prioritas",
+          "Konten yang dapat diunduh untuk penggunaan offline"
+        ],
+        "lifetime": [
+          "Pembayaran sekali",
+          "Akses ke semua pembaruan di masa depan",
+          "Akses penuh ke semua bahasa",
+          "Pengalaman tanpa iklan"
+        ]
+      },
+      "freeTrial": {
+        "title": "Uji Coba Gratis 7 Hari",
+        "description": "Coba semua fitur tanpa komitmen. Kamu dapat membatalkan kapan saja sebelum uji coba berakhir."
+      },
+      "buttons": {
+        "appStore": "App Store",
+        "playStore": "Play Store"
+      }
+    },
+    "discountSection": {
+      "title": "Coba setiap kode di aplikasi – Salah satu kode ini memberi kamu diskon 90% untuk langganan tahunan!",
+      "codeAvailable": {
+        "label": "Kode belum digunakan",
+        "icon": "⏱️"
+      },
+      "codeUsed": {
+        "label": "Kode sudah digunakan!",
+        "icon": "⏱️",
+        "title": "Kode sudah digunakan!",
+        "nextCode": "Kode berikutnya akan aktif dalam:"
+      },
+      "description": "Kami telah menyembunyikan 150 kode, namun hanya SATU yang aktif saat ini untuk diskon 90%. Jika sudah digunakan, kamu akan melihat hitungan mundur 24 jam."
+    },
+    "about": {
+      "title": "Tentang Viva La Lingo",
+      "story": [
+        "Halo! Saya adalah pembuat Viva La Lingo. Aplikasi ini dimulai sebagai proyek pribadi — saya hanya ingin menemukan cara yang lebih baik untuk belajar bahasa menggunakan metode Birkenbihl.",
+        "Apa yang terjadi selanjutnya tidak terduga. Ketika teman dan keluarga melihat saya menggunakan aplikasi, mereka juga menginginkannya. Sebelum saya menyadari, saya telah menghabiskan 5 bulan untuk mengembangkannya, menyempurnakannya, dan memperluasnya jauh melampaui rencana awal saya.",
+        "Saya berpikir, jika lingkaran terdekat saya menganggapnya berguna, mungkin orang lain juga. Maka, di sinilah kita! Saya merilis Viva La Lingo ke dunia dengan harapan bahwa orang lain dapat mengambil manfaat dari metode pembelajaran bahasa yang kuat ini.",
+        "Secara jujur: ini adalah operasi satu orang. Artinya, jika saya agak lambat dalam mengimplementasikan fitur baru, itu karena saya bekerja sendiri di balik layar. Namun, saya selalu berupaya meningkatkan dan membuat aplikasi ini sebaik mungkin!",
+        "Saya terbuka untuk masukan dan saran. Jadi, jika kamu memiliki ide untuk membuat Viva La Lingo lebih baik, saya siap mendengarkan!"
+      ],
+      "contact": {
+        "title": "Hubungi Kami",
+        "email": "VivaLaLingoapp@gmail.com"
+      },
+      "downloadButton": "Unduh Viva La Lingo"
+    },
+    "method": {
+      "hero": {
+        "title": "Metode Birkenbihl",
+        "subtitle": "Temukan cara paling efektif untuk belajar bahasa, sesuai cara kerja otakmu",
+        "ratings": {
+          "enthusiasts": "Ribuan pelajar antusias",
+          "scientific": "Secara ilmiah",
+          "foundedOn": "berdasarkan"
+        },
+        "scrollDown": "Pelajari lebih lanjut"
+      },
+      "intro": {
+        "title": "Siapa Vera F. Birkenbihl?",
+        "paragraphs": [
+          "Vera F. Birkenbihl (1946-2011) adalah pelatih manajemen ternama, penulis non-fiksi, dan ahli dalam pembelajaran yang ramah otak. Dia terkenal dengan metode inovatifnya dalam belajar bahasa yang berbeda dari metode tradisional.",
+          "Metodenya didasarkan pada cara otak manusia belajar bahasa secara alami – melalui pemahaman dan konteks, bukan dengan aturan tata bahasa dan hafalan mekanis."
+        ],
+        "quote": "\"Kamu tidak bisa mengajar bahasa, kamu hanya bisa menciptakan kondisi agar bahasa itu bisa dipelajari.\" – Vera F. Birkenbihl",
+        "appDescription": "Viva La Lingo membawa metode revolusioner ini ke dalam aplikasi modern yang membantumu belajar bahasa dengan cara paling alami dan efektif."
+      },
+      "phases": {
+        "title": "4 Fase Metode Birkenbihl",
+        "subtitle": "Pendekatan terstruktur untuk belajar bahasa secara alami yang bekerja dengan otakmu, bukan melawannya",
+        "appFeatureTitle": "Dalam Aplikasi Viva La Lingo:",
+        "items": [
+          {
+            "title": "Dekode",
+            "description": "Teks diterjemahkan secara literal sehingga kamu langsung memahami isinya. Terjemahan kata demi kata ini membantu otakmu mengenali pola, bukan belajar aturan.",
+            "appFeature": "Di aplikasi, semua teks sudah diterjemahkan secara literal dan diberi kode warna, sehingga kamu bisa langsung mulai belajar tanpa repot dengan kamus."
+          },
+          {
+            "title": "Mendengarkan Aktif & Berbicara",
+            "description": "Dengarkan teks dalam bahasa asing sambil membaca terjemahannya. Ulangi kata-kata saat kamu merasa yakin. Dengan berbicara keras, kamu melatih pengucapan dan mengukuhkan bahasa secara mendalam.",
+            "appFeature": "Dengan kura-kura (audio lambat) dan kelinci (audio cepat), kamu bisa menyesuaikan kecepatan. Mulailah dengan audio lambat dan tingkatkan secara bertahap. Dengan pengulangan dan praktik aktif, kemajuan akan terasa segera.",
+            "slow": "Lambat & Teliti",
+            "fast": "Cepat & Lancar"
+          },
+          {
+            "title": "Mendengarkan Pasif",
+            "description": "Putar audio di latar belakang saat kamu melakukan aktivitas lain. Pendengaran pasif membantu otakmu membiasakan diri dengan suara bahasa dan memperkuat apa yang telah dipelajari secara tidak sadar.",
+            "appFeature": "Aplikasi memungkinkan pemutaran audio di latar belakang, bahkan saat layar terkunci. Dengan begitu, kamu bisa tetap mendengarkan saat berlari, memasak, atau melakukan aktivitas lain."
+          },
+          {
+            "title": "Terapkan",
+            "description": "Cobalah berbicara dalam bahasa tersebut, baik dalam percakapan maupun saat menonton media. Praktikkan apa yang telah kamu pelajari dan perbaiki kesalahan tanpa tekanan.",
+            "appFeature": "Gunakan tes dalam aplikasi – tes bisa diulang sebanyak yang kamu mau tanpa tekanan. Ini membantumu mengevaluasi pengucapan dan segera mengetahui area yang perlu diperbaiki.",
+            "practiceNote": "Jangan takut dengan tes! Di Viva La Lingo, kamu bisa mengulang tes sebanyak yang diperlukan untuk meningkatkan pengucapan dan pemahaman."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Manfaat Metode Birkenbihl",
+        "subtitle": "Mengapa metode ini lebih efektif daripada belajar bahasa secara tradisional",
+        "items": [
+          {
+            "title": "Pembelajaran Alami",
+            "description": "Belajar seperti anak kecil – melalui pemahaman dan penerapan, bukan melalui aturan dan hafalan."
+          },
+          {
+            "title": "Ramah Otak",
+            "description": "Metode ini memanfaatkan cara kerja alami otak, menghasilkan hasil yang lebih cepat dan tahan lama."
+          },
+          {
+            "title": "Tanpa Stres",
+            "description": "Belajar tanpa tekanan dan kecemasan ujian – dengan kecepatan sendiri dan dengan kegembiraan, bukan frustrasi."
+          },
+          {
+            "title": "Pembelajaran Berkelanjutan",
+            "description": "Melalui stimulasi multisensorik, apa yang kamu pelajari tertanam kuat dalam memori jangka panjang."
+          },
+          {
+            "title": "Tanpa Hafalan Tata Bahasa",
+            "description": "Memahami tata bahasa secara intuitif melalui konteks, bukan dengan aturan abstrak."
+          },
+          {
+            "title": "Cocok untuk Semua",
+            "description": "Baik anak-anak maupun dewasa, berbakat atau tidak dalam bahasa – metode ini dapat diakses oleh semua orang."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Siap untuk belajar bahasa secara alami?",
+        "description": "Dengan Viva La Lingo, kamu akan merasakan metode Birkenbihl dalam aplikasi yang modern dan mudah digunakan. Mulailah perjalanan belajarmu sekarang dan belajarlah bahasa seperti kamu belajar bahasa ibu!",
+        "iosDownload": "Unduh Aplikasi iOS",
+        "androidDownload": "Unduh Aplikasi Android"
+      }
+    },
+    "languageSelector": {
+      "languages": {
+        "de": "Jerman",
+        "en": "Inggris",
+        "es": "Spanyol",
+        "fr": "Perancis",
+        "id": "Indonesia",
+        "it": "Italia"
+      }
+    },
+    "agb": {
+      "title": "Syarat dan Ketentuan",
+      "lastUpdated": "Terakhir diperbarui",
+      "sections": {
+        "1": {
+          "title": "1. Ruang Lingkup",
+          "content": "Syarat dan Ketentuan ini mengatur penggunaan aplikasi Viva La Lingo dan situs web www.VivaLaLingo.app (\"Layanan\") oleh pengguna. Viva La Lingo dioperasikan oleh Leonard Marx, Musterstraße 14, 14527 Jerman (\"kami\"). Dengan mengakses atau menggunakan Layanan, kamu menyetujui syarat-syarat ini. Jika tidak, mohon untuk tidak menggunakan Layanan kami."
+        },
+        "2": {
+          "title": "2. Deskripsi Layanan",
+          "content": "Viva La Lingo adalah aplikasi pembelajaran bahasa yang menggunakan metode Birkenbihl untuk membantu pengguna belajar bahasa asing. Aplikasi ini menawarkan:",
+          "features": [
+            "Pelajaran bahasa dalam berbagai bahasa",
+            "Dialog audio yang dihasilkan oleh AI untuk pembelajaran",
+            "Fitur pengenalan suara untuk peningkatan pengucapan",
+            "Pelacakan kemajuan",
+            "Berbagai model langganan dan pembelian dalam aplikasi"
+          ]
+        },
+        "3": {
+          "title": "3. Pendaftaran dan Akun Pengguna",
+          "content": "Untuk menggunakan Layanan secara penuh, pembuatan akun diperlukan. Kamu diwajibkan untuk memberikan informasi yang akurat dan terbaru saat mendaftar. Kamu bertanggung jawab atas keamanan kata sandi dan tidak boleh membagikan akun dengan pihak lain. Kamu juga bertanggung jawab atas seluruh aktivitas dalam akunmu."
+        },
+        "4": {
+          "title": "4. Batasan Usia",
+          "content": "Layanan ini ditujukan untuk pengguna berusia 16 tahun ke atas. Jika kamu berusia di bawah 16, kamu hanya boleh menggunakan Layanan dengan izin orang tua atau wali. Kami berhak memverifikasi usia dan membatasi akses."
+        },
+        "5": {
+          "title": "5. Harga dan Ketentuan Pembayaran",
+          "content": "Kami menawarkan berbagai pilihan langganan dan pembelian dalam aplikasi:",
+          "plans": [
+            "Langganan bulanan: €2,99 per bulan",
+            "Langganan tahunan: €12,99 per tahun (hemat 64% dibandingkan bulanan)",
+            "Akses seumur hidup: Pembayaran sekali sebesar €49,99"
+          ],
+          "payment": "Semua pembayaran diproses melalui App Store (iOS) atau Google Play Store. Penagihan dilakukan sesuai dengan ketentuan platform tersebut. Langganan diperpanjang otomatis kecuali dibatalkan 24 jam sebelum periode berakhir."
+        },
+        "6": {
+          "title": "6. Masa Percobaan dan Pengembalian Dana",
+          "content": "Pengguna baru mendapatkan uji coba gratis selama 7 hari untuk langganan bulanan atau tahunan. Pembelian akses seumur hidup tidak termasuk uji coba. Permintaan pengembalian dana harus diajukan melalui App Store (iOS) atau Google Play (Android) sesuai kebijakan masing-masing. Pengguna iOS dapat mengajukan pengembalian melalui situs Apple atau App Store, dan pengguna Android melalui Google Play dalam 48 jam setelah pembelian. Untuk permintaan selanjutnya, hubungi dukungan Google Play. Kami tidak menawarkan pengembalian dana langsung, namun akan membantu jika ada pertanyaan."
+        },
+        "7": {
+          "title": "7. Hak Penolakan",
+          "content": "Untuk konten digital, hak penolakan berakhir saat pelaksanaan kontrak dimulai jika pengguna menyetujui bahwa pelaksanaan dimulai sebelum hak tersebut habis. Untuk langganan, kamu dapat menggunakan hak penolakan dalam 14 hari setelah kontrak jika belum menggunakan Layanan."
+        },
+        "8": {
+          "title": "8. Ketentuan Penggunaan",
+          "intro": "Dengan menggunakan Layanan, kamu setuju untuk:",
+          "obligations": [
+            "Tidak menggunakan Layanan untuk tujuan ilegal atau tidak sah",
+            "Tidak menyebarkan virus atau kode berbahaya",
+            "Tidak melakukan rekayasa balik, dekompilasi, atau membongkar aplikasi",
+            "Tidak menyalin, mengekstrak, atau mendistribusikan konten",
+            "Tidak membebani infrastruktur Layanan secara berlebihan",
+            "Menggunakan dialog audio AI hanya untuk pembelajaran pribadi"
+          ]
+        },
+        "9": {
+          "title": "9. Konten yang Dihasilkan AI",
+          "content": "Dialog audio dan contoh bahasa di aplikasi dibuat dengan teknologi AI. Konten ini dihasilkan secara artifisial dan tidak berasal dari penutur asli, meskipun terdengar alami. Hanya untuk penggunaan pribadi dan tidak boleh didistribusikan. Kami memegang hak atas semua konten AI."
+        },
+        "10": {
+          "title": "10. Hak Kekayaan Intelektual",
+          "content": "Semua hak atas aplikasi dan isinya, termasuk perangkat lunak, teks, grafik, materi audio, dan konten AI, adalah milik kami atau pemegang lisensi dan dilindungi undang-undang. Penggunaan Layanan tidak memberikan hak kepemilikan atas konten atau perangkat lunak."
+        },
+        "11": {
+          "title": "11. Perlindungan Data",
+          "content": "Perlindungan data pribadimu sangat penting bagi kami. Informasi tentang cara kami mengumpulkan, memproses, dan menggunakan data pribadi ada di Kebijakan Privasi yang merupakan bagian dari syarat ini."
+        },
+        "12": {
+          "title": "12. Ketersediaan dan Perubahan Layanan",
+          "content": "Kami berusaha menjaga Layanan tersedia 24 jam, namun tidak menjamin ketersediaan tanpa gangguan. Kami berhak mengubah, memperbarui, atau menghentikan fitur aplikasi tanpa pemberitahuan terlebih dahulu dan dapat membatasi akses karena alasan teknis, hukum, atau bisnis."
+        },
+        "13": {
+          "title": "13. Batasan Tanggung Jawab",
+          "content": "Kami tidak bertanggung jawab atas kerusakan tidak langsung, konsekuensial, atau khusus yang timbul dari penggunaan atau ketidakmampuan menggunakan Layanan. Tanggung jawab kami dibatasi pada jumlah yang telah dibayar. Batasan ini tidak berlaku untuk kerusakan akibat kesengajaan atau kelalaian berat, atau kerusakan pada kehidupan, tubuh, atau kesehatan."
+        },
+        "14": {
+          "title": "14. Pembatalan",
+          "content": "Kamu dapat membatalkan langganan melalui pengaturan di App Store atau Google Play. Pembatalan berlaku pada akhir periode penagihan. Kami berhak menghentikan akun atau akses jika terjadi pelanggaran syarat."
+        },
+        "15": {
+          "title": "15. Perubahan Syarat dan Ketentuan",
+          "content": "Kami dapat mengubah syarat ini kapan saja. Perubahan akan dipublikasikan di situs dan berlaku saat diumumkan. Penggunaan Layanan setelah perubahan dianggap sebagai persetujuan."
+        },
+        "16": {
+          "title": "16. Hukum yang Berlaku dan Yurisdiksi",
+          "content": "Syarat ini diatur oleh hukum Republik Federal Jerman. Jika terjadi sengketa, yurisdiksi adalah tempat usaha kami."
+        },
+        "17": {
+          "title": "17. Ketentuan Penutup",
+          "content": "Jika ada ketentuan yang tidak sah, hal itu tidak mempengaruhi ketentuan lain. Ketentuan yang tidak berlaku akan digantikan dengan yang paling mendekati maksud aslinya."
+        },
+        "18": {
+          "title": "18. Kontak",
+          "content": "Jika ada pertanyaan mengenai syarat ini, hubungi kami di:",
+          "contactInfo": {
+            "name": "Leonard Marx",
+            "street": "Musterstraße 14",
+            "location": "14527 Jerman",
+            "email": "kontakt@VivaLaLingo.app"
+          }
+        }
+      }
+    },
+    "impressum": {
+      "title": "Impresum",
+      "companyInfo": {
+        "title": "Informasi sesuai § 5 TMG",
+        "name": "Leonard Marx",
+        "street": "Musterstraße 14",
+        "location": "14527 Jerman"
+      },
+      "contact": {
+        "title": "Kontak",
+        "email": "Email",
+        "emailAddress": "kontakt@VivaLaLingo.app",
+        "website": "Situs Web",
+        "websiteUrl": "https://www.VivaLaLingo.app"
+      },
+      "vatId": {
+        "title": "ID PPN",
+        "description": "Nomor Identifikasi Pajak Pertambahan Nilai sesuai § 27a Undang-Undang PPN Jerman:",
+        "number": "DE123456789"
+      },
+      "responsible": {
+        "title": "Penanggung Jawab Konten",
+        "name": "Leonard Marx",
+        "street": "Musterstraße 14",
+        "location": "14527 Jerman"
+      },
+      "disputeResolution": {
+        "euTitle": "Penyelesaian Sengketa UE",
+        "euDescription": "Komisi Eropa menyediakan platform untuk penyelesaian sengketa daring (OS):",
+        "euLink": "https://ec.europa.eu/consumers/odr/",
+        "emailNote": "Alamat email kami dapat ditemukan di impresum.",
+        "generalTitle": "Penyelesaian Sengketa Konsumen/Arbitrase Universal",
+        "generalDescription": "Kami tidak berkewajiban untuk ikut serta dalam penyelesaian sengketa di hadapan badan arbitrase konsumen."
+      }
+    },
+    "privacy": {
+      "title": "Kebijakan Privasi",
+      "lastUpdated": "Terakhir diperbarui",
+      "introduction": {
+        "title": "1. Pendahuluan",
+        "content": "Di Viva La Lingo (\"kami\", \"milik kami\"), kami menghormati privasimu dan berkomitmen melindungi data pribadimu. Kebijakan ini menjelaskan cara kami menangani data yang dikumpulkan melalui aplikasi dan situs web kami www.VivaLaLingo.app serta hak-hak privasimu."
+      },
+      "dataController": {
+        "title": "2. Pengendali Data",
+        "content": "Pengendali yang bertanggung jawab atas pengumpulan dan pemrosesan data pribadimu adalah:",
+        "name": "Leonard Marx",
+        "street": "Musterstraße 14",
+        "location": "14527 Jerman",
+        "email": "Email",
+        "emailAddress": "kontakt@VivaLaLingo.app"
+      },
+      "collectedData": {
+        "title": "3. Data yang Dikumpulkan",
+        "account": {
+          "title": "3.1. Data Akun",
+          "content": "Saat kamu membuat akun, kami mengumpulkan email dan kata sandi pilihanmu. Data ini diperlukan untuk memberi akses ke area pribadimu dan konten yang telah dibeli."
+        },
+        "usage": {
+          "title": "3.2. Data Penggunaan",
+          "content": "Aplikasi menyimpan data tentang kemajuan belajarmu, seperti pelajaran yang telah diselesaikan, streak latihan, dan hasil ujian. Data ini disimpan di perangkatmu untuk memberikan pengalaman yang dipersonalisasi."
+        },
+        "audio": {
+          "title": "3.3. Data Audio",
+          "content": "Untuk fitur pengenalan suara, aplikasi merekam suaramu secara sementara saat kamu mengaktifkan fungsi latihan atau ujian. Rekaman ini diproses secara lokal untuk mengevaluasi pengucapan dan tidak disimpan atau dikirim ke server."
+        },
+        "payment": {
+          "title": "3.4. Data Pembayaran",
+          "content": "Untuk pembelian dalam aplikasi, pembayaran diproses melalui App Store atau Google Play. Kami hanya menerima konfirmasi transaksi untuk memberi akses ke konten yang dibeli."
+        },
+        "automatic": {
+          "title": "3.5. Data yang Dikumpulkan Otomatis",
+          "content": "Saat menggunakan aplikasi atau situs web, data teknis seperti alamat IP, tipe perangkat, versi OS, dan pengaturan bahasa dikumpulkan untuk meningkatkan layanan."
+        }
+      },
+      "purposes": {
+        "title": "4. Tujuan Pengolahan Data",
+        "intro": "Kami mengolah data untuk:",
+        "items": [
+          "Memberikan akses ke akun dan konten yang dibeli",
+          "Menyimpan kemajuan belajarmu dan memberikan pengalaman yang dipersonalisasi",
+          "Mengevaluasi pengucapan melalui pengenalan suara",
+          "Meningkatkan fungsionalitas dan kinerja aplikasi",
+          "Memproses pembayaran langganan dan pembelian",
+          "Memberitahumu tentang perubahan atau pembaruan penting"
+        ]
+      },
+      "legalBasis": {
+        "title": "5. Dasar Hukum Pengolahan Data",
+        "intro": "Dasar hukum untuk mengolah data pribadimu adalah:",
+        "items": [
+          "Pelaksanaan kontrak (Pasal 6(1)(b) GDPR) untuk menyediakan aplikasi dan fungsinya",
+          "Persetujuanmu (Pasal 6(1)(a) GDPR) untuk tujuan tertentu, seperti pengenalan suara",
+          "Kepentingan sah kami (Pasal 6(1)(f) GDPR) untuk meningkatkan dan mengamankan layanan kami"
+        ]
+      },
+      "dataSharing": {
+        "title": "6. Berbagi Data dengan Pihak Ketiga",
+        "intro": "Kami hanya berbagi data dalam kasus berikut:",
+        "items": [
+          "Dengan penyedia layanan yang membantu kami menyediakan layanan (misalnya, Firebase)",
+          "Dengan toko aplikasi untuk memproses pembayaran",
+          "Jika diwajibkan oleh hukum atau untuk melindungi hak kami"
+        ],
+        "thirdParty": {
+          "title": "6.1. Layanan Pihak Ketiga yang Digunakan",
+          "firebase": {
+            "title": "Google Firebase",
+            "content": "Kami menggunakan Google Firebase untuk autentikasi, penyimpanan data, dan layanan awan. Lihat Kebijakan Privasi Google untuk detail:",
+            "policyUrl": "https://policies.google.com/privacy"
+          },
+          "revenueCat": {
+            "title": "RevenueCat",
+            "content": "Untuk mengelola langganan dan pembelian, kami menggunakan RevenueCat. Lihat Kebijakan Privasi RevenueCat untuk informasi lebih lanjut:",
+            "policyUrl": "https://www.revenuecat.com/privacy"
+          },
+          "appStores": {
+            "title": "App Store & Google Play",
+            "content": "Pembayaran dalam aplikasi diproses melalui App Store atau Google Play sesuai kebijakan privasi mereka:",
+            "appleLabel": "Apple",
+            "applePolicyUrl": "https://www.apple.com/legal/privacy",
+            "googleLabel": "Google",
+            "googlePolicyUrl": "https://policies.google.com/privacy"
+          }
+        }
+      },
+      "userRights": {
+        "title": "7. Hak-hakmu",
+        "intro": "Berdasarkan GDPR, kamu memiliki hak-hak berikut:",
+        "items": [
+          "Mengakses data pribadi yang kami simpan",
+          "Memperbaiki data yang salah",
+          "Menghapus data pribadimu",
+          "Membatasi pengolahan data",
+          "Portabilitas data",
+          "Menolak pengolahan data",
+          "Menarik persetujuan yang telah diberikan"
+        ],
+        "exerciseRights": "Untuk menggunakan hak-hak tersebut, hubungi kami di ",
+        "email": "contact@VivaLaLingo.app",
+        "complaint": " Kamu juga dapat mengajukan keluhan ke otoritas perlindungan data."
+      },
+      "childrenPrivacy": {
+        "title": "8. Privasi Anak-anak",
+        "content": "Layanan kami ditujukan untuk pengguna berusia 16 tahun ke atas. Kami tidak sengaja mengumpulkan data anak di bawah 16 tanpa izin orang tua yang dapat diverifikasi. Jika kamu berusia di bawah 16, gunakan layanan dengan izin orang tua. Jika terdeteksi, data anak akan dihapus."
+      },
+      "dataSecurity": {
+        "title": "9. Keamanan Data",
+        "content": "Kami menerapkan langkah-langkah keamanan teknis dan organisasi untuk melindungi data pribadimu dari manipulasi, kehilangan, atau akses tidak sah. Prosedur kami ditinjau dan diperbarui secara berkala."
+      },
+      "dataRetention": {
+        "title": "10. Retensi Data",
+        "content": "Data pribadimu disimpan hanya selama diperlukan atau sesuai hukum. Data akun disimpan selama hubungan pengguna dan dihapus setelah akun ditutup, kecuali diwajibkan oleh hukum."
+      },
+      "cookies": {
+        "title": "11. Cookies dan Teknologi Serupa",
+        "content": "Situs kami menggunakan cookies dan teknologi serupa untuk meningkatkan pengalaman pengguna. Kamu dapat menolak cookies, namun beberapa fungsi mungkin terbatas."
+      },
+      "changes": {
+        "title": "12. Perubahan Kebijakan Privasi ini",
+        "content": "Kami berhak mengubah kebijakan ini kapan saja. Versi terbaru tersedia di situs kami. Untuk perubahan signifikan, kamu akan diberitahu melalui aplikasi atau email."
+      },
+      "contact": {
+        "title": "13. Kontak",
+        "content": "Jika ada pertanyaan tentang kebijakan ini atau pengolahan data pribadimu, hubungi kami di:",
+        "name": "Leonard Marx",
+        "street": "Musterstraße 14",
+        "location": "14527 Jerman",
+        "email": "kontakt@VivaLaLingo.app"
+      }
+    }
+  }
+  

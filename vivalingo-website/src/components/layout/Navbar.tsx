@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const { t } = useLanguage();
   
-  // Handle scroll effect
+  // Handle scroll effect - nur noch für den Schatteneffekt
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(false);
   }, [location]);
 
-  // Updated navigation items - removed "How It Works"
+  // Updated navigation items
   const navItems = [
     { name: t('navbar.home'), path: '/' },
     { name: t('navbar.features'), path: '/#features' },
@@ -40,18 +40,20 @@ const Navbar: React.FC = () => {
     { name: t('navbar.pricing'), path: '/#pricing' },
   ];
 
-  const navbarClasses = `fixed w-full z-50 transition-all duration-300 ${
-    scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+  // Navbar ist jetzt immer weiß, nur der Schatten ändert sich
+  const navbarClasses = `fixed w-full z-50 transition-all duration-300 bg-white ${
+    scrolled ? 'shadow-md py-2' : 'py-4'
   }`;
 
-  const logoTextColor = scrolled ? 'text-primary-600' : 'text-white';
-  const navLinkColor = scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-100';
+  // Textfarben sind jetzt immer gleich
+  const logoTextColor = 'text-primary-600';
+  const navLinkColor = 'text-gray-700 hover:text-primary-600';
 
   return (
     <>
       <nav className={navbarClasses}>
         <div className="container-custom flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo - vergrößert von h-10 w-10 auf h-14 w-14 */}
           <Link to="/" className="flex items-center">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -62,7 +64,7 @@ const Navbar: React.FC = () => {
               <img 
                 src="/images/logo2.png" 
                 alt="Viva La Lingo Logo"
-                className="h-10 w-10 mr-2"
+                className="h-14 w-14 mr-2"
               />
               <span className={`font-bold text-xl ${logoTextColor}`}>Viva La Lingo</span>
             </motion.div>
@@ -100,7 +102,6 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
             >
-              {/* Updated to link to download section */}
               <Link to="/#download">
                 <Button 
                   variant="primary" 
@@ -123,7 +124,7 @@ const Navbar: React.FC = () => {
               aria-label="Open menu"
             >
               <svg
-                className={`w-7 h-7 ${scrolled ? 'text-gray-800' : 'text-white'}`}
+                className="w-7 h-7 text-gray-800"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

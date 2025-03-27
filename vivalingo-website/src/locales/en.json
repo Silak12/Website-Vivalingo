@@ -115,7 +115,7 @@
   "downloadCTA": {
     "title": "Revolutionize",
     "titleHighlight": "your language learning",
-    "description": "With Viva La Lingo, you learn languages in the most natural way. Just like you learned your mother tongue – intuitively and without cramming rules.",
+    "description": "With Viva La Lingo, you learn languages in the most natural way. Just like you learned your mother tongue – intuitively and without rules.",
     "downloadIOS": "Download iOS App",
     "downloadAndroid": "Download Android App",
     "appStoreRating": "4.8/5 in App Store",
@@ -260,6 +260,7 @@
     "phases": {
       "title": "The 4 Phases of the Birkenbihl Method",
       "subtitle": "A structured approach to natural language learning that works with your brain, not against it",
+      "appFeatureTitle": "In the Viva La Lingo App:",
       "items": [
         {
           "title": "Decode",
@@ -269,7 +270,9 @@
         {
           "title": "Active Listening & Speaking",
           "description": "Listen to the foreign language text while reading the translation. Repeat the words once you feel confident. By speaking along, you actively train your pronunciation and anchor the language deeper.",
-          "appFeature": "With the turtle (slow audio) and the rabbit (fast audio), you can adjust your pace. Start with the turtle and gradually increase. Through repetition and active speaking, you'll quickly notice progress."
+          "appFeature": "With the turtle (slow audio) and the rabbit (fast audio), you can adjust your pace. Start with the turtle and gradually increase. Through repetition and active speaking, you'll quickly notice progress.",
+          "slow": "Slow & thorough",
+          "fast": "Fast & fluent"
         },
         {
           "title": "Passive Listening",
@@ -279,7 +282,8 @@
         {
           "title": "Apply",
           "description": "Try the language actively, whether in conversation or when consuming media. Experiment with what you've learned and learn from your mistakes without pressure.",
-          "appFeature": "Use the tests in the app – they can be repeated as often as you like, without pressure! This way, you can test your pronunciation and quickly recognize where you still need practice. The tests are your friends, not obstacles."
+          "appFeature": "Use the tests in the app – they can be repeated as often as you like, without pressure! This way, you can test your pronunciation and quickly recognize where you still need practice. The tests are your friends, not obstacles.",
+          "practiceNote": "Don't worry about tests! In Viva La Lingo, you can repeat them as often as you like to improve your pronunciation and understanding."
         }
       ]
     },
@@ -325,7 +329,9 @@
       "de": "German",
       "en": "English",
       "es": "Spanish",
-      "fr": "French"
+      "fr": "French",
+      "it": "Italian",
+      "id": "Indonesian"
     }
   },
   "agb": {

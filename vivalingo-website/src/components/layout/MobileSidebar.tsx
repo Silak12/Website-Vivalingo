@@ -202,7 +202,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
               <div className="p-6 flex justify-between items-center border-b border-gray-200">
                 <div className="flex items-center">
                   <img 
-                    src="/images/logo.svg" 
+                    src="/images/logo2.png" 
                     alt="Viva La Lingo Logo"
                     className="h-10 w-10 mr-2"
                   />

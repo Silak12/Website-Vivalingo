@@ -1,0 +1,613 @@
+{
+    "navbar": {
+      "home": "Inicio",
+      "features": "Características",
+      "method": "Método",
+      "pricing": "Precios",
+      "downloadApp": "Descargar App"
+    },
+    "footer": {
+      "product": "Producto",
+      "features": "Características",
+      "pricing": "Precios",
+      "download": "Descargar",
+      "learn": "Aprender",
+      "method": "Método Birkenbihl",
+      "company": "Compañía",
+      "about": "Acerca de",
+      "legal": "Legal",
+      "privacyPolicy": "Política de Privacidad",
+      "termsOfService": "Términos de Servicio",
+      "impressum": "Aviso Legal",
+      "connectWithUs": "Conéctate con Nosotros",
+      "copyright": "© {year} Viva La Lingo. Todos los derechos reservados.",
+      "madeWith": "Hecho con ❤️ para los aprendices de idiomas",
+      "tagline": "Aprende idiomas de forma natural con el método Birkenbihl. Sin reglas gramaticales, solo aprendizaje intuitivo."
+    },
+    "mobileSidebar": {
+      "changeLanguage": "Cambiar Idioma",
+      "downloadApp": "Descargar App"
+    },
+    "hero": {
+      "title": "Aprende Idiomas de Forma Natural",
+      "subtitle": "Experimenta el poder del método Birkenbihl con Viva La Lingo. Aprende sin reglas gramaticales, de manera intuitiva. Tal como aprendiste tu lengua materna.",
+      "startLearning": "Empieza a Aprender Ahora",
+      "seeHowItWorks": "Mira Cómo Funciona",
+      "appStoreRating": "4.8/5 en App Store",
+      "satisfiedUsers": "Más de 100k usuarios satisfechos",
+      "benefits": {
+        "noGrammarRules": "Sin reglas gramaticales",
+        "fromListenerToSpeaker": "De oyente a hablante",
+        "naturalLanguageFeel": "Sensación natural del idioma"
+      },
+      "birkenbihlMethod": {
+        "title": "Método Birkenbihl:",
+        "decoding": "Descodificación: Traducción palabra por palabra sin reglas gramaticales",
+        "activeListening": "Escucha activa: Texto y traducción simultáneos",
+        "passiveListening": "Escucha pasiva: Reproducción de audio en segundo plano",
+        "activation": "Activación: Aplica el idioma de forma natural"
+      },
+      "languagePhrases": {
+        "spanish": {
+          "lang": "Español",
+          "original": "Me gusta aprender idiomas",
+          "translation": "Me gusta aprender idiomas"
+        },
+        "french": {
+          "lang": "Francés",
+          "original": "Je parle sans réfléchir",
+          "translation": "Hablo sin pensar"
+        },
+        "italian": {
+          "lang": "Italiano",
+          "original": "Imparo in modo naturale",
+          "translation": "Aprendo de forma natural"
+        },
+        "japanese": {
+          "lang": "Japonés",
+          "original": "私は毎日練習します",
+          "translation": "Practico todos los días"
+        }
+      }
+    },
+    "wordFlow": {
+      "title": "Viva La Lingo.",
+      "subtitle": "De oyente a hablante: Gana confianza y habla de inmediato.",
+      "scrollToSee": "Desplázate para ver más",
+      "words": [
+        { "original": "No grammar rules", "translation": "Sin reglas gramaticales" },
+        { "original": "No vocabulary drills", "translation": "Sin ejercicios de vocabulario" },
+        { "original": "Learn intuitively", "translation": "Aprende de forma intuitiva" },
+        { "original": "Real-life dialogues", "translation": "Diálogos reales" },
+        { "original": "Speak confidently", "translation": "Habla con confianza" },
+        { "original": "Natural understanding", "translation": "Comprensión natural" },
+        { "original": "Immediate results", "translation": "Resultados inmediatos" }
+      ]
+    },
+    "methodFeatures": {
+      "title": "Las 4 fases del Método Birkenbihl",
+      "subtitle": "Descubre una forma natural e intuitiva de aprender idiomas que se adapta a tu cerebro.",
+      "phases": [
+        {
+          "title": "1. Decodificar",
+          "description": "El texto se traduce literalmente, para que comprendas el significado de inmediato, sin necesidad de un diccionario."
+        },
+        {
+          "title": "2. Escucha activa y habla",
+          "description": "Escucha el texto en el idioma extranjero mientras lees la traducción. Pronto lo 'escucharás' como tu lengua materna. Intenta leer en voz alta."
+        },
+        {
+          "title": "3. Escucha pasiva",
+          "description": "Una vez que hayas aprendido algunas lecciones, puedes comenzar a reproducir los audios mientras haces otras actividades."
+        },
+        {
+          "title": "4. Aplicar",
+          "description": "Habla con amigos, mira películas en el idioma extranjero, haz lo que te ayude a practicar activamente tu nuevo idioma."
+        }
+      ],
+      "brainLearning": {
+        "title": "Aprendizaje amigable para el cerebro",
+        "description1": "Con el método Birkenbihl, aprendes de la misma manera en que tu cerebro procesa la información. No se trata de memorizar reglas gramaticales. En su lugar, construyes una intuición del idioma, tal como con tu lengua materna.",
+        "description2": "Mediante la estimulación multimodal (escuchar, ver, comprender), el idioma se asienta profundamente en tu memoria a largo plazo.",
+        "button": "Más sobre el método"
+      }
+    },
+    "downloadCTA": {
+      "title": "Revoluciona",
+      "titleHighlight": "tu aprendizaje de idiomas",
+      "description": "Con Viva La Lingo, aprendes idiomas de la manera más natural. Tal como aprendiste tu lengua materna, de forma intuitiva y sin reglas.",
+      "downloadIOS": "Descargar App para iOS",
+      "downloadAndroid": "Descargar App para Android",
+      "appStoreRating": "4.8/5 en App Store",
+      "satisfiedUsers": "Más de 100k usuarios satisfechos",
+      "features": [
+        {
+          "title": "Aprende idiomas como tu lengua materna",
+          "description": "Tu cerebro aprende mediante el reconocimiento de patrones, no mediante reglas. Así como los niños aprenden su primer idioma.",
+          "example": "El método Birkenbihl aprovecha la capacidad natural de tu cerebro para reconocer patrones"
+        },
+        {
+          "title": "Sensación intuitiva del idioma",
+          "description": "Formarás oraciones sin pensarlo. La gramática llegará de forma natural.",
+          "example": "Con la decodificación 1:1, entiendes la estructura del idioma de forma intuitiva, sin memorizar reglas"
+        },
+        {
+          "title": "Pronunciación naturalmente buena",
+          "description": "Mediante la escucha y repetición, desarrollas una pronunciación natural.",
+          "example": "Entrenas tu oído para captar los matices de la pronunciación y reproducirlos de forma natural"
+        },
+        {
+          "title": "Resultados rápidos",
+          "description": "Después de solo unas horas, comenzarás a comprender y hablar frases sencillas.",
+          "example": "El enfoque está en la aplicación práctica en lugar del conocimiento teórico, lo que conduce a progresos rápidos"
+        }
+      ]
+    },
+    "pricingSection": {
+      "title": "Elige tu plan",
+      "subtitle": "Precios simples, funciones potentes y sin cargos ocultos",
+      "tabs": {
+        "monthly": "Mensual",
+        "yearly": "Anual",
+        "lifetime": "De por vida",
+        "yearlySavings": "Ahorra 64%",
+        "lifetimeBestValue": "La mejor oferta"
+      },
+      "cards": {
+        "monthly": {
+          "title": "Acceso Mensual",
+          "price": "2.99",
+          "period": "mes",
+          "savings": "",
+          "freeTrialAvailable": true
+        },
+        "yearly": {
+          "title": "Acceso Anual",
+          "price": "12.99",
+          "period": "año",
+          "savings": "Ahorra 64% en comparación con el plan mensual",
+          "tag": "POPULAR",
+          "freeTrialAvailable": true
+        },
+        "lifetime": {
+          "title": "Acceso de por Vida",
+          "price": "49.99",
+          "period": "pago único",
+          "savings": "La mejor oferta – Sin pagos recurrentes",
+          "tag": "MEJOR OFERTA",
+          "freeTrialAvailable": false
+        }
+      },
+      "features": {
+        "title": "Incluye:",
+        "monthly": [
+          "Acceso completo a todos los idiomas",
+          "Experiencia sin anuncios",
+          "Control de audio ilimitado",
+          "Cambio entre múltiples idiomas"
+        ],
+        "yearly": [
+          "Acceso completo a todos los idiomas",
+          "Experiencia sin anuncios",
+          "Soporte al cliente prioritario",
+          "Contenido descargable para uso offline"
+        ],
+        "lifetime": [
+          "Pago único",
+          "Acceso a todas las futuras actualizaciones",
+          "Acceso completo a todos los idiomas",
+          "Experiencia sin anuncios"
+        ]
+      },
+      "freeTrial": {
+        "title": "Prueba gratuita de 7 días",
+        "description": "Prueba todas las funciones sin compromiso. Puedes cancelar en cualquier momento antes de que finalice la prueba."
+      },
+      "buttons": {
+        "appStore": "App Store",
+        "playStore": "Play Store"
+      }
+    },
+    "discountSection": {
+      "title": "¡Prueba cada código en la app! Uno de estos códigos te da un descuento del 90% en la suscripción anual.",
+      "codeAvailable": {
+        "label": "El código aún no ha sido usado",
+        "icon": "⏱️"
+      },
+      "codeUsed": {
+        "label": "¡El código ya fue usado!",
+        "icon": "⏱️",
+        "title": "¡El código ya fue utilizado!",
+        "nextCode": "El próximo código se activará en:"
+      },
+      "description": "Hemos ocultado 150 códigos, pero solo UNO está activo actualmente para un 90% de descuento. Si ya fue usado, verás una cuenta regresiva de 24 horas."
+    },
+    "about": {
+      "title": "Acerca de Viva La Lingo",
+      "story": [
+        "¡Hola! Soy el creador de Viva La Lingo. Esta app comenzó como un proyecto personal: simplemente quería encontrar una mejor manera de aprender idiomas utilizando el método Birkenbihl.",
+        "Lo que sucedió después fue inesperado. Cuando amigos y familiares me vieron usar la app, ellos también la quisieron. Antes de darme cuenta, había dedicado 5 meses a su desarrollo, perfeccionándola y ampliándola mucho más allá de mis planes iniciales.",
+        "Pensé que, si a mi círculo cercano le resultaba útil, tal vez a otros también. ¡Y aquí estamos! He lanzado Viva La Lingo al mundo con la esperanza de que otros se beneficien de este poderoso método de aprendizaje de idiomas.",
+        "Para ser sincero: es un proyecto de una sola persona. Eso significa que si soy un poco lento en implementar nuevas funciones, es porque trabajo solo detrás de escena. ¡Pero siempre estoy trabajando en mejoras y deseando hacer esta app lo mejor posible!",
+        "Estoy abierto a comentarios y sugerencias. Así que, si tienes ideas para mejorar Viva La Lingo, ¡soy todo oídos!"
+      ],
+      "contact": {
+        "title": "Contáctanos",
+        "email": "VivaLaLingoapp@gmail.com"
+      },
+      "downloadButton": "Descargar Viva La Lingo"
+    },
+    "method": {
+      "hero": {
+        "title": "El Método Birkenbihl",
+        "subtitle": "Descubre la forma más efectiva de aprender idiomas, tal como le encanta a tu cerebro",
+        "ratings": {
+          "enthusiasts": "Miles de aprendices entusiastas",
+          "scientific": "Científicamente",
+          "foundedOn": "basado"
+        },
+        "scrollDown": "Saber más"
+      },
+      "intro": {
+        "title": "¿Quién fue Vera F. Birkenbihl?",
+        "paragraphs": [
+          "Vera F. Birkenbihl (1946-2011) fue una reconocida entrenadora de management, autora de no ficción y experta en métodos de aprendizaje amigables para el cerebro. Es famosa por su innovador método de aprendizaje de idiomas, que funciona de manera completamente diferente a los métodos tradicionales.",
+          "Su método se basa en entender cómo el cerebro humano aprende idiomas de forma natural, es decir, a través de la comprensión y el contexto, y no mediante reglas gramaticales o memorización mecánica."
+        ],
+        "quote": "No se puede enseñar un idioma, solo se pueden crear las condiciones para que se aprenda. – Vera F. Birkenbihl",
+        "appDescription": "Viva La Lingo trae este revolucionario método a una app moderna que te ayuda a aprender idiomas de la forma más natural y efectiva."
+      },
+      "phases": {
+        "title": "Las 4 fases del Método Birkenbihl",
+        "subtitle": "Un enfoque estructurado para aprender idiomas de forma natural, que trabaja con tu cerebro, no en su contra",
+        "appFeatureTitle": "En la app Viva La Lingo:",
+        "items": [
+          {
+            "title": "Decodificar",
+            "description": "El texto se traduce literalmente, para que comprendas el contenido de inmediato. Esta traducción palabra por palabra ayuda a tu cerebro a reconocer patrones, en lugar de aprender reglas.",
+            "appFeature": "En la app, todos los textos ya están traducidos literalmente y codificados por colores, para que puedas empezar a aprender de inmediato, sin perder tiempo con diccionarios."
+          },
+          {
+            "title": "Escucha activa y habla",
+            "description": "Escucha el texto en el idioma extranjero mientras lees la traducción. Repite las palabras cuando te sientas seguro. Al hablar en voz alta, entrenas activamente tu pronunciación y fijas el idioma de forma más profunda.",
+            "appFeature": "Con la tortuga (audio lento) y el conejo (audio rápido) puedes ajustar tu ritmo. Comienza con la tortuga y aumenta gradualmente. Con la repetición y la práctica activa, notarás rápidamente el progreso.",
+            "slow": "Lento y minucioso",
+            "fast": "Rápido y fluido"
+          },
+          {
+            "title": "Escucha pasiva",
+            "description": "Reproduce el audio mientras realizas otras actividades. Esta escucha pasiva ayuda a que tu cerebro se familiarice con los sonidos del idioma y refuerce lo aprendido de forma inconsciente.",
+            "appFeature": "La app permite reproducir el audio en segundo plano, incluso con la pantalla bloqueada. Así, puedes seguir escuchando mientras corres, cocinas o realizas otras actividades."
+          },
+          {
+            "title": "Aplicar",
+            "description": "Practica el idioma activamente, ya sea en conversaciones o al consumir medios. Experimenta con lo aprendido y corrige tus errores sin presión.",
+            "appFeature": "Utiliza las pruebas en la app, las cuales puedes repetir tantas veces como desees sin presión. Así, podrás evaluar tu pronunciación y detectar rápidamente en qué necesitas mejorar.",
+            "practiceNote": "¡No temas a las pruebas! En Viva La Lingo puedes repetirlas todas las veces que necesites para mejorar tu pronunciación y comprensión."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Beneficios del Método Birkenbihl",
+        "subtitle": "Por qué este método es más efectivo que el aprendizaje tradicional de idiomas",
+        "items": [
+          {
+            "title": "Aprendizaje natural",
+            "description": "Aprende como un niño: a través de la comprensión y la aplicación, no mediante reglas y memorización."
+          },
+          {
+            "title": "Amigable para el cerebro",
+            "description": "El método utiliza la forma natural en que funciona tu cerebro, lo que conduce a resultados más rápidos y duraderos."
+          },
+          {
+            "title": "Sin estrés",
+            "description": "Aprende sin presión ni ansiedad, a tu propio ritmo y con placer en lugar de frustración."
+          },
+          {
+            "title": "Aprendizaje sostenible",
+            "description": "Mediante la estimulación multisensorial, lo que aprendes se fija profundamente en tu memoria a largo plazo."
+          },
+          {
+            "title": "Sin memorización gramatical",
+            "description": "Comprende la gramática de forma intuitiva a través del contexto, en lugar de reglas abstractas."
+          },
+          {
+            "title": "Accesible para todos",
+            "description": "Ya seas niño o adulto, con o sin talento para idiomas, el método es accesible para todos."
+          }
+        ]
+      },
+      "cta": {
+        "title": "¿Listo para aprender idiomas de forma natural?",
+        "description": "Con Viva La Lingo experimentarás el método Birkenbihl en una app moderna y fácil de usar. ¡Comienza tu viaje de aprendizaje ahora y aprende idiomas como lo haces con tu lengua materna!",
+        "iosDownload": "Descargar App para iOS",
+        "androidDownload": "Descargar App para Android"
+      }
+    },
+    "languageSelector": {
+      "languages": {
+        "de": "Alemán",
+        "en": "Inglés",
+        "es": "Español",
+        "fr": "Francés",
+        "id": "Indonesio",
+        "it": "Italiano"
+      }
+    },
+    "agb": {
+      "title": "Términos y Condiciones",
+      "lastUpdated": "Última actualización",
+      "sections": {
+        "1": {
+          "title": "1. Ámbito de aplicación",
+          "content": "Estos Términos y Condiciones (T&C) regulan el uso de la app de aprendizaje de idiomas Viva La Lingo y el sitio web www.VivaLaLingo.app (\"Servicios\") por parte del usuario. Viva La Lingo es operada por Leonard Marx, Musterstraße 14, 14527 Alemania (\"nosotros\"). Al acceder o utilizar nuestros Servicios, aceptas estos T&C. Si no estás de acuerdo, por favor, no utilices nuestros Servicios."
+        },
+        "2": {
+          "title": "2. Descripción del Servicio",
+          "content": "Viva La Lingo es una app de aprendizaje de idiomas que utiliza el método Birkenbihl para ayudar a los usuarios a aprender idiomas extranjeros. La app ofrece:",
+          "features": [
+            "Pelajes en varios idiomas",
+            "Diálogos en audio generados por IA para el aprendizaje",
+            "Funciones de reconocimiento de voz para mejorar la pronunciación",
+            "Seguimiento del progreso",
+            "Diversos modelos de suscripción y compras en la app"
+          ]
+        },
+        "3": {
+          "title": "3. Registro y Cuenta de Usuario",
+          "content": "Es necesario crear una cuenta de usuario para utilizar plenamente nuestros Servicios. Debes proporcionar información precisa y actualizada al registrarte. Eres responsable de la seguridad de tu contraseña y no debes compartir tu cuenta con terceros. Eres responsable de todas las actividades realizadas a través de tu cuenta."
+        },
+        "4": {
+          "title": "4. Restricción de edad",
+          "content": "Nuestros Servicios están destinados a usuarios de 16 años o más. Si tienes menos de 16, solo podrás usar nuestros Servicios con el consentimiento de tus padres o tutores. Nos reservamos el derecho de tomar medidas adicionales para verificar la edad y restringir el acceso a nuestros Servicios."
+        },
+        "5": {
+          "title": "5. Precios y Condiciones de Pago",
+          "content": "Ofrecemos diversas opciones de suscripción y compras en la app:",
+          "plans": [
+            "Suscripción mensual: 2,99 € por mes",
+            "Suscripción anual: 12,99 € por año (equivalente a un ahorro del 64% comparado con la mensual)",
+            "Acceso de por vida: Pago único de 49,99 €"
+          ],
+          "payment": "Todos los pagos se realizan a través del App Store (iOS) o Google Play Store. La facturación se efectúa según las disposiciones de estas plataformas. Las suscripciones se renuevan automáticamente al precio vigente, a menos que se cancelen al menos 24 horas antes del final del período actual. La cancelación se efectúa a través de tu cuenta en App Store o Google Play."
+        },
+        "6": {
+          "title": "6. Periodos de prueba y reembolsos",
+          "content": "Los nuevos usuarios reciben una prueba gratuita de 7 días al suscribirse a un plan mensual o anual. Las compras de acceso de por vida no incluyen prueba. Las solicitudes de reembolso deben dirigirse al App Store (iOS) o Google Play Store (Android) y están sujetas a sus políticas. Los usuarios de iOS pueden solicitar reembolsos a través del sitio web de Apple o directamente en el App Store bajo \"Historial de Compras\". Los usuarios de Android pueden solicitar reembolsos a través del Google Play Store en la sección \"Historial de Pedidos\" dentro de las 48 horas posteriores a la compra. Para solicitudes posteriores, se debe contactar al soporte de Google Play. No ofrecemos reembolsos directos, pero te ayudamos con cualquier duda sobre el proceso."
+        },
+        "7": {
+          "title": "7. Derecho de desistimiento",
+          "content": "Para el contenido digital, el derecho de desistimiento caduca al inicio de la ejecución del contrato si el usuario acepta expresamente que la ejecución comience antes de que finalice el plazo de desistimiento, confirmando que con su consentimiento, este derecho caduca. Para las suscripciones, puedes ejercer tu derecho de desistimiento dentro de los 14 días siguientes a la contratación, siempre que no hayas utilizado los Servicios."
+        },
+        "8": {
+          "title": "8. Condiciones de uso",
+          "intro": "Al utilizar nuestros Servicios, te comprometes a:",
+          "obligations": [
+            "No utilizar nuestros Servicios para fines ilegales o no autorizados",
+            "No difundir virus o códigos maliciosos",
+            "No realizar ingeniería inversa, descompilar o desmontar la app",
+            "No extraer, copiar o distribuir el contenido de la app",
+            "No ejecutar acciones que sobrecarguen la infraestructura de nuestros Servicios",
+            "Usar los diálogos en audio generados por IA solo para tu aprendizaje personal"
+          ]
+        },
+        "9": {
+          "title": "9. Contenido generado por IA",
+          "content": "Los diálogos en audio y ejemplos lingüísticos en la app son creados con tecnología de IA. Se aclara que estos contenidos son generados artificialmente y no provienen de hablantes nativos, aunque suenen naturales. Están destinados únicamente para uso personal en el aprendizaje de idiomas y no pueden reproducirse, distribuirse o utilizarse para otros fines. Conservamos los derechos sobre todo el contenido generado por IA en la app."
+        },
+        "10": {
+          "title": "10. Propiedad intelectual",
+          "content": "Todos los derechos sobre la app y sus contenidos, incluyendo software, textos, gráficos, material de audio y contenido generado por IA, son de nuestra propiedad o de nuestros licenciantes y están protegidos por derechos de autor y otras leyes de propiedad intelectual. El uso de nuestros Servicios no otorga derechos de propiedad sobre el contenido o software."
+        },
+        "11": {
+          "title": "11. Protección de datos",
+          "content": "La protección de tus datos es importante para nosotros. La información sobre cómo recopilamos, procesamos y utilizamos tus datos personales se encuentra en nuestra Política de Privacidad, que forma parte integral de estos T&C."
+        },
+        "12": {
+          "title": "12. Disponibilidad y cambios de los Servicios",
+          "content": "Nos esforzamos por mantener nuestros Servicios disponibles las 24 horas, pero no garantizamos disponibilidad ininterrumpida. Nos reservamos el derecho de modificar, actualizar o descontinuar funciones de la app en cualquier momento sin previo aviso, así como restringir el acceso por motivos técnicos, legales o comerciales."
+        },
+        "13": {
+          "title": "13. Limitación de responsabilidad",
+          "content": "No somos responsables por daños indirectos, consecuentes o especiales derivados del uso o la imposibilidad de usar nuestros Servicios. Nuestra responsabilidad se limita al importe pagado por el uso de los Servicios. Esta limitación no se aplica a daños causados por dolo o negligencia grave, ni a lesiones en la vida, cuerpo o salud."
+        },
+        "14": {
+          "title": "14. Cancelación",
+          "content": "Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta en App Store o Google Play. La cancelación se hará efectiva al final del periodo de facturación. Podemos terminar o suspender tu cuenta o acceso a los Servicios por causas justificadas, especialmente en caso de incumplimiento de estos T&C."
+        },
+        "15": {
+          "title": "15. Cambios en los T&C",
+          "content": "Nos reservamos el derecho de modificar estos T&C en cualquier momento. Los cambios se publicarán en nuestro sitio web y entrarán en vigor al publicarse. El uso continuado de los Servicios implica la aceptación de dichos cambios."
+        },
+        "16": {
+          "title": "16. Ley aplicable y jurisdicción",
+          "content": "Estos T&C se rigen por la ley de la República Federal de Alemania, exceptuando la Convención de la ONU sobre Contratos de Compraventa Internacional. Si el cliente es comerciante o persona jurídica, la jurisdicción para cualquier disputa es nuestro domicilio."
+        },
+        "17": {
+          "title": "17. Disposiciones finales",
+          "content": "Si alguna disposición de estos T&C resulta inválida, ello no afectará la validez de las demás. La disposición inválida será reemplazada por la norma legal que más se acerque a su finalidad."
+        },
+        "18": {
+          "title": "18. Contacto",
+          "content": "Si tienes preguntas sobre estos T&C, contáctanos en:",
+          "contactInfo": {
+            "name": "Leonard Marx",
+            "street": "Musterstraße 14",
+            "location": "14527 Alemania",
+            "email": "kontakt@VivaLaLingo.app"
+          }
+        }
+      }
+    },
+    "impressum": {
+      "title": "Aviso Legal",
+      "companyInfo": {
+        "title": "Información según § 5 TMG",
+        "name": "Leonard Marx",
+        "street": "Musterstraße 14",
+        "location": "14527 Alemania"
+      },
+      "contact": {
+        "title": "Contacto",
+        "email": "Correo electrónico",
+        "emailAddress": "kontakt@VivaLaLingo.app",
+        "website": "Sitio web",
+        "websiteUrl": "https://www.VivaLaLingo.app"
+      },
+      "vatId": {
+        "title": "ID de IVA",
+        "description": "Número de Identificación del IVA según § 27a de la Ley del IVA alemana:",
+        "number": "DE123456789"
+      },
+      "responsible": {
+        "title": "Responsable del contenido",
+        "name": "Leonard Marx",
+        "street": "Musterstraße 14",
+        "location": "14527 Alemania"
+      },
+      "disputeResolution": {
+        "euTitle": "Resolución de conflictos de la UE",
+        "euDescription": "La Comisión Europea ofrece una plataforma para la resolución online de conflictos (OS):",
+        "euLink": "https://ec.europa.eu/consumers/odr/",
+        "emailNote": "Encuentra nuestro correo en el aviso legal.",
+        "generalTitle": "Resolución de conflictos del consumidor/Arbitraje Universal",
+        "generalDescription": "No estamos obligados a participar en procesos de resolución de conflictos ante organismos de arbitraje de consumidores."
+      }
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "lastUpdated": "Última actualización",
+      "introduction": {
+        "title": "1. Introducción",
+        "content": "En Viva La Lingo (\"nosotros\", \"nuestro\"), respetamos tu privacidad y nos comprometemos a proteger tus datos personales. Esta Política de Privacidad te informa cómo manejamos los datos que recopilamos a través de nuestra app Viva La Lingo y el sitio web www.VivaLaLingo.app, y explica tus derechos de privacidad."
+      },
+      "dataController": {
+        "title": "2. Responsable del Tratamiento de Datos",
+        "content": "El responsable de la recopilación y procesamiento de tus datos personales es:",
+        "name": "Leonard Marx",
+        "street": "Musterstraße 14",
+        "location": "14527 Alemania",
+        "email": "Correo electrónico",
+        "emailAddress": "kontakt@VivaLaLingo.app"
+      },
+      "collectedData": {
+        "title": "3. Datos que Recopilamos",
+        "account": {
+          "title": "3.1. Datos de la Cuenta",
+          "content": "Al crear una cuenta, recopilamos tu correo electrónico y la contraseña que elijas. Estos datos son necesarios para darte acceso a tu área personal y al contenido adquirido."
+        },
+        "usage": {
+          "title": "3.2. Datos de Uso",
+          "content": "La app almacena datos sobre tu progreso, como lecciones completadas, rachas de práctica y resultados de exámenes. Estos datos se guardan localmente en tu dispositivo para ofrecerte una experiencia de aprendizaje personalizada."
+        },
+        "audio": {
+          "title": "3.3. Datos de Audio",
+          "content": "Para la función de reconocimiento de voz, la app graba temporalmente tu voz cuando activas la función de práctica o examen. Estas grabaciones se procesan localmente para evaluar tu pronunciación y no se almacenan ni envían a servidores."
+        },
+        "payment": {
+          "title": "3.4. Datos de Pago",
+          "content": "Para las compras en la app, los pagos se procesan a través del App Store o Google Play. Solo recibimos la confirmación de la transacción para darte acceso al contenido adquirido."
+        },
+        "automatic": {
+          "title": "3.5. Datos Recopilados Automáticamente",
+          "content": "Al usar nuestra app o sitio web se recopilan datos técnicos (IP, tipo de dispositivo, versión del sistema operativo y configuraciones de idioma) para mejorar la funcionalidad de nuestros servicios."
+        }
+      },
+      "purposes": {
+        "title": "4. Finalidades del Tratamiento de Datos",
+        "intro": "Procesamos tus datos para:",
+        "items": [
+          "Proporcionarte acceso a tu cuenta y contenido adquirido",
+          "Guardar tu progreso y ofrecer una experiencia personalizada",
+          "Evaluar tu pronunciación mediante el reconocimiento de voz",
+          "Mejorar la funcionalidad y rendimiento de la app",
+          "Procesar pagos de suscripciones y compras en la app",
+          "Informarte sobre cambios y actualizaciones importantes"
+        ]
+      },
+      "legalBasis": {
+        "title": "5. Bases Legales para el Tratamiento de Datos",
+        "intro": "Las bases legales para procesar tus datos son:",
+        "items": [
+          "Ejecución del contrato (Art. 6(1)(b) GDPR) para proporcionar la app y sus funciones",
+          "Tu consentimiento (Art. 6(1)(a) GDPR) para ciertos fines, como el reconocimiento de voz",
+          "Nuestro interés legítimo (Art. 6(1)(f) GDPR) en mejorar y asegurar nuestros servicios"
+        ]
+      },
+      "dataSharing": {
+        "title": "6. Compartir Datos con Terceros",
+        "intro": "Solo compartimos tus datos en estos casos:",
+        "items": [
+          "Con proveedores que nos ayudan a ofrecer nuestros servicios (p.ej., Firebase)",
+          "Con las tiendas de apps para procesar pagos",
+          "Si la ley lo exige o para proteger nuestros derechos"
+        ],
+        "thirdParty": {
+          "title": "6.1. Servicios de Terceros Utilizados",
+          "firebase": {
+            "title": "Google Firebase",
+            "content": "Utilizamos Google Firebase para autenticación, almacenamiento de datos y servicios en la nube. Consulta la Política de Privacidad de Google para más detalles:",
+            "policyUrl": "https://policies.google.com/privacy"
+          },
+          "revenueCat": {
+            "title": "RevenueCat",
+            "content": "Para gestionar suscripciones y compras, usamos RevenueCat. Consulta su Política de Privacidad para más información:",
+            "policyUrl": "https://www.revenuecat.com/privacy"
+          },
+          "appStores": {
+            "title": "App Store & Google Play",
+            "content": "Los pagos se procesan a través de App Store o Google Play, siguiendo sus políticas de privacidad:",
+            "appleLabel": "Apple",
+            "applePolicyUrl": "https://www.apple.com/legal/privacy",
+            "googleLabel": "Google",
+            "googlePolicyUrl": "https://policies.google.com/privacy"
+          }
+        }
+      },
+      "userRights": {
+        "title": "7. Tus Derechos",
+        "intro": "Bajo el GDPR tienes los siguientes derechos:",
+        "items": [
+          "Acceder a la información de tus datos almacenados",
+          "Rectificar datos incorrectos",
+          "Eliminar tus datos",
+          "Restringir el procesamiento",
+          "Portabilidad de datos",
+          "Oponerte al procesamiento",
+          "Retirar el consentimiento"
+        ],
+        "exerciseRights": "Para ejercer estos derechos, contáctanos en ",
+        "email": "contact@VivaLaLingo.app",
+        "complaint": " También puedes presentar una queja ante la autoridad de protección de datos."
+      },
+      "childrenPrivacy": {
+        "title": "8. Privacidad de Niños y Adolescentes",
+        "content": "Nuestros servicios están destinados a mayores de 16 años. No recopilamos datos de niños sin el consentimiento verificable de sus padres. Si tienes menos de 16, solo puedes usar los servicios con dicho consentimiento. Si detectamos datos de un menor sin permiso, procederemos a eliminarlos."
+      },
+      "dataSecurity": {
+        "title": "9. Seguridad de los Datos",
+        "content": "Implementamos medidas técnicas y organizativas para proteger tus datos contra manipulaciones, pérdidas o accesos no autorizados. Nuestros procedimientos se revisan y actualizan periódicamente."
+      },
+      "dataRetention": {
+        "title": "10. Retención de Datos",
+        "content": "Conservamos tus datos solo mientras sean necesarios para los fines para los que se recopilaron o según la ley. Los datos de cuenta se mantienen durante la relación y se eliminan al finalizarla, salvo obligaciones legales."
+      },
+      "cookies": {
+        "title": "11. Cookies y Tecnologías Similares",
+        "content": "Nuestro sitio usa cookies y tecnologías similares para mejorar la experiencia del usuario. Puedes rechazar las cookies, pero esto podría limitar algunas funciones del sitio."
+      },
+      "changes": {
+        "title": "12. Cambios a esta Política de Privacidad",
+        "content": "Nos reservamos el derecho de modificar esta política en cualquier momento. La versión actual se encuentra en nuestro sitio web. Para cambios significativos, te notificaremos a través de la app o por email."
+      },
+      "contact": {
+        "title": "13. Contacto",
+        "content": "Si tienes preguntas sobre esta Política de Privacidad o el tratamiento de tus datos, contáctanos en:",
+        "name": "Leonard Marx",
+        "street": "Musterstraße 14",
+        "location": "14527 Alemania",
+        "email": "kontakt@VivaLaLingo.app"
+      }
+    }
+  }
+  
