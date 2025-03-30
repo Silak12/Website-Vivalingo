@@ -217,8 +217,8 @@ const MethodFeatures: React.FC = () => {
               
               {/* Logo image */}
               <img 
-                src="../../../public/images/logo2.png"  
-                alt="VivaLaLingo Logo" 
+                src={`${import.meta.env.BASE_URL}images/logo2.png`}   
+                alt="Viva La Lingo Logo" 
                 className="logo-image w-full h-full object-contain relative z-10"
               />
             </div>
