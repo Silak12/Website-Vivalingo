@@ -396,8 +396,10 @@ const Hero: React.FC = () => {
       ></div>
       
       <div className="container-custom relative z-10">
+        {/* Mobile Layout (Column): Title → Phone → Subtitle → Benefits → Metrics → Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+          {/* Mobile Title (Only shown on mobile) */}
+          <div className="w-full md:hidden text-center mb-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -405,103 +407,22 @@ const Hero: React.FC = () => {
             >
               <AnimatedText
                 text={t('hero.title')}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
+                className="text-4xl font-bold text-white mb-4"
                 as="h1"
                 once={true}
               />
-              
-              <AnimatedText
-                text={t('hero.subtitle')}
-                className="text-lg text-white/80 mb-8 max-w-xl mx-auto md:mx-0"
-                as="p"
-                delay={0.3}
-                once={true}
-              />
-              
-              <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
-                {/* Updated Link to scroll to download section */}
-                <Link to="/#download">
-                  <Button 
-                    variant="primary" 
-                    size="lg"
-                    className="shadow-lg shadow-primary-500/30 flex items-center gap-2"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 22v-9.5m0 0l4 3-4-3-4 3m4-3V7.5" />
-                      <path d="M20 14v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3" />
-                    </svg>
-                    {t('hero.startLearning')}
-                  </Button>
-                </Link>
-                
-                {/* Updated Link to go to Method page */}
-                <Link to="/method">
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-white text-white hover:bg-white/10 flex items-center gap-2"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10" />
-                      <polygon points="10 8 16 12 10 16 10 8" />
-                    </svg>
-                    {t('hero.seeHowItWorks')}
-                  </Button>
-                </Link>
-              </div>
-              
-              {/* Added ratings and stats like in DownloadCTA section */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.5 }}
-              >
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
-                  <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
-                    <div className="text-yellow-400 text-lg">★★★★★</div>
-                    <span className="text-white">{t('hero.appStoreRating')}</span>
-                  </div>
-                  
-                  <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
-                    <span className="text-white font-semibold">100k+</span>
-                    <span className="text-gray-300">{t('hero.satisfiedUsers')}</span>
-                  </div>
-                </div>
-              </motion.div>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 text-white/80">
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>{t('hero.benefits.noGrammarRules')}</span>
-                </div>
-                
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>{t('hero.benefits.fromListenerToSpeaker')}</span>
-                </div>
-                
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>{t('hero.benefits.naturalLanguageFeel')}</span>
-                </div>
-              </div>
             </motion.div>
           </div>
           
-          <div className="w-full md:w-1/2">
+          {/* Phone Mockup - On mobile appears after the title */}
+          <div className="w-full md:w-1/2 order-1 md:order-2">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               className="relative perspective-1000 z-10" 
             >
-              {/* Enhanced phone mockup with 3D effects but with reduced transform to fix interaction issues */}
+              {/* Phone mockup component */}
               <div 
                 ref={phoneRef}
                 className="relative mx-auto w-[300px] h-[600px] shadow-[0_15px_35px_rgba(0,0,0,0.3)]"
@@ -509,7 +430,7 @@ const Hero: React.FC = () => {
               >
                 {/* Phone Frame - fixed to ensure content is interactive */}
                 <div className="absolute inset-0 bg-gray-800 rounded-[35px] border-[10px] border-gray-900 shadow-xl overflow-hidden z-10">
-                  {/* Keeping the same phone content as requested, but ensuring scrollability */}
+                  {/* Phone content */}
                   <div 
                     ref={phoneContentRef}
                     className="absolute inset-0 bg-gray-900 overflow-hidden z-20"
@@ -652,6 +573,101 @@ const Hero: React.FC = () => {
               <div className="absolute top-1/4 -right-4 w-10 h-10 bg-primary-400/15 rounded-full blur-sm animate-float pointer-events-none"></div>
               <div className="absolute bottom-1/3 -left-6 w-12 h-12 bg-secondary-400/15 rounded-full blur-md animate-float pointer-events-none" style={{animationDelay: '1.5s'}}></div>
               <div className="absolute top-1/2 -left-4 w-8 h-8 bg-accent-400/15 rounded-full blur-sm animate-float pointer-events-none" style={{animationDelay: '2.5s'}}></div>
+            </motion.div>
+          </div>
+          
+          {/* Text Content - Adjusted for mobile order */}
+          <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              {/* Desktop title - hidden on mobile */}
+              <div className="hidden md:block">
+                <AnimatedText
+                  text={t('hero.title')}
+                  className="text-5xl lg:text-6xl font-bold text-white mb-4"
+                  as="h1"
+                  once={true}
+                />
+              </div>
+              
+              {/* Subtitle */}
+              <AnimatedText
+                text={t('hero.subtitle')}
+                className="text-lg text-white/80 mb-8 max-w-xl mx-auto md:mx-0"
+                as="p"
+                delay={0.3}
+                once={true}
+              />
+              
+              {/* Benefits Checklist */}
+              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 text-white/80 mb-8">
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>{t('hero.benefits.noGrammarRules')}</span>
+                </div>
+                
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>{t('hero.benefits.fromListenerToSpeaker')}</span>
+                </div>
+                
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>{t('hero.benefits.naturalLanguageFeel')}</span>
+                </div>
+              </div>
+              
+              {/* App Ratings and User Metrics */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className="mb-8"
+              >
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                  <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
+                    <div className="text-yellow-400 text-lg">★★★★★</div>
+                    <span className="text-white">{t('hero.appStoreRating')}</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
+                    <span className="text-white font-semibold">100k+</span>
+                    <span className="text-gray-300">{t('hero.satisfiedUsers')}</span>
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* Single CTA Button with App/Play Store Icon */}
+              <div className="flex justify-center md:justify-start">
+                {/* Updated Link to scroll to download section with combined store icon */}
+                <Link to="/#download">
+                  <Button 
+                    variant="primary" 
+                    size="lg"
+                    className="shadow-lg shadow-primary-500/30 flex items-center gap-3 px-6 py-3"
+                  >
+                    {/* Custom App/Play Store combined icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+                      {/* Apple half */}
+                      <path d="M10.5 4.5C11.1 3.5 11.4 2.5 11.1 1.5C10.2 1.6 9.1 2.1 8.4 3.1C7.8 4 7.4 5 7.8 6C8.7 6.1 9.8 5.6 10.5 4.5Z" fill="currentColor"/>
+                      <path d="M11.4 6.2C10.4 6.2 9.5 6.7 8.9 6.7C8.2 6.7 7.4 6.2 6.6 6.2C5.3 6.2 3.9 7.2 3.9 9.2C3.9 10.2 4.1 11.2 4.5 12.2C5 13.4 6.6 16.1 8.3 16C9.1 16 9.6 15.5 10.6 15.5C11.6 15.5 12 16 12.9 16C14.6 16 16 13.5 16.5 12.3C14.5 11.3 14 8.3 16 7.2C15.3 6.1 14.2 5.6 13.2 5.6C12.3 5.7 11.8 6.2 11.4 6.2Z" fill="currentColor"/>
+                      {/* Play Store */}
+                      <path d="M19 6.5L19 17.5L25 12L19 6.5Z" fill="currentColor"/>
+                      <path d="M18 7.9V17.1L22.5 12.5L18 7.9Z" fill="white"/>
+                    </svg>
+                    {t('hero.startLearning')}
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
