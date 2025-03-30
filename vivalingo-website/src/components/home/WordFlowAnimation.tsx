@@ -87,7 +87,7 @@ const WordFlowAnimation: React.FC = () => {
     >
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center">
-          {/* Static Viva La Lingo Text */}
+          {/* Static VivaLaLingo Text */}
           <div 
             ref={staticTextRef}
             className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0"

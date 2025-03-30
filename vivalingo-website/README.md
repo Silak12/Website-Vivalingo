@@ -1,6 +1,6 @@
-# Viva La Lingo Website
+# VivaLaLingo Website
 
-Modern website for the Viva La Lingo language learning app based on the Birkenbihl method.
+Modern website for the VivaLaLingo language learning app based on the Birkenbihl method.
 
 ## Technology Stack
 
@@ -25,7 +25,7 @@ Modern website for the Viva La Lingo language learning app based on the Birkenbi
 
 ```bash
 git clone <repository-url>
-cd Viva La Lingo-website
+cd VivaLaLingo-website
 ```
 
 2. Install dependencies:
@@ -55,7 +55,7 @@ This will generate optimized files in the `dist` directory.
 ## Project Structure
 
 ```
-Viva La Lingo-website/
+VivaLaLingo-website/
 ├── public/             # Static assets
 │   └── images/         # Images and media files
 ├── src/                # Source code

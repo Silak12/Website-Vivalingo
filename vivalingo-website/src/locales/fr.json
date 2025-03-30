@@ -20,7 +20,7 @@
       "termsOfService": "Conditions d'utilisation",
       "impressum": "Mentions légales",
       "connectWithUs": "Contactez-nous",
-      "copyright": "© {year} Viva La Lingo. Tous droits réservés.",
+      "copyright": "© {year} VivaLaLingo. Tous droits réservés.",
       "madeWith": "Fait avec ❤️ pour les apprenants en langues",
       "tagline": "Apprenez les langues naturellement avec la méthode Birkenbihl. Sans règles grammaticales, juste un apprentissage intuitif."
     },
@@ -30,7 +30,7 @@
     },
     "hero": {
       "title": "Apprenez les langues naturellement",
-      "subtitle": "Découvrez la puissance de la méthode Birkenbihl avec Viva La Lingo. Apprenez sans règles grammaticales, de manière intuitive. Comme vous avez appris votre langue maternelle.",
+      "subtitle": "Découvrez la puissance de la méthode Birkenbihl avec VivaLaLingo. Apprenez sans règles grammaticales, de manière intuitive. Comme vous avez appris votre langue maternelle.",
       "startLearning": "Commencez à apprendre maintenant",
       "seeHowItWorks": "Voir comment ça marche",
       "appStoreRating": "4.8/5 sur l'App Store",
@@ -71,7 +71,7 @@
       }
     },
     "wordFlow": {
-      "title": "Viva La Lingo.",
+      "title": "VivaLaLingo.",
       "subtitle": "De l'écoute au discours : gagnez en confiance et parlez immédiatement.",
       "scrollToSee": "Faites défiler pour en voir plus",
       "words": [
@@ -115,7 +115,7 @@
     "downloadCTA": {
       "title": "Révolutionnez",
       "titleHighlight": "votre apprentissage des langues",
-      "description": "Avec Viva La Lingo, apprenez les langues de la manière la plus naturelle. Comme vous avez appris votre langue maternelle – de façon intuitive et sans règles.",
+      "description": "Avec VivaLaLingo, apprenez les langues de la manière la plus naturelle. Comme vous avez appris votre langue maternelle – de façon intuitive et sans règles.",
       "downloadIOS": "Télécharger l'application iOS",
       "downloadAndroid": "Télécharger l'application Android",
       "appStoreRating": "4.8/5 sur l'App Store",
@@ -223,19 +223,19 @@
       "description": "Nous avons caché 150 codes, mais un seul est actuellement actif pour 90% de réduction. Si le code a déjà été utilisé, vous verrez un compte à rebours de 24 heures."
     },
     "about": {
-      "title": "À propos de Viva La Lingo",
+      "title": "À propos de VivaLaLingo",
       "story": [
-        "Bonjour ! Je suis le créateur de Viva La Lingo. Cette application a débuté comme un projet personnel – je voulais simplement trouver une meilleure méthode pour apprendre les langues en utilisant la méthode Birkenbihl.",
+        "Bonjour ! Je suis le créateur de VivaLaLingo. Cette application a débuté comme un projet personnel – je voulais simplement trouver une meilleure méthode pour apprendre les langues en utilisant la méthode Birkenbihl.",
         "Ce qui s'est passé ensuite a été inattendu. Lorsque mes amis et ma famille m'ont vu utiliser l'application, ils l'ont également adoptée. Avant même de m'en rendre compte, j'avais passé 5 mois à développer, perfectionner et étendre l'application bien au-delà de mes plans initiaux.",
-        "Je me suis dit que si mon cercle proche la trouvait utile, d'autres pourraient en bénéficier également. C'est ainsi que Viva La Lingo est née, avec l'espoir d'aider d'autres personnes à profiter de cette puissante méthode d'apprentissage des langues.",
+        "Je me suis dit que si mon cercle proche la trouvait utile, d'autres pourraient en bénéficier également. C'est ainsi que VivaLaLingo est née, avec l'espoir d'aider d'autres personnes à profiter de cette puissante méthode d'apprentissage des langues.",
         "Pour être transparent : il s'agit d'une entreprise individuelle. Cela signifie que si je suis un peu lent à implémenter de nouvelles fonctionnalités, c'est parce que je travaille seul en coulisses. Cependant, je m'efforce constamment d'améliorer l'application pour qu'elle soit la meilleure possible !",
-        "Je suis ouvert aux retours et aux suggestions. Si vous avez des idées pour améliorer Viva La Lingo, je suis tout ouïe !"
+        "Je suis ouvert aux retours et aux suggestions. Si vous avez des idées pour améliorer VivaLaLingo, je suis tout ouïe !"
       ],
       "contact": {
         "title": "Contactez-nous",
         "email": "VivaLaLingoapp@gmail.com"
       },
-      "downloadButton": "Télécharger Viva La Lingo"
+      "downloadButton": "Télécharger VivaLaLingo"
     },
     "method": {
       "hero": {
@@ -255,12 +255,12 @@
           "Sa méthode repose sur la compréhension de la manière dont le cerveau humain apprend naturellement les langues – par la compréhension et le contexte, et non par des règles grammaticales ou une mémorisation répétitive."
         ],
         "quote": "\"On ne peut pas enseigner une langue, on ne peut qu'en créer les conditions pour qu'elle soit apprise.\" – Vera F. Birkenbihl",
-        "appDescription": "Viva La Lingo apporte cette méthode révolutionnaire dans une application moderne qui vous aide à apprendre les langues de la manière la plus naturelle et efficace."
+        "appDescription": "VivaLaLingo apporte cette méthode révolutionnaire dans une application moderne qui vous aide à apprendre les langues de la manière la plus naturelle et efficace."
       },
       "phases": {
         "title": "Les 4 phases de la Méthode Birkenbihl",
         "subtitle": "Une approche structurée pour apprendre naturellement une langue, qui travaille avec votre cerveau plutôt que contre lui",
-        "appFeatureTitle": "Dans l'application Viva La Lingo :",
+        "appFeatureTitle": "Dans l'application VivaLaLingo :",
         "items": [
           {
             "title": "Décoder",
@@ -283,7 +283,7 @@
             "title": "Application",
             "description": "Mettez la langue en pratique en parlant avec des amis ou en regardant des films en langue étrangère. Essayez activement ce que vous avez appris et corrigez vos erreurs sans pression.",
             "appFeature": "Utilisez les tests de l'application – ils peuvent être répétés autant de fois que nécessaire, sans aucune pression. Cela vous aide à évaluer votre prononciation et à identifier rapidement les points à améliorer.",
-            "practiceNote": "N'ayez pas peur des tests ! Avec Viva La Lingo, vous pouvez les refaire autant de fois que nécessaire pour améliorer votre prononciation et compréhension."
+            "practiceNote": "N'ayez pas peur des tests ! Avec VivaLaLingo, vous pouvez les refaire autant de fois que nécessaire pour améliorer votre prononciation et compréhension."
           }
         ]
       },
@@ -319,7 +319,7 @@
       },
       "cta": {
         "title": "Prêt à apprendre les langues naturellement ?",
-        "description": "Avec Viva La Lingo, vivez l'expérience de la Méthode Birkenbihl dans une application moderne et conviviale. Commencez dès aujourd'hui votre aventure linguistique et apprenez les langues comme votre langue maternelle !",
+        "description": "Avec VivaLaLingo, vivez l'expérience de la Méthode Birkenbihl dans une application moderne et conviviale. Commencez dès aujourd'hui votre aventure linguistique et apprenez les langues comme votre langue maternelle !",
         "iosDownload": "Télécharger l'application iOS",
         "androidDownload": "Télécharger l'application Android"
       }
@@ -340,11 +340,11 @@
       "sections": {
         "1": {
           "title": "1. Champ d'application",
-          "content": "Les présentes Conditions Générales régissent l'utilisation de l'application Viva La Lingo et du site www.VivaLaLingo.app (les \"Services\") par l'utilisateur. Viva La Lingo est exploitée par Leonard Marx, Musterstraße 14, 14527 Allemagne. En accédant ou en utilisant nos Services, vous acceptez ces conditions. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos Services."
+          "content": "Les présentes Conditions Générales régissent l'utilisation de l'application VivaLaLingo et du site www.VivaLaLingo.app (les \"Services\") par l'utilisateur. VivaLaLingo est exploitée par Leonard Marx, Musterstraße 14, 14527 Allemagne. En accédant ou en utilisant nos Services, vous acceptez ces conditions. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos Services."
         },
         "2": {
           "title": "2. Description du service",
-          "content": "Viva La Lingo est une application d'apprentissage des langues qui utilise la méthode Birkenbihl pour aider les utilisateurs à apprendre des langues étrangères. L'application propose :",
+          "content": "VivaLaLingo est une application d'apprentissage des langues qui utilise la méthode Birkenbihl pour aider les utilisateurs à apprendre des langues étrangères. L'application propose :",
           "features": [
             "Des leçons de langue dans différentes langues",
             "Des dialogues audio générés par IA pour l'apprentissage",
@@ -397,7 +397,7 @@
         },
         "10": {
           "title": "10. Propriété intellectuelle",
-          "content": "Tous les droits relatifs à l'application et à son contenu, y compris les logiciels, textes, graphiques, contenus audio et contenus générés par IA, sont la propriété de Viva La Lingo ou de ses concédants et sont protégés par les lois sur le droit d'auteur et la propriété intellectuelle. L'utilisation de nos Services ne vous confère aucun droit de propriété sur le contenu ou le logiciel."
+          "content": "Tous les droits relatifs à l'application et à son contenu, y compris les logiciels, textes, graphiques, contenus audio et contenus générés par IA, sont la propriété de VivaLaLingo ou de ses concédants et sont protégés par les lois sur le droit d'auteur et la propriété intellectuelle. L'utilisation de nos Services ne vous confère aucun droit de propriété sur le contenu ou le logiciel."
         },
         "11": {
           "title": "11. Protection des données",
@@ -421,7 +421,7 @@
         },
         "16": {
           "title": "16. Droit applicable et juridiction",
-          "content": "Ces Conditions sont régies par le droit de la République fédérale d'Allemagne, à l'exception de la Convention des Nations Unies sur les contrats de vente internationale de marchandises. En cas de litige, la juridiction sera celle du siège de Viva La Lingo."
+          "content": "Ces Conditions sont régies par le droit de la République fédérale d'Allemagne, à l'exception de la Convention des Nations Unies sur les contrats de vente internationale de marchandises. En cas de litige, la juridiction sera celle du siège de VivaLaLingo."
         },
         "17": {
           "title": "17. Dispositions finales",
@@ -479,7 +479,7 @@
       "lastUpdated": "Dernière mise à jour",
       "introduction": {
         "title": "1. Introduction",
-        "content": "Chez Viva La Lingo (\"nous\", \"notre\"), nous respectons votre vie privée et nous engageons à protéger vos données personnelles. Cette politique de confidentialité vous informe sur la manière dont nous traitons les données collectées via notre application Viva La Lingo et notre site web www.VivaLaLingo.app, et explique vos droits en matière de confidentialité."
+        "content": "Chez VivaLaLingo (\"nous\", \"notre\"), nous respectons votre vie privée et nous engageons à protéger vos données personnelles. Cette politique de confidentialité vous informe sur la manière dont nous traitons les données collectées via notre application VivaLaLingo et notre site web www.VivaLaLingo.app, et explique vos droits en matière de confidentialité."
       },
       "dataController": {
         "title": "2. Responsable du traitement des données",

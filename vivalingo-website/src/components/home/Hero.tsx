@@ -516,7 +516,7 @@ const Hero: React.FC = () => {
                   >
                     {/* App Header */}
                     <div className="h-14 bg-primary-600 flex items-center justify-center">
-                      <div className="text-white font-bold text-lg">Viva La Lingo</div>
+                      <div className="text-white font-bold text-lg">VivaLaLingo</div>
                     </div>
                     
                     {/* Language UI */}

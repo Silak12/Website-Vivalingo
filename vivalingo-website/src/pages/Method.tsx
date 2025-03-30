@@ -609,8 +609,8 @@ const Method: React.FC = () => {
                   {/* Phone mockup */}
                   <div className="relative w-[200px] h-[400px] mx-auto rounded-[30px] border-[10px] border-gray-800 bg-gray-900 shadow-2xl overflow-hidden">
                     <img
-                      src="https://via.placeholder.com/300x600.png/0a0a0a/ffffff?text=Viva La Lingo+App"
-                      alt="Viva La Lingo App"
+                      src="https://via.placeholder.com/300x600.png/0a0a0a/ffffff?text=VivaLaLingo+App"
+                      alt="VivaLaLingo App"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     

@@ -218,7 +218,7 @@ const MethodFeatures: React.FC = () => {
               {/* Logo image */}
               <img 
                 src="../../../public/images/logo2.png"  
-                alt="Viva La Lingo Logo" 
+                alt="VivaLaLingo Logo" 
                 className="logo-image w-full h-full object-contain relative z-10"
               />
             </div>

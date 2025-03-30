@@ -63,10 +63,10 @@ const Navbar: React.FC = () => {
             >
               <img 
                 src="/images/logo2.png" 
-                alt="Viva La Lingo Logo"
+                alt="VivaLaLingo Logo"
                 className="h-14 w-14 mr-2"
               />
-              <span className={`font-bold text-xl ${logoTextColor}`}>Viva La Lingo</span>
+              <span className={`font-bold text-xl ${logoTextColor}`}>VivaLaLingo</span>
             </motion.div>
           </Link>
 

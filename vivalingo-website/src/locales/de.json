@@ -20,7 +20,7 @@
     "termsOfService": "Nutzungsbedingungen",
     "impressum": "Impressum",
     "connectWithUs": "Kontaktiere uns",
-    "copyright": "© {year} Viva La Lingo. Alle Rechte vorbehalten.",
+    "copyright": "© {year} VivaLaLingo. Alle Rechte vorbehalten.",
     "madeWith": "Gemacht mit ❤️ für Sprachlerner",
     "tagline": "Lerne Sprachen natürlich mit der Birkenbihl-Methode. Keine Grammatikregeln, nur intuitives Lernen."
   },
@@ -30,7 +30,7 @@
   },
   "hero": {
     "title": "Sprachen natürlich lernen",
-    "subtitle": "Erlebe die Kraft der Birkenbihl-Methode mit Viva La Lingo. Lerne ohne Grammatikregeln, intuitiv. So wie du deine Muttersprache gelernt hast.",
+    "subtitle": "Erlebe die Kraft der Birkenbihl-Methode mit VivaLaLingo. Lerne ohne Grammatikregeln, intuitiv. So wie du deine Muttersprache gelernt hast.",
     "startLearning": "Jetzt starten",
     "seeHowItWorks": "So funktioniert es",
     "appStoreRating": "4.8/5 im App Store",
@@ -71,7 +71,7 @@
     }
   },
   "wordFlow": {
-    "title": "Viva La Lingo.",
+    "title": "VivaLaLingo.",
     "subtitle": "Vom Zuhörer zum Sprecher: Gewinne Selbstvertrauen und sprich sofort.",
     "scrollToSee": "Zum Weitersehen scrollen",
     "words": [
@@ -115,7 +115,7 @@
   "downloadCTA": {
     "title": "Revolutioniere",
     "titleHighlight": "dein Sprachenlernen",
-    "description": "Mit Viva La Lingo lernst du Sprachen auf die natürlichste Weise. Genau wie du deine Muttersprache gelernt hast – intuitiv und ohne Regeln.",
+    "description": "Mit VivaLaLingo lernst du Sprachen auf die natürlichste Weise. Genau wie du deine Muttersprache gelernt hast – intuitiv und ohne Regeln.",
     "downloadIOS": "iOS App herunterladen",
     "downloadAndroid": "Android App herunterladen",
     "appStoreRating": "4.8/5 im App Store",
@@ -223,19 +223,19 @@
     "description": "Wir haben 150 Codes versteckt, aber nur EINER ist derzeit aktiv für 90% Rabatt. Wenn er bereits benutzt wurde, siehst du einen 24-Stunden-Countdown."
   },
   "about": {
-    "title": "Über Viva La Lingo",
+    "title": "Über VivaLaLingo",
     "story": [
-      "Hallo! Ich bin der Gründer von Viva La Lingo. Diese App begann als persönliches Projekt – ich wollte einfach eine bessere Methode finden, um Sprachen mit der Birkenbihl-Methode zu lernen.",
+      "Hallo! Ich bin der Gründer von VivaLaLingo. Diese App begann als persönliches Projekt – ich wollte einfach eine bessere Methode finden, um Sprachen mit der Birkenbihl-Methode zu lernen.",
       "Was dann geschah, war unerwartet. Als Freunde und Familie mich die App nutzen sahen, wollten auch sie sie haben. Ehe ich mich versah, hatte ich 5 Monate in die Entwicklung gesteckt, die App verfeinert und weit über meine ursprünglichen Pläne hinaus erweitert.",
-      "Ich dachte, wenn mein enges Umfeld sie nützlich fand, könnten es vielleicht auch andere tun. Und so sind wir hier! Ich habe Viva La Lingo der Welt vorgestellt, in der Hoffnung, dass auch andere von dieser kraftvollen Methode des Sprachenlernens profitieren können.",
+      "Ich dachte, wenn mein enges Umfeld sie nützlich fand, könnten es vielleicht auch andere tun. Und so sind wir hier! Ich habe VivaLaLingo der Welt vorgestellt, in der Hoffnung, dass auch andere von dieser kraftvollen Methode des Sprachenlernens profitieren können.",
       "Offen gesagt: Das ist ein Ein-Personen-Betrieb. Das heißt, wenn ich etwas langsam bei der Umsetzung neuer Funktionen bin, liegt es daran, dass ich allein im Hintergrund arbeite! Aber ich arbeite ständig an Verbesserungen und bin bestrebt, diese App so gut wie möglich zu machen.",
-      "Ich bin offen für Feedback und Vorschläge. Wenn du also Ideen hast, wie Viva La Lingo verbessert werden kann, bin ich ganz Ohr!"
+      "Ich bin offen für Feedback und Vorschläge. Wenn du also Ideen hast, wie VivaLaLingo verbessert werden kann, bin ich ganz Ohr!"
     ],
     "contact": {
       "title": "Kontaktiere uns",
-      "email": "Viva La Lingoapp@gmail.com"
+      "email": "VivaLaLingoapp@gmail.com"
     },
-    "downloadButton": "Viva La Lingo herunterladen"
+    "downloadButton": "VivaLaLingo herunterladen"
   },
   "method": {
     "hero": {
@@ -255,12 +255,12 @@
         "Ihre Methode basiert auf dem Verständnis, wie das menschliche Gehirn Sprachen natürlich erlernt – nämlich durch Verstehen und Kontext, nicht durch Grammatikregeln und stures Auswendiglernen."
       ],
       "quote": "Man kann eine Sprache nicht unterrichten, man kann nur die Bedingungen schaffen, unter denen sie gelernt werden kann. – Vera F. Birkenbihl",
-      "appDescription": "Viva La Lingo bringt diese revolutionäre Methode in eine moderne App, die dir hilft, Sprachen auf die natürlichste und effektivste Weise zu erlernen."
+      "appDescription": "VivaLaLingo bringt diese revolutionäre Methode in eine moderne App, die dir hilft, Sprachen auf die natürlichste und effektivste Weise zu erlernen."
     },
     "phases": {
       "title": "Die 4 Phasen der Birkenbihl-Methode",
       "subtitle": "Ein strukturierter Ansatz zum natürlichen Sprachenlernen, der mit deinem Gehirn arbeitet, nicht gegen es",
-      "appFeatureTitle": "In der Viva La Lingo-App:",
+      "appFeatureTitle": "In der VivaLaLingo-App:",
       "items": [
         {
           "title": "Dekodieren",
@@ -283,7 +283,7 @@
           "title": "Anwenden",
           "description": "Sprich mit Freunden, schaue fremdsprachige Filme – alles, was dir hilft, deine neue Sprache aktiv auszuprobieren.",
           "appFeature": "Nutze die Prüfungen in der App – sie können beliebig oft wiederholt werden, ohne Druck! So kannst du deine Aussprache testen und erkennst schnell, wo du noch Übung brauchst. Die Prüfungen sind deine Freunde, keine Hindernisse.",
-          "practiceNote": "Keine Angst vor Prüfungen! In Viva La Lingo kannst du sie beliebig oft wiederholen, um deine Aussprache und dein Verständnis zu verbessern."
+          "practiceNote": "Keine Angst vor Prüfungen! In VivaLaLingo kannst du sie beliebig oft wiederholen, um deine Aussprache und dein Verständnis zu verbessern."
         }
       ]
     },
@@ -319,7 +319,7 @@
     },
     "cta": {
       "title": "Bereit, Sprachen auf natürliche Weise zu lernen?",
-      "description": "Mit Viva La Lingo erlebst du die Birkenbihl-Methode in einer modernen, benutzerfreundlichen App. Starte jetzt deine Sprachlernreise und lerne Sprachen so wie deine Muttersprache!",
+      "description": "Mit VivaLaLingo erlebst du die Birkenbihl-Methode in einer modernen, benutzerfreundlichen App. Starte jetzt deine Sprachlernreise und lerne Sprachen so wie deine Muttersprache!",
       "iosDownload": "iOS App herunterladen",
       "androidDownload": "Android App herunterladen"
     }
@@ -340,11 +340,11 @@
   "sections": {
     "1": {
       "title": "1. Anwendungsbereich",
-      "content": "Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der Viva La Lingo Sprachlern-App und der Website www.Viva La Lingo.app (\"Dienste\") durch Sie als Nutzer. Viva La Lingo wird betrieben von Leonard Marx, Musterstraße 14, 14527 Deutschland (\"wir\", \"uns\"). Mit dem Zugriff auf oder der Nutzung unserer Dienste erklären Sie sich mit diesen AGB einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie unsere Dienste bitte nicht."
+      "content": "Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der VivaLaLingo Sprachlern-App und der Website www.VivaLaLingo.app (\"Dienste\") durch Sie als Nutzer. VivaLaLingo wird betrieben von Leonard Marx, Musterstraße 14, 14527 Deutschland (\"wir\", \"uns\"). Mit dem Zugriff auf oder der Nutzung unserer Dienste erklären Sie sich mit diesen AGB einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie unsere Dienste bitte nicht."
     },
     "2": {
       "title": "2. Leistungsbeschreibung",
-      "content": "Viva La Lingo ist eine Sprachlern-App, die die Birkenbihl-Methode nutzt, um Nutzern das Erlernen von Fremdsprachen zu erleichtern. Die App bietet:",
+      "content": "VivaLaLingo ist eine Sprachlern-App, die die Birkenbihl-Methode nutzt, um Nutzern das Erlernen von Fremdsprachen zu erleichtern. Die App bietet:",
       "features": [
         "Sprachlektionen in verschiedenen Sprachen",
         "KI-generierte Audiodialoge zum Sprachenlernen",
@@ -434,7 +434,7 @@
         "name": "Leonard Marx",
         "street": "Musterstraße 14",
         "location": "14527 Deutschland",
-        "email": "kontakt@Viva La Lingo.app"
+        "email": "kontakt@VivaLaLingo.app"
       }
     }
   }
@@ -450,9 +450,9 @@
   "contact": {
     "title": "Kontakt",
     "email": "E-Mail",
-    "emailAddress": "kontakt@Viva La Lingo.app",
+    "emailAddress": "kontakt@VivaLaLingo.app",
     "website": "Website",
-    "websiteUrl": "https://www.Viva La Lingo.app"
+    "websiteUrl": "https://www.VivaLaLingo.app"
   },
   "vatId": {
     "title": "Umsatzsteuer-ID",
@@ -479,7 +479,7 @@
     "lastUpdated": "Stand",
     "introduction": {
       "title": "1. Einleitung",
-      "content": "Wir bei Viva La Lingo (\"wir\", \"uns\", \"unsere\") respektieren deine Privatsphäre und verpflichten uns, deine personenbezogenen Daten zu schützen. Diese Datenschutzerklärung informiert dich darüber, wie wir mit den Daten umgehen, die wir durch deine Nutzung unserer Sprachlern-App Viva La Lingo (die \"App\") und unserer Website www.Viva La Lingo.app (die \"Website\") sammeln, und erklärt deine Datenschutzrechte."
+      "content": "Wir bei VivaLaLingo (\"wir\", \"uns\", \"unsere\") respektieren deine Privatsphäre und verpflichten uns, deine personenbezogenen Daten zu schützen. Diese Datenschutzerklärung informiert dich darüber, wie wir mit den Daten umgehen, die wir durch deine Nutzung unserer Sprachlern-App VivaLaLingo (die \"App\") und unserer Website www.VivaLaLingo.app (die \"Website\") sammeln, und erklärt deine Datenschutzrechte."
     },
     "dataController": {
       "title": "2. Verantwortlicher für die Datenverarbeitung",
@@ -488,7 +488,7 @@
       "street": "Musterstraße 14",
       "location": "14527 Deutschland",
       "email": "E-Mail",
-      "emailAddress": "kontakt@Viva La Lingo.app"
+      "emailAddress": "kontakt@VivaLaLingo.app"
     },
     "collectedData": {
       "title": "3. Von uns erhobene Daten",
@@ -577,7 +577,7 @@
         "Recht auf Widerruf einer erteilten Einwilligung"
       ],
       "exerciseRights": "Um eines dieser Rechte auszuüben, kontaktiere uns bitte unter ",
-      "email": "kontakt@Viva La Lingo.app",
+      "email": "kontakt@VivaLaLingo.app",
       "complaint": " Du hast außerdem das Recht, eine Beschwerde bei einer Datenschutzaufsichtsbehörde einzureichen."
     },
     "childrenPrivacy": {
@@ -606,7 +606,7 @@
       "name": "Leonard Marx",
       "street": "Musterstraße 14",
       "location": "14527 Deutschland",
-      "email": "kontakt@Viva La Lingo.app"
+      "email": "kontakt@VivaLaLingo.app"
     }
   }
 

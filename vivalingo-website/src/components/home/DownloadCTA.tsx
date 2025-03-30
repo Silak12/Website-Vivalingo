@@ -386,7 +386,7 @@ const DownloadCTA: React.FC = () => {
                     {/* App Header */}
                     <div className="h-14 flex items-center justify-center mb-4">
                       <div className="text-white text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
-                        Viva La Lingo
+                        VivaLaLingo
                       </div>
                     </div>
                     

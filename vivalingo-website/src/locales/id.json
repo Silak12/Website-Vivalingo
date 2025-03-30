@@ -20,7 +20,7 @@
       "termsOfService": "Syarat Layanan",
       "impressum": "Impresum",
       "connectWithUs": "Hubungi Kami",
-      "copyright": "© {year} Viva La Lingo. Hak cipta dilindungi undang-undang.",
+      "copyright": "© {year} VivaLaLingo. Hak cipta dilindungi undang-undang.",
       "madeWith": "Dibuat dengan ❤️ untuk para pembelajar bahasa",
       "tagline": "Belajar bahasa secara alami dengan metode Birkenbihl. Tanpa aturan tata bahasa, hanya pembelajaran intuitif."
     },
@@ -30,7 +30,7 @@
     },
     "hero": {
       "title": "Belajar Bahasa Secara Alami",
-      "subtitle": "Rasakan kekuatan metode Birkenbihl bersama Viva La Lingo. Belajar tanpa aturan tata bahasa, secara intuitif. Seperti cara kamu belajar bahasa ibu.",
+      "subtitle": "Rasakan kekuatan metode Birkenbihl bersama VivaLaLingo. Belajar tanpa aturan tata bahasa, secara intuitif. Seperti cara kamu belajar bahasa ibu.",
       "startLearning": "Mulai Belajar Sekarang",
       "seeHowItWorks": "Lihat Cara Kerjanya",
       "appStoreRating": "4.8/5 di App Store",
@@ -71,7 +71,7 @@
       }
     },
     "wordFlow": {
-      "title": "Viva La Lingo.",
+      "title": "VivaLaLingo.",
       "subtitle": "Dari pendengar ke pembicara: Dapatkan kepercayaan diri dan segera berbicara.",
       "scrollToSee": "Gulir untuk melihat lebih banyak",
       "words": [
@@ -115,7 +115,7 @@
     "downloadCTA": {
       "title": "Revolusi",
       "titleHighlight": "pembelajaran bahasamu",
-      "description": "Dengan Viva La Lingo, kamu belajar bahasa dengan cara yang paling alami. Seperti cara kamu belajar bahasa ibu – secara intuitif dan tanpa aturan.",
+      "description": "Dengan VivaLaLingo, kamu belajar bahasa dengan cara yang paling alami. Seperti cara kamu belajar bahasa ibu – secara intuitif dan tanpa aturan.",
       "downloadIOS": "Unduh Aplikasi iOS",
       "downloadAndroid": "Unduh Aplikasi Android",
       "appStoreRating": "4.8/5 di App Store",
@@ -223,19 +223,19 @@
       "description": "Kami telah menyembunyikan 150 kode, namun hanya SATU yang aktif saat ini untuk diskon 90%. Jika sudah digunakan, kamu akan melihat hitungan mundur 24 jam."
     },
     "about": {
-      "title": "Tentang Viva La Lingo",
+      "title": "Tentang VivaLaLingo",
       "story": [
-        "Halo! Saya adalah pembuat Viva La Lingo. Aplikasi ini dimulai sebagai proyek pribadi — saya hanya ingin menemukan cara yang lebih baik untuk belajar bahasa menggunakan metode Birkenbihl.",
+        "Halo! Saya adalah pembuat VivaLaLingo. Aplikasi ini dimulai sebagai proyek pribadi — saya hanya ingin menemukan cara yang lebih baik untuk belajar bahasa menggunakan metode Birkenbihl.",
         "Apa yang terjadi selanjutnya tidak terduga. Ketika teman dan keluarga melihat saya menggunakan aplikasi, mereka juga menginginkannya. Sebelum saya menyadari, saya telah menghabiskan 5 bulan untuk mengembangkannya, menyempurnakannya, dan memperluasnya jauh melampaui rencana awal saya.",
-        "Saya berpikir, jika lingkaran terdekat saya menganggapnya berguna, mungkin orang lain juga. Maka, di sinilah kita! Saya merilis Viva La Lingo ke dunia dengan harapan bahwa orang lain dapat mengambil manfaat dari metode pembelajaran bahasa yang kuat ini.",
+        "Saya berpikir, jika lingkaran terdekat saya menganggapnya berguna, mungkin orang lain juga. Maka, di sinilah kita! Saya merilis VivaLaLingo ke dunia dengan harapan bahwa orang lain dapat mengambil manfaat dari metode pembelajaran bahasa yang kuat ini.",
         "Secara jujur: ini adalah operasi satu orang. Artinya, jika saya agak lambat dalam mengimplementasikan fitur baru, itu karena saya bekerja sendiri di balik layar. Namun, saya selalu berupaya meningkatkan dan membuat aplikasi ini sebaik mungkin!",
-        "Saya terbuka untuk masukan dan saran. Jadi, jika kamu memiliki ide untuk membuat Viva La Lingo lebih baik, saya siap mendengarkan!"
+        "Saya terbuka untuk masukan dan saran. Jadi, jika kamu memiliki ide untuk membuat VivaLaLingo lebih baik, saya siap mendengarkan!"
       ],
       "contact": {
         "title": "Hubungi Kami",
         "email": "VivaLaLingoapp@gmail.com"
       },
-      "downloadButton": "Unduh Viva La Lingo"
+      "downloadButton": "Unduh VivaLaLingo"
     },
     "method": {
       "hero": {
@@ -255,12 +255,12 @@
           "Metodenya didasarkan pada cara otak manusia belajar bahasa secara alami – melalui pemahaman dan konteks, bukan dengan aturan tata bahasa dan hafalan mekanis."
         ],
         "quote": "\"Kamu tidak bisa mengajar bahasa, kamu hanya bisa menciptakan kondisi agar bahasa itu bisa dipelajari.\" – Vera F. Birkenbihl",
-        "appDescription": "Viva La Lingo membawa metode revolusioner ini ke dalam aplikasi modern yang membantumu belajar bahasa dengan cara paling alami dan efektif."
+        "appDescription": "VivaLaLingo membawa metode revolusioner ini ke dalam aplikasi modern yang membantumu belajar bahasa dengan cara paling alami dan efektif."
       },
       "phases": {
         "title": "4 Fase Metode Birkenbihl",
         "subtitle": "Pendekatan terstruktur untuk belajar bahasa secara alami yang bekerja dengan otakmu, bukan melawannya",
-        "appFeatureTitle": "Dalam Aplikasi Viva La Lingo:",
+        "appFeatureTitle": "Dalam Aplikasi VivaLaLingo:",
         "items": [
           {
             "title": "Dekode",
@@ -283,7 +283,7 @@
             "title": "Terapkan",
             "description": "Cobalah berbicara dalam bahasa tersebut, baik dalam percakapan maupun saat menonton media. Praktikkan apa yang telah kamu pelajari dan perbaiki kesalahan tanpa tekanan.",
             "appFeature": "Gunakan tes dalam aplikasi – tes bisa diulang sebanyak yang kamu mau tanpa tekanan. Ini membantumu mengevaluasi pengucapan dan segera mengetahui area yang perlu diperbaiki.",
-            "practiceNote": "Jangan takut dengan tes! Di Viva La Lingo, kamu bisa mengulang tes sebanyak yang diperlukan untuk meningkatkan pengucapan dan pemahaman."
+            "practiceNote": "Jangan takut dengan tes! Di VivaLaLingo, kamu bisa mengulang tes sebanyak yang diperlukan untuk meningkatkan pengucapan dan pemahaman."
           }
         ]
       },
@@ -319,7 +319,7 @@
       },
       "cta": {
         "title": "Siap untuk belajar bahasa secara alami?",
-        "description": "Dengan Viva La Lingo, kamu akan merasakan metode Birkenbihl dalam aplikasi yang modern dan mudah digunakan. Mulailah perjalanan belajarmu sekarang dan belajarlah bahasa seperti kamu belajar bahasa ibu!",
+        "description": "Dengan VivaLaLingo, kamu akan merasakan metode Birkenbihl dalam aplikasi yang modern dan mudah digunakan. Mulailah perjalanan belajarmu sekarang dan belajarlah bahasa seperti kamu belajar bahasa ibu!",
         "iosDownload": "Unduh Aplikasi iOS",
         "androidDownload": "Unduh Aplikasi Android"
       }
@@ -340,11 +340,11 @@
       "sections": {
         "1": {
           "title": "1. Ruang Lingkup",
-          "content": "Syarat dan Ketentuan ini mengatur penggunaan aplikasi Viva La Lingo dan situs web www.VivaLaLingo.app (\"Layanan\") oleh pengguna. Viva La Lingo dioperasikan oleh Leonard Marx, Musterstraße 14, 14527 Jerman (\"kami\"). Dengan mengakses atau menggunakan Layanan, kamu menyetujui syarat-syarat ini. Jika tidak, mohon untuk tidak menggunakan Layanan kami."
+          "content": "Syarat dan Ketentuan ini mengatur penggunaan aplikasi VivaLaLingo dan situs web www.VivaLaLingo.app (\"Layanan\") oleh pengguna. VivaLaLingo dioperasikan oleh Leonard Marx, Musterstraße 14, 14527 Jerman (\"kami\"). Dengan mengakses atau menggunakan Layanan, kamu menyetujui syarat-syarat ini. Jika tidak, mohon untuk tidak menggunakan Layanan kami."
         },
         "2": {
           "title": "2. Deskripsi Layanan",
-          "content": "Viva La Lingo adalah aplikasi pembelajaran bahasa yang menggunakan metode Birkenbihl untuk membantu pengguna belajar bahasa asing. Aplikasi ini menawarkan:",
+          "content": "VivaLaLingo adalah aplikasi pembelajaran bahasa yang menggunakan metode Birkenbihl untuk membantu pengguna belajar bahasa asing. Aplikasi ini menawarkan:",
           "features": [
             "Pelajaran bahasa dalam berbagai bahasa",
             "Dialog audio yang dihasilkan oleh AI untuk pembelajaran",
@@ -479,7 +479,7 @@
       "lastUpdated": "Terakhir diperbarui",
       "introduction": {
         "title": "1. Pendahuluan",
-        "content": "Di Viva La Lingo (\"kami\", \"milik kami\"), kami menghormati privasimu dan berkomitmen melindungi data pribadimu. Kebijakan ini menjelaskan cara kami menangani data yang dikumpulkan melalui aplikasi dan situs web kami www.VivaLaLingo.app serta hak-hak privasimu."
+        "content": "Di VivaLaLingo (\"kami\", \"milik kami\"), kami menghormati privasimu dan berkomitmen melindungi data pribadimu. Kebijakan ini menjelaskan cara kami menangani data yang dikumpulkan melalui aplikasi dan situs web kami www.VivaLaLingo.app serta hak-hak privasimu."
       },
       "dataController": {
         "title": "2. Pengendali Data",

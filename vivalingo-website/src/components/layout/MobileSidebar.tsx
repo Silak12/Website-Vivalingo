@@ -221,10 +221,10 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
                 <div className="flex items-center">
                   <img 
                     src="/images/logo2.png" 
-                    alt="Viva La Lingo Logo"
+                    alt="VivaLaLingo Logo"
                     className="h-10 w-10 mr-2"
                   />
-                  <span className="font-bold text-xl text-primary-600">Viva La Lingo</span>
+                  <span className="font-bold text-xl text-primary-600">VivaLaLingo</span>
                 </div>
                 <button
                   onClick={onClose}
@@ -289,7 +289,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
                   {t('mobileSidebar.downloadApp')}
                 </Button>
                 <div className="mt-4 text-center text-sm text-gray-500">
-                  &copy; {new Date().getFullYear()} Viva La Lingo
+                  &copy; {new Date().getFullYear()} VivaLaLingo
                 </div>
               </motion.div>
             </div>
