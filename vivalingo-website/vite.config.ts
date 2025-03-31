@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Website-Vivalingo/', // Basis-URL für die Bereitstellung
+  base: '/', // Basis-URL für die Bereitstellung
   plugins: [react()],
   server: {
     host: '0.0.0.0', // Auf allen Netzwerkschnittstellen lauschen
