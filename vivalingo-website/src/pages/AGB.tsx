@@ -91,12 +91,7 @@ const AGB: React.FC = () => {
     t('agb.sections.2.features.4')
   ];
   
-  // Define plans array for section 5
-  const plansSection5 = [
-    t('agb.sections.5.plans.0'),
-    t('agb.sections.5.plans.1'),
-    t('agb.sections.5.plans.2')
-  ];
+
   
   // Define obligations array for section 8
   const obligationsSection8 = [
@@ -183,11 +178,6 @@ const AGB: React.FC = () => {
               <p className="text-gray-300 mb-4">
                 {t('agb.sections.5.content')}
               </p>
-              <ul className="list-disc pl-6 text-gray-300 mb-4">
-                {plansSection5.map((plan, index) => (
-                  <li key={index} className="mb-2">{plan}</li>
-                ))}
-              </ul>
               <p className="text-gray-300 mb-6">
                 {t('agb.sections.5.payment')}
               </p>

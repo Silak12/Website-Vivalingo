@@ -209,6 +209,12 @@ const Datenschutz: React.FC = () => {
                 {t('privacy.collectedData.automatic.content')}
               </p>
               
+              {/* New Analytics Section */}
+              <h3 className="text-xl font-semibold text-white mb-3">{t('privacy.collectedData.analytics.title')}</h3>
+              <p className="text-gray-300 mb-4">
+                {t('privacy.collectedData.analytics.content')}
+              </p>
+              
               <h2 className="text-2xl font-semibold text-white mb-4 mt-8">{t('privacy.purposes.title')}</h2>
               <p className="text-gray-300 mb-4">
                 {t('privacy.purposes.intro')}

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import Button from '../shared/Button';
 import { useLanguage, Language } from '../../contexts/LanguageContext';
+import { label } from 'framer-motion/client';
 
 interface MobileSidebarProps {
   isOpen: boolean;
@@ -120,8 +121,12 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
 
   // Available languages
   const languages = [
+    { code: 'en', label: 'EN' },
     { code: 'de', label: 'DE' },
-    { code: 'en', label: 'EN' }
+    { code: 'es', label: 'ES' },
+    { code: 'id', label: 'ID' },
+    { code: 'fr', label: 'FR' },
+    { code: 'it', label: 'IT' },
   ];
   
   // Handle language change

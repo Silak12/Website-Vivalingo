@@ -359,18 +359,12 @@
     },
     "4": {
       "title": "4. Altersbeschränkung",
-      "content": "Unsere Dienste richten sich an Nutzer ab 16 Jahren. Wenn du jünger als 16 Jahre bist, darfst du unsere Dienste nur mit Zustimmung deiner Eltern oder Erziehungsberechtigten nutzen. Wir behalten uns das Recht vor, zusätzliche Maßnahmen zu ergreifen, um das Alter der Nutzer zu überprüfen und den Zugang zu unseren Diensten einzuschränken."
+      "content": "Durch Nutzung und Registrierung bestätigst du, dass du mindestens 16 Jahre alt bist. Falls du unter 16 Jahre alt bist, ist eine Nutzung unserer App sowie Abschluss von Abonnements und In-App-Käufen nur mit nachweisbarer Zustimmung eines Elternteils oder gesetzlichen Vertreters erlaubt."
     },
     "5": {
       "title": "5. Preise und Zahlungsbedingungen",
       "content": "Wir bieten verschiedene Abonnement-Optionen und In-App-Käufe an:",
-      "plans": [
-        "Monatliches Abonnement: 2,99 € pro Monat",
-        "Jährliches Abonnement: 12,99 € pro Jahr (entspricht einer Ersparnis von 64% gegenüber dem monatlichen Abonnement)",
-        "Lifetime-Zugang: Einmalzahlung von 49,99 €"
-      ],
-      "payment": "Alle Zahlungen werden über den App Store (iOS) oder Google Play Store (Android) abgewickelt. Die Abrechnung erfolgt entsprechend der Bestimmungen dieser Plattformen. Abonnements verlängern sich automatisch zum jeweils gültigen Preis, sofern sie nicht mindestens 24 Stunden vor Ende der aktuellen Laufzeit gekündigt werden. Die Kündigung erfolgt über Ihren App Store oder Google Play Account."
-    },
+      "payment": "Alle Zahlungen werden über den App Store (iOS) oder Google Play Store (Android) abgewickelt. Die Abrechnung erfolgt entsprechend der Bestimmungen dieser Plattformen. Abonnements verlängern sich automatisch zum jeweils gültigen Preis, sofern sie nicht mindestens 24 Stunden vor Ende der aktuellen Laufzeit gekündigt werden. Die Kündigung erfolgt über Ihren App Store oder Google Play Account. Wir behalten uns vor, Preise für Abonnements jederzeit anzupassen. Bereits laufende Abonnements bleiben bis zur nächsten Verlängerung unverändert."    },
     "6": {
       "title": "6. Testphasen und Rückerstattungen",
       "content": "Neue Nutzer erhalten beim Abschluss eines monatlichen oder jährlichen Abonnements eine 7-tägige kostenlose Testphase. Bei Lifetime-Käufen ist keine Testphase vorgesehen. Rückerstattungsanfragen müssen an den jeweiligen App Store (iOS) oder Google Play Store (Android) gerichtet werden und unterliegen deren Richtlinien. Für iOS-Nutzer können Rückerstattungen über die Apple-Website oder direkt im App Store unter \"Kaufverlauf\" beantragt werden. Android-Nutzer können Rückerstattungen über den Google Play Store im Bereich \"Bestellverlauf\" innerhalb von 48 Stunden nach dem Kauf beantragen. Bei späteren Anfragen muss der Google Play Support kontaktiert werden. Wir selbst bieten keine direkten Rückerstattungen an, unterstützen Sie aber gerne bei Fragen zum Rückerstattungsprozess."
@@ -409,7 +403,7 @@
     },
     "13": {
       "title": "13. Haftungsbeschränkung",
-      "content": "Wir haften nicht für indirekte Schäden, Folgeschäden oder besondere Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung unserer Dienste entstehen. Unsere Haftung ist auf den Betrag beschränkt, den Sie für die Nutzung unserer Dienste gezahlt haben. Diese Haftungsbeschränkung gilt nicht für Schäden, die durch Vorsatz oder grobe Fahrlässigkeit unsererseits verursacht wurden, oder für Verletzungen des Lebens, des Körpers oder der Gesundheit."
+      "content": "Wir haften nicht für indirekte Schäden, Folgeschäden oder besondere Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung unserer Dienste entstehen. Unsere Haftung ist auf den Betrag beschränkt, den Sie für die Nutzung unserer Dienste gezahlt haben. Diese Haftungsbeschränkung gilt nicht für Schäden, die durch Vorsatz oder grobe Fahrlässigkeit unsererseits verursacht wurden, oder für Verletzungen des Lebens, des Körpers oder der Gesundheit. Wir bieten keine Garantie für bestimmte Lernerfolge oder Spracherfolge durch die Nutzung unserer App. Die individuelle Lernentwicklung hängt stark vom persönlichen Einsatz des Nutzers ab."
     },
     "14": {
       "title": "14. Kündigung",
