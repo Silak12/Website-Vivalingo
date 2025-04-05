@@ -18,12 +18,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   // Handle anchor link scrolling
   useEffect(() => {
-    // Check if the URL contains a hash
     if (location.hash) {
-      // Get the element by id
       const element = document.getElementById(location.hash.substring(1));
-      
-      // If the element exists, scroll to it
       if (element) {
         setTimeout(() => {
           window.scrollTo({
@@ -34,28 +30,28 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       }
     }
   }, [location]);
-  
+
+  // Google Analytics Pageview Tracking
+  useEffect(() => {
+    const pagePath = location.pathname + location.hash;
+    if (window.gtag) {
+      window.gtag('config', 'G-ZE75QCKT3V', { page_path: pagePath });
+    }
+  }, [location]);
+
   // Detect if device is mobile
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
-    // Initial check
+
     checkMobile();
-    
-    // Add resize listener
     window.addEventListener('resize', checkMobile);
-    
-    // Mobile-specific optimizations
+
     if (isMobile) {
-      // Optimieren von Animationen für Mobilgeräte
       document.documentElement.classList.add('mobile-device');
-      
-      // Passive scroll listeners für bessere Scrolling-Performance
       const script = document.createElement('script');
       script.textContent = `
-        // Add passive listener option to improve scroll performance
         jQuery.event.special.touchstart = {
           setup: function(_, ns, handle) {
             this.addEventListener('touchstart', handle, { passive: true });
@@ -69,7 +65,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       `;
       document.head.appendChild(script);
     }
-    
+
     return () => {
       window.removeEventListener('resize', checkMobile);
       if (isMobile) {
@@ -77,7 +73,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       }
     };
   }, [isMobile]);
-  
+
   // Add device-specific class to body
   useEffect(() => {
     if (isMobile) {
@@ -86,13 +82,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       document.body.classList.remove('is-mobile');
     }
   }, [isMobile]);
-  
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow pt-16">
-        {children}
-      </main>
+      <main className="flex-grow pt-16">{children}</main>
       <Footer />
     </div>
   );
