@@ -555,7 +555,61 @@
           "applePolicyUrl": "https://www.apple.com/legal/privacy",
           "googleLabel": "Google",
           "googlePolicyUrl": "https://policies.google.com/privacy"
+        },
+        "cookies": {
+  "title": "11. Cookies und ähnliche Technologien",
+  "intro": "Unsere Website verwendet Cookies und ähnliche Technologien. Cookies sind kleine Textdateien, die auf deinem Endgerät gespeichert werden und bestimmte Informationen enthalten.",
+  "types": {
+    "title": "11.1 Arten von Cookies",
+    "content": "Wir verwenden folgende Arten von Cookies:",
+    "necessary": {
+      "title": "Notwendige Cookies",
+      "description": "Diese Cookies sind für den Betrieb unserer Website unerlässlich. Sie ermöglichen grundlegende Funktionen wie die Seitennavigation und den Zugriff auf gesicherte Bereiche der Website. Die Website kann ohne diese Cookies nicht richtig funktionieren."
+    },
+    "analytics": {
+      "title": "Analytische Cookies",
+      "description": "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden. Sie helfen uns, unsere Website zu verbessern."
+    },
+    "marketing": {
+      "title": "Marketing-Cookies",
+      "description": "Diese Cookies werden verwendet, um Besuchern auf Websites relevante Werbung anzuzeigen. Sie werden eingesetzt, um Werbung zu liefern, die für dich relevanter und ansprechender ist."
+    }
+  },
+  "cookieDetails": {
+    "title": "11.2 Details zu den verwendeten Cookies",
+    "necessary": {
+      "title": "Notwendige Cookies",
+      "cookies": [
+        {
+          "name": "cookieConsent",
+          "purpose": "Speichert deine Cookie-Einstellungen und Präferenzen",
+          "duration": "6 Monate",
+          "provider": "VivaLaLingo (Eigener Cookie)"
         }
+      ]
+    },
+    "analytics": {
+      "title": "Analytische Cookies (nur mit deiner Zustimmung)",
+      "cookies": [
+        {
+          "name": "_ga, _gid, _gat",
+          "purpose": "Google Analytics Cookies zur Unterscheidung von Nutzern und zur Begrenzung der Anfragerate",
+          "duration": "2 Jahre (_ga), 24 Stunden (_gid), 1 Minute (_gat)",
+          "provider": "Google LLC, USA",
+          "privacyUrl": "https://policies.google.com/privacy"
+        }
+      ]
+    }
+  },
+  "management": {
+    "title": "11.3 Verwaltung deiner Cookie-Einstellungen",
+    "content": "Du kannst selbst entscheiden, ob du Cookies akzeptieren möchtest. Über den Cookie-Banner auf unserer Website kannst du deine Einstellungen anpassen und jederzeit ändern. Du kannst auch deine Browser-Einstellungen so konfigurieren, dass Cookies abgelehnt oder gelöscht werden. Bitte beachte jedoch, dass bei einer Ablehnung bestimmter Cookies einige Funktionen unserer Website möglicherweise nicht vollständig nutzbar sind."
+  },
+  "thirdParty": {
+    "title": "11.4 Cookies von Drittanbietern",
+    "content": "Einige Cookies werden von Drittanbietern platziert, wie z.B. Google Analytics. Diese Drittanbieter können Informationen über deine Nutzung unserer Website sammeln und mit anderen Informationen, die sie über dich haben, kombinieren. Wir haben keinen Einfluss auf die Verwendung von Cookies durch Drittanbieter. Weitere Informationen findest du in den Datenschutzerklärungen der jeweiligen Anbieter."
+  }
+}
       }
     },
     "userRights": {
@@ -602,7 +656,32 @@
       "location": "14542 Werder",
       "email": "VivaLaLingo@gmail.com"
     }
+  },
+
+  "cookieBanner": {
+  "title": "Wir verwenden Cookies",
+  "description": "Diese Website verwendet Cookies, um dein Surferlebnis zu verbessern und personalisierte Inhalte anzubieten. Du kannst selbst entscheiden, welche Cookies du zulassen möchtest.",
+  "showDetails": "Einstellungen anpassen",
+  "hideDetails": "Weniger anzeigen",
+  "required": "Erforderlich",
+  "acceptAll": "Alle akzeptieren",
+  "rejectAll": "Alle ablehnen",
+  "savePreferences": "Einstellungen speichern",
+  "privacyPolicy": "Datenschutzerklärung",
+  "dataProcessingInfo": "Weitere Informationen über die Verwendung deiner Daten findest du in unserer",
+  "necessary": {
+    "title": "Notwendige Cookies",
+    "description": "Diese Cookies sind für das Funktionieren der Website erforderlich und können nicht deaktiviert werden."
+  },
+  "analytics": {
+    "title": "Analytische Cookies",
+    "description": "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden."
+  },
+  "marketing": {
+    "title": "Marketing Cookies",
+    "description": "Diese Cookies werden verwendet, um Besuchern auf Websites relevante Werbung anzuzeigen."
   }
+}
 
 }
 

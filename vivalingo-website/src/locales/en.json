@@ -592,10 +592,7 @@
     "title": "10. Data Retention",
     "content": "We store your personal data only for as long as necessary for the purposes for which it was collected or as required by law. Account data is stored for the duration of your user relationship and deleted after termination of your account, unless legal retention obligations exist."
   },
-  "cookies": {
-    "title": "11. Cookies and Similar Technologies",
-    "content": "Our Website uses cookies and similar technologies to improve user-friendliness and enable certain functions. You can set your browser to reject cookies, which may, however, limit the functionality of our Website."
-  },
+ 
   "changes": {
     "title": "12. Changes to this Privacy Policy",
     "content": "We reserve the right to change this Privacy Policy at any time. The current version is available on our Website. For significant changes, we will inform you via the App or by email."
@@ -607,6 +604,85 @@
     "street": "Immenstraße 13",
     "location": "14542 Werder",
     "email": "contact@VivaLaLingo.app"
+  },
+  "cookies": {
+  "title": "11. Cookies and Similar Technologies",
+  "intro": "Our website uses cookies and similar technologies. Cookies are small text files that are stored on your device and contain certain information.",
+  "types": {
+    "title": "11.1 Types of Cookies",
+    "content": "We use the following types of cookies:",
+    "necessary": {
+      "title": "Necessary Cookies",
+      "description": "These cookies are essential for the operation of our website. They enable basic functions such as page navigation and access to secure areas of the website. The website cannot function properly without these cookies."
+    },
+    "analytics": {
+      "title": "Analytical Cookies",
+      "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. They help us improve our website."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "These cookies are used to display relevant advertising to visitors across websites. They are used to deliver advertisements that are more relevant and engaging for you."
+    }
+  },
+  "cookieDetails": {
+    "title": "11.2 Details of Cookies Used",
+    "necessary": {
+      "title": "Necessary Cookies",
+      "cookies": [
+        {
+          "name": "cookieConsent",
+          "purpose": "Stores your cookie settings and preferences",
+          "duration": "6 months",
+          "provider": "VivaLaLingo (First-party cookie)"
+        }
+      ]
+    },
+    "analytics": {
+      "title": "Analytical Cookies (only with your consent)",
+      "cookies": [
+        {
+          "name": "_ga, _gid, _gat",
+          "purpose": "Google Analytics cookies to distinguish users and to throttle request rate",
+          "duration": "2 years (_ga), 24 hours (_gid), 1 minute (_gat)",
+          "provider": "Google LLC, USA",
+          "privacyUrl": "https://policies.google.com/privacy"
+        }
+      ]
+    }
+  },
+  "management": {
+    "title": "11.3 Managing Your Cookie Settings",
+    "content": "You can decide whether you want to accept cookies. You can adjust your settings and change them at any time via the cookie banner on our website. You can also configure your browser settings to reject or delete cookies. Please note, however, that if certain cookies are rejected, some functions of our website may not be fully usable."
+  },
+  "thirdParty": {
+    "title": "11.4 Third-Party Cookies",
+    "content": "Some cookies are placed by third parties, such as Google Analytics. These third parties may collect information about your use of our website and combine it with other information they have about you. We have no influence on the use of cookies by third parties. You can find more information in the privacy policies of the respective providers."
+  }
+}
+},
+
+"cookieBanner": {
+  "title": "We use cookies",
+  "description": "This website uses cookies to enhance your browsing experience and offer personalized content. You can decide which cookies you want to allow.",
+  "showDetails": "Customize settings",
+  "hideDetails": "Show less",
+  "required": "Required",
+  "acceptAll": "Accept all",
+  "rejectAll": "Reject all",
+  "savePreferences": "Save preferences",
+  "privacyPolicy": "Privacy Policy",
+  "dataProcessingInfo": "For more information about how we use your data, please see our",
+  "necessary": {
+    "title": "Necessary cookies",
+    "description": "These cookies are essential for the website to function and cannot be disabled."
+  },
+  "analytics": {
+    "title": "Analytics cookies",
+    "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously."
+  },
+  "marketing": {
+    "title": "Marketing cookies",
+    "description": "These cookies are used to display relevant advertising to visitors across websites."
   }
 }
 }
