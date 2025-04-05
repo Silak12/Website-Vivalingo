@@ -233,7 +233,7 @@
     ],
     "contact": {
       "title": "Kontaktiere uns",
-      "email": "VivaLaLingoapp@gmail.com"
+      "email": "VivaLaLingo@gmail.com"
     },
     "downloadButton": "VivaLaLingo herunterladen"
   },
@@ -340,7 +340,7 @@
   "sections": {
     "1": {
       "title": "1. Anwendungsbereich",
-      "content": "Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der VivaLaLingo Sprachlern-App und der Website www.VivaLaLingo.app (\"Dienste\") durch Sie als Nutzer. VivaLaLingo wird betrieben von Leonard Marx, Musterstraße 14, 14527 Deutschland (\"wir\", \"uns\"). Mit dem Zugriff auf oder der Nutzung unserer Dienste erklären Sie sich mit diesen AGB einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie unsere Dienste bitte nicht."
+      "content": "Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der VivaLaLingo Sprachlern-App und der Website www.VivaLaLingo.app (\"Dienste\") durch Sie als Nutzer. VivaLaLingo wird betrieben von Leonard Marx, Immenstraße 13, 14542 Werder (\"wir\", \"uns\"). Mit dem Zugriff auf oder der Nutzung unserer Dienste erklären Sie sich mit diesen AGB einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie unsere Dienste bitte nicht."
     },
     "2": {
       "title": "2. Leistungsbeschreibung",
@@ -426,9 +426,9 @@
       "content": "Bei Fragen zu diesen AGB kontaktieren Sie uns bitte unter:",
       "contactInfo": {
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Deutschland",
-        "email": "kontakt@VivaLaLingo.app"
+        "street": "Immenstraße 13",
+        "location": "14542 Werder",
+        "email": "VivaLaLingo@gmail.com"
       }
     }
   }
@@ -438,15 +438,15 @@
   "companyInfo": {
     "title": "Angaben gemäß § 5 TMG",
     "name": "Leonard Marx",
-    "street": "Musterstraße 14",
-    "location": "14527 Deutschland"
+    "street": "Immenstraße 13",
+    "location": "14542 Werder"
   },
   "contact": {
     "title": "Kontakt",
     "email": "E-Mail",
-    "emailAddress": "kontakt@VivaLaLingo.app",
+    "emailAddress": "VivaLaLingo@gmail.com",
     "website": "Website",
-    "websiteUrl": "https://www.VivaLaLingo.app"
+    "websiteUrl": "https://VivaLaLingo.com"
   },
   "vatId": {
     "title": "Umsatzsteuer-ID",
@@ -456,8 +456,8 @@
   "responsible": {
     "title": "Verantwortlich für den Inhalt",
     "name": "Leonard Marx",
-    "street": "Musterstraße 14",
-    "location": "14527 Deutschland"
+    "street": "Immenstraße 13",
+    "location": "14542 Werder"
   },
   "disputeResolution": {
     "euTitle": "EU-Streitschlichtung",
@@ -479,10 +479,10 @@
       "title": "2. Verantwortlicher für die Datenverarbeitung",
       "content": "Verantwortlich für die Erhebung und Verarbeitung deiner personenbezogenen Daten ist:",
       "name": "Leonard Marx",
-      "street": "Musterstraße 14",
-      "location": "14527 Deutschland",
+      "street": "Immenstraße 13",
+      "location": "14542 Werder",
       "email": "E-Mail",
-      "emailAddress": "kontakt@VivaLaLingo.app"
+      "emailAddress": "VivaLaLingo@gmail.com"
     },
     "collectedData": {
       "title": "3. Von uns erhobene Daten",
@@ -571,7 +571,7 @@
         "Recht auf Widerruf einer erteilten Einwilligung"
       ],
       "exerciseRights": "Um eines dieser Rechte auszuüben, kontaktiere uns bitte unter ",
-      "email": "kontakt@VivaLaLingo.app",
+      "email": "VivaLaLingo@gmail.com",
       "complaint": " Du hast außerdem das Recht, eine Beschwerde bei einer Datenschutzaufsichtsbehörde einzureichen."
     },
     "childrenPrivacy": {
@@ -598,9 +598,9 @@
       "title": "13. Kontakt",
       "content": "Bei Fragen oder Anliegen zu unserer Datenschutzerklärung oder der Verarbeitung deiner personenbezogenen Daten kontaktiere uns bitte unter:",
       "name": "Leonard Marx",
-      "street": "Musterstraße 14",
-      "location": "14527 Deutschland",
-      "email": "kontakt@VivaLaLingo.app"
+      "street": "Immenstraße 13",
+      "location": "14542 Werder",
+      "email": "VivaLaLingo@gmail.com"
     }
   }
 

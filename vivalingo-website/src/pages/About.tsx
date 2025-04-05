@@ -197,7 +197,7 @@ const About: React.FC = () => {
           
           {/* Email address */}
           <a 
-            href="mailto:VivaLaLingoapp@gmail.com" 
+            href="mailto:VivaLaLingo@gmail.com" 
             className="inline-block text-gray-300 hover:text-white transition-colors duration-300 mb-8"
           >
             <div className="flex items-center justify-center">

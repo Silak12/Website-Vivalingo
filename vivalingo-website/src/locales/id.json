@@ -233,7 +233,7 @@
       ],
       "contact": {
         "title": "Hubungi Kami",
-        "email": "VivaLaLingoapp@gmail.com"
+        "email": "VivaLaLingo@gmail.com"
       },
       "downloadButton": "Unduh VivaLaLingo"
     },
@@ -340,7 +340,7 @@
       "sections": {
         "1": {
           "title": "1. Ruang Lingkup",
-          "content": "Syarat dan Ketentuan ini mengatur penggunaan aplikasi VivaLaLingo dan situs web www.VivaLaLingo.app (\"Layanan\") oleh pengguna. VivaLaLingo dioperasikan oleh Leonard Marx, Musterstraße 14, 14527 Jerman (\"kami\"). Dengan mengakses atau menggunakan Layanan, kamu menyetujui syarat-syarat ini. Jika tidak, mohon untuk tidak menggunakan Layanan kami."
+          "content": "Syarat dan Ketentuan ini mengatur penggunaan aplikasi VivaLaLingo dan situs web www.VivaLaLingo.app (\"Layanan\") oleh pengguna. VivaLaLingo dioperasikan oleh Leonard Marx, Immenstraße 13, 14542 Werder (\"kami\"). Dengan mengakses atau menggunakan Layanan, kamu menyetujui syarat-syarat ini. Jika tidak, mohon untuk tidak menggunakan Layanan kami."
         },
         "2": {
           "title": "2. Deskripsi Layanan",
@@ -432,9 +432,9 @@
           "content": "Jika ada pertanyaan mengenai syarat ini, hubungi kami di:",
           "contactInfo": {
             "name": "Leonard Marx",
-            "street": "Musterstraße 14",
-            "location": "14527 Jerman",
-            "email": "kontakt@VivaLaLingo.app"
+            "street": "Immenstraße 13",
+            "location": "14542 Werder",
+            "email": "VivaLaLingo@gmail.com"
           }
         }
       }
@@ -444,15 +444,15 @@
       "companyInfo": {
         "title": "Informasi sesuai § 5 TMG",
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Jerman"
+        "street": "Immenstraße 13",
+        "location": "14542 Werder"
       },
       "contact": {
         "title": "Kontak",
         "email": "Email",
-        "emailAddress": "kontakt@VivaLaLingo.app",
+        "emailAddress": "VivaLaLingo@gmail.com",
         "website": "Situs Web",
-        "websiteUrl": "https://www.VivaLaLingo.app"
+        "websiteUrl": "https://VivaLaLingo.com"
       },
       "vatId": {
         "title": "ID PPN",
@@ -462,8 +462,8 @@
       "responsible": {
         "title": "Penanggung Jawab Konten",
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Jerman"
+        "street": "Immenstraße 13",
+        "location": "14542 Werder"
       },
       "disputeResolution": {
         "euTitle": "Penyelesaian Sengketa UE",
@@ -485,10 +485,10 @@
         "title": "2. Pengendali Data",
         "content": "Pengendali yang bertanggung jawab atas pengumpulan dan pemrosesan data pribadimu adalah:",
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Jerman",
+        "street": "Immenstraße 13",
+        "location": "14542 Werder",
         "email": "Email",
-        "emailAddress": "kontakt@VivaLaLingo.app"
+        "emailAddress": "VivaLaLingo@gmail.com"
       },
       "collectedData": {
         "title": "3. Data yang Dikumpulkan",
@@ -604,9 +604,9 @@
         "title": "13. Kontak",
         "content": "Jika ada pertanyaan tentang kebijakan ini atau pengolahan data pribadimu, hubungi kami di:",
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Jerman",
-        "email": "kontakt@VivaLaLingo.app"
+        "street": "Immenstraße 13",
+        "location": "14542 Werder",
+        "email": "VivaLaLingo@gmail.com"
       }
     }
   }

@@ -233,7 +233,7 @@
       ],
       "contact": {
         "title": "Contactez-nous",
-        "email": "VivaLaLingoapp@gmail.com"
+        "email": "VivaLaLingo@gmail.com"
       },
       "downloadButton": "Télécharger VivaLaLingo"
     },
@@ -340,7 +340,7 @@
       "sections": {
         "1": {
           "title": "1. Champ d'application",
-          "content": "Les présentes Conditions Générales régissent l'utilisation de l'application VivaLaLingo et du site www.VivaLaLingo.app (les \"Services\") par l'utilisateur. VivaLaLingo est exploitée par Leonard Marx, Musterstraße 14, 14527 Allemagne. En accédant ou en utilisant nos Services, vous acceptez ces conditions. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos Services."
+          "content": "Les présentes Conditions Générales régissent l'utilisation de l'application VivaLaLingo et du site www.VivaLaLingo.app (les \"Services\") par l'utilisateur. VivaLaLingo est exploitée par Leonard Marx, Immenstraße 13, 14542 Werder. En accédant ou en utilisant nos Services, vous acceptez ces conditions. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos Services."
         },
         "2": {
           "title": "2. Description du service",
@@ -432,9 +432,9 @@
           "content": "Pour toute question concernant ces Conditions, veuillez nous contacter à :",
           "contactInfo": {
             "name": "Leonard Marx",
-            "street": "Musterstraße 14",
-            "location": "14527 Allemagne",
-            "email": "kontakt@VivaLaLingo.app"
+            "street": "Immenstraße 13",
+            "location": "14542 Werder",
+            "email": "VivaLaLingo@gmail.com"
           }
         }
       }
@@ -444,15 +444,15 @@
       "companyInfo": {
         "title": "Informations selon § 5 TMG",
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Allemagne"
+        "street": "Immenstraße 13",
+        "location": "14542 Werder"
       },
       "contact": {
         "title": "Contact",
         "email": "Email",
-        "emailAddress": "kontakt@VivaLaLingo.app",
+        "emailAddress": "VivaLaLingo@gmail.com",
         "website": "Site web",
-        "websiteUrl": "https://www.VivaLaLingo.app"
+        "websiteUrl": "https://VivaLaLingo.com"
       },
       "vatId": {
         "title": "ID TVA",
@@ -462,8 +462,8 @@
       "responsible": {
         "title": "Responsable du contenu",
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Allemagne"
+        "street": "Immenstraße 13",
+        "location": "14542 Werder"
       },
       "disputeResolution": {
         "euTitle": "Résolution des litiges UE",
@@ -485,10 +485,10 @@
         "title": "2. Responsable du traitement des données",
         "content": "Le responsable de la collecte et du traitement de vos données personnelles est :",
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Allemagne",
+        "street": "Immenstraße 13",
+        "location": "14542 Werder",
         "email": "Email",
-        "emailAddress": "kontakt@VivaLaLingo.app"
+        "emailAddress": "VivaLaLingo@gmail.com"
       },
       "collectedData": {
         "title": "3. Données collectées",
@@ -604,9 +604,9 @@
         "title": "13. Contact",
         "content": "Pour toute question concernant notre politique de confidentialité ou le traitement de vos données personnelles, veuillez nous contacter à :",
         "name": "Leonard Marx",
-        "street": "Musterstraße 14",
-        "location": "14527 Allemagne",
-        "email": "kontakt@VivaLaLingo.app"
+        "street": "Immenstraße 13",
+        "location": "14542 Werder",
+        "email": "VivaLaLingo@gmail.com"
       }
     }
   }
