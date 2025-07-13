@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <Hero />
       <WordFlowAnimation />
       <MethodFeatures />
-      <DiscountSection />
+ {/* <DiscountSection /> */} {/* Temporär auskommentiert - kann jederzeit wieder aktiviert werden */}
       <PricingSection />
       <DownloadCTA />
     </>
