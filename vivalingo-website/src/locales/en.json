@@ -364,16 +364,11 @@
     "5": {
       "title": "5. Prices and Payment Terms",
       "content": "We offer various subscription options and in-app purchases:",
-      "plans": [
-        "Monthly subscription: €2.99 per month",
-        "Annual subscription: €12.99 per year (equivalent to a 64% savings compared to the monthly subscription)",
-        "Lifetime access: One-time payment of €49.99"
-      ],
-      "payment": "All payments are processed through the App Store (iOS) or Google Play Store (Android). Billing is done according to the provisions of these platforms. Subscriptions automatically renew at the current price unless canceled at least 24 hours before the end of the current billing period. Cancellation is done through your App Store or Google Play account."
+      "payment": "All payments are processed through the App Store (iOS) or Google Play Store (Android). Billing is handled according to the terms of these platforms. Subscriptions automatically renew at the current price unless cancelled before the end of the current period. Cancellation is done through your App Store or Google Play account. We reserve the right to adjust subscription prices at any time. Existing subscriptions remain unchanged until the next renewal."
     },
     "6": {
       "title": "6. Trial Periods and Refunds",
-      "content": "New users receive a 7-day free trial when signing up for a monthly or annual subscription. Lifetime purchases do not include a trial period. Refund requests must be directed to the respective App Store (iOS) or Google Play Store (Android) and are subject to their policies. iOS users can request refunds through the Apple website or directly in the App Store under \"Purchase History.\" Android users can request refunds through the Google Play Store in the \"Order History\" section within 48 hours of purchase. For later requests, Google Play Support must be contacted. We do not offer direct refunds ourselves but are happy to assist with questions about the refund process."
+      "content": "New users receive a 7-day free trial when signing up for a monthly or annual subscription. Lifetime purchases do not include a trial period. Refund requests must be directed to the respective App Store (iOS) or Google Play Store (Android) and are subject to their policies. iOS users can request refunds through the Apple website or directly in the App Store under \"Purchase History.\""
     },
     "7": {
       "title": "7. Right of Withdrawal",

@@ -75,26 +75,51 @@ const Method: React.FC = () => {
     }
   }, []);
 
-  // Phone animation effects
+  // Phone animation effects - exakt wie in DownloadCTA
   useEffect(() => {
     if (phoneRef.current) {
-      // Floating animation for the phone
+      // Schwebende Animation mit verbessertem Float-Effekt
       gsap.to(phoneRef.current, {
-        y: -10,
-        duration: 2,
-        ease: 'sine.inOut',
+        y: -15,
+        duration: 3,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true
+      });
+      
+      // Shadow-Animation synchron mit schwebendem Handy
+      gsap.to(phoneRef.current, {
+        boxShadow: '0 30px 60px rgba(0, 0, 0, 0.4)',
+        duration: 3,
+        ease: "sine.inOut",
         repeat: -1,
         yoyo: true,
+        yoyoEase: "sine.inOut"
       });
-
-      // Subtle rotation animation
-      gsap.to(phoneRef.current, {
-        rotation: 2,
-        duration: 4,
-        ease: 'sine.inOut',
-        repeat: -1,
-        yoyo: true,
-      });
+      
+      // Neigungseffekt bei Mausbewegung
+      const handleMouseMove = (e: MouseEvent) => {
+        const { clientX, clientY } = e;
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        
+        // Berechne Neigungswinkel basierend auf Mausposition mit sanfteren Werten
+        const tiltX = (clientY - windowHeight / 2) / 30;
+        const tiltY = (windowWidth / 2 - clientX) / 30;
+        
+        gsap.to(phoneRef.current, {
+          rotateX: tiltX,
+          rotateY: tiltY,
+          duration: 1.5,
+          ease: "power2.out"
+        });
+      };
+      
+      window.addEventListener('mousemove', handleMouseMove);
+      
+      return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+      };
     }
   }, []);
   
@@ -632,21 +657,30 @@ const Method: React.FC = () => {
                   viewport={{ once: true }}
                   className="flex flex-col sm:flex-row gap-4"
                 >
-                  <Button
-                    variant="secondary"
-                    size="lg"
-                    className="shadow-lg shadow-secondary-500/20 flex items-center justify-center gap-2 bg-white text-primary-600 hover:bg-white/90 transform transition-all duration-300 hover:scale-105"
+                  <a 
+                    href="https://apps.apple.com/de/app/viva-la-lingo/id6738089310?platform=iphone"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
                   >
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                    </svg>
-                    {t('method.cta.iosDownload')}
-                  </Button>
+                    <Button 
+                      variant="primary" 
+                      size="lg"
+                      className="min-w-40 flex items-center justify-center gap-2 shadow-lg shadow-primary-500/30 hover:scale-105 transition-transform w-full sm:w-auto"
+                    >
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                      </svg>
+                      {t('method.cta.iosDownload')}
+                    </Button>
+                  </a>
                   
-                  <Button
-                    variant="outline"
+                  {/* Android Button - kann später aktiviert werden */}
+                  <Button 
+                    variant="secondary" 
                     size="lg"
-                    className="border-white/30 text-white hover:bg-white/10 shadow-lg flex items-center justify-center gap-2 transform transition-all duration-300 hover:scale-105"
+                    className="min-w-40 flex items-center justify-center gap-2 shadow-lg shadow-secondary-500/30 opacity-60 cursor-not-allowed w-full sm:w-auto"
+                    disabled
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3 20.5V3.5c0-.85.44-1.59 1.1-2.02L14.5 12 4.1 22.52c-.66-.43-1.1-1.17-1.1-2.02zM18.77 12L7 3.78l8.49 8.49-8.49 8.49L18.77 12zm-4.31 0l-1.65 9.71L5.21 12l7.6-9.71L14.46 12z" />
@@ -658,101 +692,133 @@ const Method: React.FC = () => {
               
               <div className="w-full lg:w-2/5">
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="relative flex justify-center"
+                  className="flex justify-center perspective-1000"
                 >
-                  {/* Enhanced glow effects around the phone */}
-                  <div className="absolute -inset-8 bg-gradient-to-r from-white/20 to-secondary-300/20 rounded-[3rem] blur-2xl"></div>
-                  <div className="absolute -inset-4 bg-white/10 rounded-[2.5rem] blur-xl"></div>
-                  
-                  {/* Phone mockup with enhanced design */}
-                  <div 
+                  <div
                     ref={phoneRef}
-                    className="relative w-[280px] h-[560px] rounded-[3rem] border-[12px] border-gray-800 bg-black shadow-2xl overflow-hidden transform perspective-1000"
+                    className="relative w-[320px] h-[640px] transform-gpu shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                    style={{ transformStyle: 'preserve-3d' }}
                   >
-                    {/* Screen content */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 rounded-[1.8rem] overflow-hidden">
-                      {/* Status bar */}
-                      <div className="flex justify-between items-center px-6 py-2 text-white text-sm">
-                        <span>9:41</span>
-                        <div className="flex items-center gap-1">
-                          <div className="w-4 h-2 border border-white rounded-sm">
-                            <div className="w-3 h-1 bg-white rounded-sm m-0.5"></div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* App content simulation */}
-                      <div className="px-6 py-4">
-                        <div className="text-center mb-6">
-                          <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-3 flex items-center justify-center">
-                            <span className="text-2xl">🌟</span>
-                          </div>
-                          <h3 className="text-white font-bold text-lg">VivaLaLingo</h3>
-                          <p className="text-white/80 text-sm">Birkenbihl-Methode</p>
+                    {/* Phone Frame mit verbessertem Design */}
+                    <div className="absolute inset-0 bg-gray-800 rounded-[40px] border-[12px] border-gray-900 shadow-2xl transform-gpu overflow-hidden">
+                      {/* Phone Screen mit Reflexionseffekt */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black rounded-[30px] overflow-hidden">
+                        {/* Phone Notch */}
+                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-36 h-8 bg-black rounded-b-xl z-20 flex justify-center items-end pb-1">
+                          <div className="w-20 h-1.5 bg-gray-800 rounded-full"></div>
                         </div>
                         
-                        {/* Simulated lesson cards */}
-                        <div className="space-y-3">
-                          <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <div className="w-20 h-3 bg-white/40 rounded mb-2"></div>
-                                <div className="w-16 h-2 bg-white/30 rounded"></div>
-                              </div>
-                              <div className="w-8 h-8 bg-white/20 rounded-full"></div>
-                            </div>
-                          </div>
-                          
-                          <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <div className="w-24 h-3 bg-white/40 rounded mb-2"></div>
-                                <div className="w-12 h-2 bg-white/30 rounded"></div>
-                              </div>
-                              <div className="w-8 h-8 bg-white/20 rounded-full"></div>
-                            </div>
-                          </div>
-                          
-                          <div className="bg-secondary-400/30 backdrop-blur-sm rounded-xl p-4 border border-secondary-300/30">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <div className="w-18 h-3 bg-white/60 rounded mb-2"></div>
-                                <div className="w-14 h-2 bg-white/40 rounded"></div>
-                              </div>
-                              <div className="w-8 h-8 bg-secondary-300/50 rounded-full flex items-center justify-center">
-                                <span className="text-xs">▶</span>
-                              </div>
+                        {/* Status Bar mit Zeit und Batteriestand */}
+                        <div className="absolute top-2 left-0 right-0 px-6 flex justify-between text-xs text-white z-10">
+                          <span>9:41</span>
+                          <div className="flex items-center gap-1">
+                            <div className="h-2.5 w-2.5 rounded-full bg-white"></div>
+                            <div className="h-2.5 w-2.5 rounded-full bg-white"></div>
+                            <div className="h-2.5 w-2.5 rounded-full bg-white"></div>
+                            <div className="h-2.5 w-6 rounded-sm border border-white ml-1 relative">
+                              <div className="absolute inset-0.5 right-auto w-4 bg-white rounded-sm"></div>
                             </div>
                           </div>
                         </div>
                         
-                        {/* Bottom navigation simulation */}
-                        <div className="absolute bottom-8 left-6 right-6">
-                          <div className="bg-white/10 backdrop-blur-sm rounded-full p-2 flex justify-around">
-                            <div className="w-8 h-8 bg-white/20 rounded-full"></div>
-                            <div className="w-8 h-8 bg-secondary-400/40 rounded-full"></div>
-                            <div className="w-8 h-8 bg-white/20 rounded-full"></div>
-                            <div className="w-8 h-8 bg-white/20 rounded-full"></div>
+                        {/* App UI */}
+                        <div className="absolute inset-0 pt-12 pb-6 px-4 flex flex-col">
+                          {/* App Header */}
+                          <div className="h-14 flex items-center justify-center mb-4">
+                            <div className="text-white text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                              VivaLaLingo
+                            </div>
+                          </div>
+                          
+                          {/* Method phases visualization */}
+                          <div className="flex-grow flex flex-col justify-center space-y-4">
+                            <div className="bg-gray-900/80 backdrop-blur-md rounded-2xl p-4 border border-gray-800 shadow-xl">
+                              <div className="flex items-center gap-3 mb-3">
+                                <div className="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-lg">
+                                  🧠
+                                </div>
+                                <div>
+                                  <h3 className="text-white font-semibold text-sm">Phase 1: Dekodieren</h3>
+                                  <p className="text-gray-300 text-xs">Verstehen ohne übersetzen</p>
+                                </div>
+                              </div>
+                              <div className="bg-black/30 rounded-lg p-3">
+                                <p className="text-white text-xs mb-1">Hola, ¿cómo estás?</p>
+                                <p className="text-gray-400 text-xs">Hallo, wie geht es dir?</p>
+                              </div>
+                            </div>
+                            
+                            <div className="bg-gray-900/80 backdrop-blur-md rounded-2xl p-4 border border-gray-800 shadow-xl">
+                              <div className="flex items-center gap-3 mb-3">
+                                <div className="w-10 h-10 bg-secondary-500 rounded-full flex items-center justify-center text-lg">
+                                  🔊
+                                </div>
+                                <div>
+                                  <h3 className="text-white font-semibold text-sm">Phase 2: Aktives Hören</h3>
+                                  <p className="text-gray-300 text-xs">Sprache natürlich aufnehmen</p>
+                                </div>
+                              </div>
+                              <div className="flex justify-center space-x-2">
+                                <div className="w-8 h-8 bg-secondary-400/30 rounded-full flex items-center justify-center">
+                                  <span className="text-white text-xs">🐢</span>
+                                </div>
+                                <div className="w-8 h-8 bg-secondary-400/50 rounded-full flex items-center justify-center">
+                                  <span className="text-white text-xs">▶</span>
+                                </div>
+                                <div className="w-8 h-8 bg-secondary-400/30 rounded-full flex items-center justify-center">
+                                  <span className="text-white text-xs">🐇</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* App Navbar */}
+                          <div className="h-16 mt-auto pt-2">
+                            <div className="h-1 w-32 bg-gray-700 mx-auto rounded-full mb-3"></div>
+                            <div className="flex justify-around">
+                              <button className="w-12 h-12 flex flex-col items-center justify-center">
+                                <div className="w-6 h-6 rounded-full bg-primary-500 flex items-center justify-center">
+                                  <span className="text-white text-xs">🏠</span>
+                                </div>
+                                <span className="text-gray-400 text-[10px] mt-1">Home</span>
+                              </button>
+                              <button className="w-12 h-12 flex flex-col items-center justify-center">
+                                <div className="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center">
+                                  <span className="text-white text-xs">📚</span>
+                                </div>
+                                <span className="text-gray-400 text-[10px] mt-1">Lernen</span>
+                              </button>
+                              <button className="w-12 h-12 flex flex-col items-center justify-center">
+                                <div className="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center">
+                                  <span className="text-white text-xs">👤</span>
+                                </div>
+                                <span className="text-gray-400 text-[10px] mt-1">Profil</span>
+                              </button>
+                            </div>
                           </div>
                         </div>
+                        
+                        {/* Dynamischer Lichtreflexeffekt */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-20 pointer-events-none"></div>
                       </div>
                     </div>
                     
-                    {/* Screen reflection overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none rounded-[1.8rem]"></div>
+                    {/* Verbesserte Reflektionseffekte - Subtile Highlights */}
+                    <div className="absolute top-1/4 left-1/3 w-1/3 h-1/4 bg-white/5 rounded-full blur-sm"></div>
+                    <div className="absolute bottom-1/3 right-1/4 w-1/5 h-1/5 bg-primary-400/10 rounded-full blur-md"></div>
                     
-                    {/* Home indicator */}
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/30 rounded-full"></div>
+                    {/* Pulse-Effekt um das Handy */}
+                    <div className="absolute inset-[-10px] rounded-[50px] bg-primary-500/5 animate-pulse"></div>
                   </div>
                   
-                  {/* Floating elements around phone */}
-                  <div className="absolute top-10 -left-6 w-12 h-12 bg-white/10 rounded-full blur-sm animate-pulse"></div>
-                  <div className="absolute bottom-20 -right-8 w-16 h-16 bg-secondary-300/20 rounded-full blur-md animate-pulse" style={{ animationDelay: '1s' }}></div>
-                  <div className="absolute top-1/2 -left-10 w-8 h-8 bg-accent-300/20 rounded-full blur-sm animate-pulse" style={{ animationDelay: '2s' }}></div>
+                  {/* Zusätzliche schwebende Elemente um das Telefon */}
+                  <div className="absolute top-1/4 -right-4 w-12 h-12 bg-primary-400/20 rounded-full blur-sm animate-pulse"></div>
+                  <div className="absolute bottom-1/3 -left-6 w-16 h-16 bg-secondary-400/20 rounded-full blur-md animate-pulse" style={{animationDelay: '1s'}}></div>
+                  <div className="absolute top-1/2 -left-8 w-12 h-12 bg-accent-400/20 rounded-full blur-sm animate-pulse" style={{animationDelay: '2s'}}></div>
                 </motion.div>
               </div>
             </div>
